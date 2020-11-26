@@ -41,7 +41,7 @@ func _physics_process(delta):
 				motion.y = HEIGHT
 				on_ground = false
 			
-	if Input.is_action_just_pressed("ui_focus_next" ) && is_attacking == false:
+	if Input.is_action_just_pressed("ui_shoot" ) && is_attacking == false:
 		if is_on_floor():
 			motion.x = 0
 		is_attacking = true

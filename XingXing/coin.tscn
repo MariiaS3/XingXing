@@ -1,0 +1,38 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://dodatki/PNG/Items/000_0043_coin3.png" type="Texture" id=1]
+[ext_resource path="res://dodatki/PNG/Items/000_0045_coin.png" type="Texture" id=2]
+[ext_resource path="res://dodatki/PNG/Items/000_0037_coin9.png" type="Texture" id=3]
+[ext_resource path="res://dodatki/PNG/Items/000_0039_coin7.png" type="Texture" id=4]
+[ext_resource path="res://dodatki/PNG/Items/000_0044_coin2.png" type="Texture" id=5]
+[ext_resource path="res://dodatki/PNG/Items/000_0036_coin10.png" type="Texture" id=6]
+[ext_resource path="res://dodatki/PNG/Items/000_0040_coin6.png" type="Texture" id=7]
+[ext_resource path="res://dodatki/PNG/Items/000_0041_coin5.png" type="Texture" id=8]
+[ext_resource path="res://dodatki/PNG/Items/000_0042_coin4.png" type="Texture" id=9]
+[ext_resource path="res://coin.gd" type="Script" id=10]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 17.1172
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="coin" type="Area2D"]
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 4 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.237423, 4.67677 )
+scale = Vector2( 1.25347, 1.28472 )
+frames = SubResource( 2 )
+frame = 4
+playing = true
+[connection signal="body_entered" from="." to="." method="_on_coin_body_entered"]
