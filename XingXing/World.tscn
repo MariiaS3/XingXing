@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://dodatki/png/box/16_Easy-Resize.com.jpg" type="Texture" id=1]
 [ext_resource path="res://Kosmita.gd" type="Script" id=2]
@@ -40,17 +40,20 @@
 [ext_resource path="res://alien_armor/armor__0040_fire_6.png" type="Texture" id=38]
 [ext_resource path="res://alien_armor/armor__0041_fire_7.png" type="Texture" id=39]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=40]
+[ext_resource path="res://fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=41]
+[ext_resource path="res://dodatki/PNG/Items/000_0045_coin.png" type="Texture" id=42]
+[ext_resource path="res://HUD.gd" type="Script" id=43]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 10 ), ExtResource( 18 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "Run",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 10 ), ExtResource( 18 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 37 ) ],
@@ -58,24 +61,9 @@ animations = [ {
 "name": "flash",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 24 ), ExtResource( 8 ), ExtResource( 23 ), ExtResource( 9 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 14 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Turn",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 35 ), ExtResource( 33 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 34 ), ExtResource( 37 ) ],
-"loop": false,
-"name": "attack",
-"speed": 15.0
-}, {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
@@ -83,9 +71,24 @@ animations = [ {
 "name": "jump_r_l",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 35 ), ExtResource( 33 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 34 ), ExtResource( 37 ) ],
+"loop": false,
+"name": "attack",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 24 ), ExtResource( 8 ), ExtResource( 23 ), ExtResource( 9 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 19 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -94,6 +97,21 @@ extents = Vector2( 16, 39 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 60, 60 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0235294, 0.0235294, 0.0235294, 0.34902 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 41 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 41 )
 
 [node name="World" type="Node"]
 
@@ -832,5 +850,86 @@ shape = SubResource( 3 )
 [node name="coins" type="Node2D" parent="."]
 
 [node name="coin" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 605, 296 )
+position = Vector2( 600, 296 )
+
+[node name="coin2" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 648, 296 )
+
+[node name="coin3" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 696, 296 )
+
+[node name="coin4" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 792, 200 )
+
+[node name="coin5" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 840, 200 )
+
+[node name="coin6" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 888, 200 )
+
+[node name="coin7" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 368, 88 )
+
+[node name="coin8" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 424, 88 )
+
+[node name="coin9" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 480, 88 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 43 )
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 22.0
+margin_top = 9.0
+margin_right = 117.0
+margin_bottom = 63.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x" type="Label" parent="HUD"]
+margin_left = 67.0
+margin_top = 18.0
+margin_right = 92.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.937255, 0.882353, 0.141176, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+margin_left = 27.0
+margin_top = 17.0
+margin_right = 67.0
+margin_bottom = 55.0
+texture = ExtResource( 42 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coins" type="Label" parent="HUD"]
+margin_left = 83.0
+margin_top = 20.0
+margin_right = 123.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.937255, 0.882353, 0.141176, 1 )
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="animation_finished" from="KinematicBody2D/AnimatedSprite" to="KinematicBody2D" method="_on_AnimatedSprite_animation_finished"]
+[connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin5" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin6" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin7" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin8" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin9" to="HUD" method="_on_coin_collected"]
