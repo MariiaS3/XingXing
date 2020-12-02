@@ -76,10 +76,14 @@ func _physics_process(delta):
 	
 	
 	motion = move_and_slide(motion, UP)
-	pass
+	
 
 
 
 func _on_AnimatedSprite_animation_finished():
 	is_attacking = false
-	pass
+	
+
+
+func _on_Fallzone_body_entered(body):
+	get_tree().change_scene("res://World.tscn")
