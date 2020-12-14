@@ -24,7 +24,7 @@
 [ext_resource path="res://alien_armor/armor__0011_walk_6.png" type="Texture" id=22]
 [ext_resource path="res://alien_armor/armor__0009_walk_4.png" type="Texture" id=23]
 [ext_resource path="res://alien_armor/armor__0007_walk_2.png" type="Texture" id=24]
-[ext_resource path="res://background/1781_Easy-Resize.com.jpg" type="Texture" id=25]
+[ext_resource path="res://background/mars-landscape-alien-planet-martian-background/1781.jpg" type="Texture" id=25]
 [ext_resource path="res://dodatki/png/box/20_Easy-Resize.com.jpg" type="Texture" id=26]
 [ext_resource path="res://dodatki/png/box/17_Easy-Resize.com.jpg" type="Texture" id=27]
 [ext_resource path="res://dodatki/png/box/12_Easy-Resize.com.jpg" type="Texture" id=28]
@@ -114,12 +114,12 @@ size = 30
 font_data = ExtResource( 41 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 617.312, 14.4142 )
+extents = Vector2( 816, 14.4142 )
 
 [node name="World" type="Node"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 121.016, 218.73 )
+position = Vector2( 128, 195.095 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -129,7 +129,7 @@ __meta__ = {
 position = Vector2( 0, 16 )
 scale = Vector2( 0.225352, 0.224299 )
 frames = SubResource( 1 )
-animation = "attack"
+animation = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 visible = false
@@ -143,16 +143,28 @@ __meta__ = {
 "_gizmo_extents_": 38.6
 }
 
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+current = true
+limit_left = 0
+limit_top = -110
+limit_right = 1800
+limit_bottom = 600
+smoothing_enabled = true
+smoothing_speed = 1.0
+editor_draw_limits = true
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.3, 0.6 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -131.338, -19.6776 )
-scale = Vector2( 0.719395, 0.726563 )
+position = Vector2( 0.591666, -101.627 )
+scale = Vector2( 0.240833, 0.237333 )
 texture = ExtResource( 25 )
 centered = false
-offset = Vector2( 10, 0 )
+offset = Vector2( 10, -10 )
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -230,6 +242,21 @@ __meta__ = {
 visible = false
 shape = SubResource( 3 )
 
+[node name="Sprite47" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1360, 576 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite47"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite47/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
 [node name="Sprite4" type="Sprite" parent="Platforms"]
 modulate = Color( 0.584314, 1, 0, 0.690196 )
 position = Vector2( 112, 576 )
@@ -257,6 +284,21 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite17"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite17/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite59" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1120, 576 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite59"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite59/StaticBody2D"]
 visible = false
 shape = SubResource( 3 )
 
@@ -335,6 +377,21 @@ __meta__ = {
 visible = false
 shape = SubResource( 3 )
 
+[node name="Sprite46" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1312, 528 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite46"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite46/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
 [node name="Sprite27" type="Sprite" parent="Platforms"]
 modulate = Color( 0.584314, 1, 0, 0.690196 )
 position = Vector2( 768, 528 )
@@ -347,6 +404,51 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite27"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite27/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite44" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1168, 528 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite44"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite44/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite45" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1264, 528 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite45"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite45/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite48" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1216, 528 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite48"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite48/StaticBody2D"]
 visible = false
 shape = SubResource( 3 )
 
@@ -439,6 +541,35 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite15/StaticBody2D"]
 shape = SubResource( 3 )
 
+[node name="Sprite75" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1624, 248 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite75"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite75/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite76" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1672, 248 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite76"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite76/StaticBody2D"]
+shape = SubResource( 3 )
+
 [node name="Sprite16" type="Sprite" parent="Platforms"]
 modulate = Color( 1, 1, 0, 0.784314 )
 position = Vector2( 696, 392 )
@@ -451,6 +582,78 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite16"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite16/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite70" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1304, 139.302 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite70"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite70/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite71" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1352, 139.302 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite71"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite71/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite72" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1304, 91.3018 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite72"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite72/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite54" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1064, 187.302 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite54"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite54/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite60" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1112, 187.302 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite60"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite60/StaticBody2D"]
 shape = SubResource( 3 )
 
 [node name="Sprite19" type="Sprite" parent="Platforms"]
@@ -724,6 +927,162 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite42/StaticBody2D"]
 shape = SubResource( 3 )
 
+[node name="Sprite61" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1531.94, 368 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite61"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite61/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite73" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1531.94, 416 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite73"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite73/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite74" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1579.94, 416 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite74"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite74/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite62" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1208, 91.3018 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite62"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite62/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite63" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1256, 91.3018 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite63"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite63/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite64" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1435.94, 416 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite64"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite64/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite65" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1160, 139.302 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite65"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite65/StaticBody2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Sprite66" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1208, 139.302 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite66"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite66/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite67" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1256, 139.302 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite67"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite67/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite68" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1483.94, 416 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite68"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite68/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite69" type="Sprite" parent="Platforms"]
+modulate = Color( 1, 1, 0, 0.784314 )
+position = Vector2( 1483.94, 368 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite69"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite69/StaticBody2D"]
+shape = SubResource( 3 )
+
 [node name="Sprite9" type="Sprite" parent="Platforms"]
 modulate = Color( 0.584314, 1, 0, 0.690196 )
 position = Vector2( 368, 576 )
@@ -836,6 +1195,62 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite53/StaticBody2D"]
 shape = SubResource( 3 )
 
+[node name="Sprite55" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1216, 576 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite55"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite55/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite56" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1168, 576 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite56"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite56/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite57" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1264, 576 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite57"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite57/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite58" type="Sprite" parent="Platforms"]
+modulate = Color( 0.584314, 1, 0, 0.690196 )
+position = Vector2( 1312, 576 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms/Sprite58"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Sprite58/StaticBody2D"]
+shape = SubResource( 3 )
+
 [node name="Sprite13" type="Sprite" parent="Platforms"]
 modulate = Color( 0.584314, 1, 0, 0.690196 )
 position = Vector2( 512, 576 )
@@ -871,14 +1286,35 @@ position = Vector2( 840, 200 )
 [node name="coin6" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 888, 200 )
 
+[node name="coin13" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 1484.49, 288.143 )
+
+[node name="coin15" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 1540.49, 288.143 )
+
+[node name="coin16" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 1628.49, 176.143 )
+
+[node name="coin17" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 1684.49, 176.143 )
+
 [node name="coin7" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 368, 88 )
+position = Vector2( 368, 88.1428 )
 
 [node name="coin8" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 424, 88 )
+position = Vector2( 424, 88.1428 )
 
 [node name="coin9" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 480, 88 )
+position = Vector2( 480, 88.1428 )
+
+[node name="coin10" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 1204.49, 8.14277 )
+
+[node name="coin11" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 1260.49, 8.14277 )
+
+[node name="coin12" parent="coins" instance=ExtResource( 40 )]
+position = Vector2( 1316.49, 8.14277 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 43 )
@@ -931,7 +1367,7 @@ __meta__ = {
 [node name="Fallzone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fallzone"]
-position = Vector2( 507.754, 662.684 )
+position = Vector2( 815.455, 664 )
 shape = SubResource( 7 )
 [connection signal="animation_finished" from="KinematicBody2D/AnimatedSprite" to="KinematicBody2D" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
@@ -940,7 +1376,14 @@ shape = SubResource( 7 )
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin5" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin6" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin13" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin15" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin16" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin17" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin7" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin8" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin9" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin10" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin11" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin12" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="Fallzone" to="KinematicBody2D" method="_on_Fallzone_body_entered"]
