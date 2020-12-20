@@ -37,11 +37,11 @@ position = Vector2( 1120, 152 )
 rotation = 2.618
 
 [node name="coin10" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 1440, 24 )
+position = Vector2( 1344, 23.9999 )
 rotation = 2.618
 
 [node name="coin9" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 1376, 24 )
+position = Vector2( 1256, 24 )
 rotation = -0.785397
 
 [node name="coin7" parent="Node" instance=ExtResource( 4 )]
@@ -78,6 +78,7 @@ position = Vector2( 1504, 480 )
 
 [node name="Portal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 32, 480 )
+collision_mask = 2147483651
 next_scene = "res://World.tscn"
 player_spawn_location = Vector2( 168, 192 )
 [connection signal="coin_collected" from="Node/coin" to="HUD" method="_on_coin_collected"]
