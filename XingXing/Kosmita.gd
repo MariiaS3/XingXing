@@ -9,7 +9,8 @@ var motion = Vector2()
 var on_ground = false
 var is_attacking = false
 
-func _physics_process(delta):
+
+func _physics_process(_delta):
 	motion.y += GRAVITY
 	
 	if Input.is_action_pressed("ui_right" ):
@@ -78,12 +79,10 @@ func _physics_process(delta):
 	motion = move_and_slide(motion, UP)
 	
 
-
-
 func _on_AnimatedSprite_animation_finished():
 	is_attacking = false
 	
+func Fall():
+	 get_tree().change_scene("res://World.tscn")
 
 
-func _on_Fallzone_body_entered(body):
-	get_tree().change_scene("res://World.tscn")

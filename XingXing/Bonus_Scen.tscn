@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TileMap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Fallzone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bonus_Scen.gd" type="Script" id=7]
+[ext_resource path="res://Local_portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Area2D.tscn" type="PackedScene" id=9]
+
+[node name="Bonus_Scen" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 104, 192 )
+collision_layer = 2147483649
+collision_mask = 2
+
+[node name="Floor" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 524288, 2, 0, 524289, 2, 0, 524290, 4, 0, 524299, 1, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 4, 0, 524308, 1, 0, 524309, 2, 0, 524310, 2, 0, 524311, 4, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 4, 0, 589829, 1, 0, 589830, 2, 0, 589831, 2, 0, 589832, 4, 0, 589835, 3, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 4, 0, 589843, 1, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 4, 0 )
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="coin" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 360, 72 )
+
+[node name="coin8" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1056, 152 )
+rotation = -0.785397
+
+[node name="coin11" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1120, 152 )
+rotation = 2.618
+
+[node name="coin10" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1440, 24 )
+rotation = 2.618
+
+[node name="coin9" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1376, 24 )
+rotation = -0.785397
+
+[node name="coin7" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1000, 152 )
+rotation = -0.785397
+
+[node name="coin6" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 896, 18 )
+rotation = -0.785397
+
+[node name="coin5" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 816, 20 )
+
+[node name="coin4" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 744, 20 )
+
+[node name="coin3" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 504, 72 )
+
+[node name="coin2" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 424, 72 )
+
+[node name="Fallzone" parent="." instance=ExtResource( 6 )]
+position = Vector2( 808, 688 )
+
+[node name="TileMap" parent="." instance=ExtResource( 5 )]
+tile_data = PoolIntArray( 65531, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 262141, 7, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
+
+[node name="Local_portal" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 32 )
+
+[node name="Local_portal2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 480 )
+
+[node name="Portal" parent="." instance=ExtResource( 9 )]
+position = Vector2( 32, 480 )
+next_scene = "res://World.tscn"
+player_spawn_location = Vector2( 168, 192 )
+[connection signal="coin_collected" from="Node/coin" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin8" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin11" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin10" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin9" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin7" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin6" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin5" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin4" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
+[connection signal="body_entered" from="Local_portal" to="." method="_on_Local_portal_body_entered"]
+[connection signal="body_entered" from="Local_portal2" to="." method="_on_Local_portal2_body_entered"]
