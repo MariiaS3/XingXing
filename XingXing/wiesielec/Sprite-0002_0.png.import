@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/8.jpg-55d30b3691209f78ca0acf1802450b3b.stex"
+path="res://.import/Sprite-0002_0.png-f1a1db9ef2b3a21df719526cbe001d42.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JPG/8.jpg"
-dest_files=[ "res://.import/8.jpg-55d30b3691209f78ca0acf1802450b3b.stex" ]
+source_file="res://wiesielec/Sprite-0002_0.png"
+dest_files=[ "res://.import/Sprite-0002_0.png-f1a1db9ef2b3a21df719526cbe001d42.stex" ]
 
 [params]
 

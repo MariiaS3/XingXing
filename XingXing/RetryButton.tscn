@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="RetryButton" type="Button"]
+margin_right = 144.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Retry"
+[connection signal="button_up" from="." to="." method="_on_button_up"]

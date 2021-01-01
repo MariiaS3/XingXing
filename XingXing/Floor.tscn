@@ -208,4 +208,3 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 modulate = Color( 1, 1, 0, 0.690196 )
 tile_set = SubResource( 7 )
 format = 1
-tile_data = PoolIntArray( 131107, 0, 0 )
