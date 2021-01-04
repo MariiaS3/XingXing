@@ -109,6 +109,9 @@ func _on_Button_pressed():
 	if i==12:
 		self.paused = false
 
+func tel(object, end, offset):
+	object.position = end.position + offset
+
 func set_paused(value: bool) -> void:
 	paused = value
 	scene_tree.paused = value

@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9, 14.5 )
 
-[node name="Wiesielec" type="KinematicBody2D"]
+[node name="Wiesielec" type="Area2D"]
 position = Vector2( 32, 32 )
 collision_layer = 8
 script = ExtResource( 2 )

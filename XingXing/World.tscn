@@ -139,3 +139,4 @@ position = Vector2( 1185.18, 430.068 )
 [connection signal="coin_collected" from="coins/coin11" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin12" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
+[connection signal="body_entered" from="Wiesielec" to="." method="_on_Wiesielec_body_entered"]
