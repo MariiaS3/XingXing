@@ -29,9 +29,7 @@ margin_right = 225.525
 margin_bottom = 22.9893
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 146.596, 180.63 )
-collision_layer = 2
-collision_mask = 31
+collision_mask = 14
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.3, 0.6 )
@@ -40,7 +38,7 @@ scroll_base_scale = Vector2( 0.3, 0.6 )
 motion_mirroring = Vector2( 1400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -2.19913, -125.427 )
+position = Vector2( -3.38835, -124.238 )
 scale = Vector2( 0.239599, 0.266667 )
 texture = ExtResource( 25 )
 centered = false
@@ -123,15 +121,7 @@ tile_data = PoolIntArray( 524289, 1, 0, 524290, 2, 0, 524291, 4, 0, 524295, 1, 0
 position = Vector2( 616, 480 )
 
 [node name="Enemy" parent="." instance=ExtResource( 7 )]
-<<<<<<< Updated upstream
 position = Vector2( 1185.18, 430.068 )
-=======
-<<<<<<< HEAD
-position = Vector2( 644.55, 246.166 )
-=======
-position = Vector2( 1185.18, 430.068 )
->>>>>>> 3cc27a255db2c2854030d1c00d81fe523079a403
->>>>>>> Stashed changes
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin3" to="HUD" method="_on_coin_collected"]
