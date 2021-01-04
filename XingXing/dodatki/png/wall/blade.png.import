@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blade.png-a24b98813c993ef26bf865c1e039c97c.stex"
+path="res://.import/blade.png-3e6da9ed7e251ec283eab462d6bc4595.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dodatki/png/wall/blade.png"
-dest_files=[ "res://.import/blade.png-a24b98813c993ef26bf865c1e039c97c.stex" ]
+source_file="res://dodatki/PNG/wall/blade.png"
+dest_files=[ "res://.import/blade.png-3e6da9ed7e251ec283eab462d6bc4595.stex" ]
 
 [params]
 

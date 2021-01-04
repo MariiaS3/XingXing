@@ -26,15 +26,19 @@ radius = 31.7749
 height = 30.923
 
 [node name="Enemy" type="KinematicBody2D"]
+collision_layer = 16
+collision_mask = 17
 script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+light_mask = 16
 position = Vector2( 7.63784, 6.57915 )
 scale = Vector2( 0.196143, 0.195851 )
 frames = SubResource( 1 )
-frame = 9
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 16
 position = Vector2( 1.82825, 26.2833 )
 shape = SubResource( 2 )
