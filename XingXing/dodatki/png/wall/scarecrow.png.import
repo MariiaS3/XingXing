@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scarecrow.png-4853e7e95d01cf115db744afc81a038e.stex"
+path="res://.import/scarecrow.png-2a8a13ab12eeb4ce27d99499baed6dee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dodatki/PNG/wall/scarecrow.png"
-dest_files=[ "res://.import/scarecrow.png-4853e7e95d01cf115db744afc81a038e.stex" ]
+source_file="res://dodatki/png/wall/scarecrow.png"
+dest_files=[ "res://.import/scarecrow.png-2a8a13ab12eeb4ce27d99499baed6dee.stex" ]
 
 [params]
 
