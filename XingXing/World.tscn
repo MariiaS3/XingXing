@@ -109,7 +109,7 @@ shape = SubResource( 1 )
 position = Vector2( 96, 480 )
 scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
-next_scene = "res://Control.tscn"
+next_scene = "res://Bonus_Scen.tscn"
 player_spawn_location = Vector2( 168, 192 )
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/thorns1.png-bb0f4afb0d07e1b79c29e628084fe23f.stex"
+path="res://.import/thorns1.png-9eb1be343bfadbf43f11aefbbce6d652.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dodatki/PNG/wall/thorns1.png"
-dest_files=[ "res://.import/thorns1.png-bb0f4afb0d07e1b79c29e628084fe23f.stex" ]
+source_file="res://dodatki/png/wall/thorns1.png"
+dest_files=[ "res://.import/thorns1.png-9eb1be343bfadbf43f11aefbbce6d652.stex" ]
 
 [params]
 

@@ -12,7 +12,6 @@ func  _get_configuration_warning() -> String:
 func _on_Portal_body_entered(_body):
 	Global.player_initial_map_position = player_spawn_location
 	Global.player_facing_direction = player_direction
-	Global.temp = 1 
 	if get_tree().change_scene(next_scene) != OK:
 		print("ERR")
 

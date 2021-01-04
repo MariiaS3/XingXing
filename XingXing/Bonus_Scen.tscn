@@ -28,32 +28,23 @@ tile_data = PoolIntArray( 524288, 2, 0, 524289, 2, 0, 524290, 4, 0, 524299, 1, 0
 [node name="coin" parent="Node" instance=ExtResource( 4 )]
 position = Vector2( 360, 72 )
 
-[node name="coin8" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 1056, 152 )
-rotation = -0.785397
-
-[node name="coin11" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 1120, 152 )
-rotation = 2.618
-
-[node name="coin10" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 1344, 23.9999 )
-rotation = 2.618
-
-[node name="coin9" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 1256, 24 )
-rotation = -0.785397
-
-[node name="coin7" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 1000, 152 )
-rotation = -0.785397
-
-[node name="coin6" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 896, 18 )
-rotation = -0.785397
-
 [node name="coin5" parent="Node" instance=ExtResource( 4 )]
 position = Vector2( 816, 20 )
+
+[node name="coin6" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 911.137, 22.3784 )
+
+[node name="coin7" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1008.65, 141.299 )
+
+[node name="coin8" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1099.03, 138.921 )
+
+[node name="coin9" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1253.63, 8.10791 )
+
+[node name="coin10" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 1339.25, 8.10791 )
 
 [node name="coin4" parent="Node" instance=ExtResource( 4 )]
 position = Vector2( 744, 20 )
@@ -71,10 +62,10 @@ position = Vector2( 808, 688 )
 tile_data = PoolIntArray( 65531, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 262141, 7, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
 
 [node name="Local_portal" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1504, 32 )
+position = Vector2( 1488.88, 14.3611 )
 
 [node name="Local_portal2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1504, 480 )
+position = Vector2( 1496.44, 469.921 )
 
 [node name="Portal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 32, 480 )
@@ -82,13 +73,12 @@ collision_mask = 2147483651
 next_scene = "res://World.tscn"
 player_spawn_location = Vector2( 168, 192 )
 [connection signal="coin_collected" from="Node/coin" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Node/coin8" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Node/coin11" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Node/coin10" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Node/coin9" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Node/coin7" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Node/coin6" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Node/coin5" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin6" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin7" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin8" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin9" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Node/coin10" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Node/coin4" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Node/coin3" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Node/coin2" to="HUD" method="_on_coin_collected"]
