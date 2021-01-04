@@ -35,6 +35,16 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 14 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Run",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 31 ) ],
 "loop": false,
 "name": "flash",
@@ -69,33 +79,19 @@ animations = [ {
 "loop": true,
 "name": "Walk",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 14 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Run",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12.5164, 34.4526 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 10, 28.7105 )
+extents = Vector2( 13.761, 28.7105 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
-pause_mode = 1
-position = Vector2( 168, 184 )
+position = Vector2( 169.191, 184.198 )
 scale = Vector2( 1.27832, 1.39322 )
 collision_mask = 6
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 4.30646 )
@@ -130,7 +126,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 6.25821, 7.17763 )
+position = Vector2( 0.514938, 5.46857 )
 shape = SubResource( 3 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

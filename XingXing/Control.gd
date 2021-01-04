@@ -1,20 +1,36 @@
 extends Control
 var i=0;
+var j=0;
+var array = ["Wypisz pięć pierwszych liczb pierwszych",
+"Wypisz liczby parzyste mniejsze od 13 binarne licząc od 1",
+"Dodaj do siebie dwie liczby binarne: 10111+11001",
+"Odejmij dwie liczby binarne: 1011-101",
+"Wypisz 7 pierwszych liczb z ciągu Fibonnaciego",
+"Wypisz długości stron trójkąta tak, żeby był to trójkąt pitagorejski jedna strona, którego jest równa 5",
+"Wypisz długości stron trójkąta egipskiego",
+"Jaka jest suma liczb na kole ruletki nazywana także 'szatańską liczbą'",
+"Ile wynosi suma liczb od 1 do 100",
+"Jaka liczba jest na 32 miejscu po przecinku w liczbie Pi",
+"Ile razy w ciągu doby zachodzą na siebie wskazówki godziny i minuty",
+"Litery A,B,C,D,E,F w systemie szesnastkowym to odpowiednio:",
+"Trzy pierwsze liczby doskonałe"] 
 
 onready var scene_tree: SceneTree = get_tree()
 onready var pause_overlay: ColorRect = $ColorRect
-
+onready var label: Label = get_node("ColorRect/Label")
 
 var paused: = false setget set_paused
 
 
 func _ready() -> void:
-	PlayerData.connect("died", self, "_on_Player_died")
+	PlayerData.connect("quiz", self, "_on_quiz")
 
 
 
-func _on_Player_died() -> void:
+func _on_quiz() -> void:
 	self.paused = true
+	j = randi()%12+1
+	label.text = array[j]
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -25,9 +41,46 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_Button_pressed():
 	if i == 0:
 		$ColorRect/AnimatedSprite.play("0")
-		
-	if $ColorRect/TextEdit.text == "5":
-		get_node("ColorRect/Label").set_text("55555555555")
+	
+	if j==0 &&  $ColorRect/TextEdit.text == "2,3,5,7,11":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==1 &&  $ColorRect/TextEdit.text == "10,100,110,1000,1100":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==2 &&  $ColorRect/TextEdit.text == "110000":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==3 &&  $ColorRect/TextEdit.text == "110":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==4 &&  $ColorRect/TextEdit.text == "0,1,1,2,3,5,8":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==5 &&  $ColorRect/TextEdit.text == "12,13":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==6 &&  $ColorRect/TextEdit.text == "3,4,5":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==7 &&  $ColorRect/TextEdit.text == "666":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==8 &&  $ColorRect/TextEdit.text == "5050":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==9 &&  $ColorRect/TextEdit.text == "0":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==10 &&  $ColorRect/TextEdit.text == "22":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==11 &&  $ColorRect/TextEdit.text == "10,11,12,13,14,15":
+		j = randi()%12+1
+		label.text = array[j]
+	elif j==12 &&  $ColorRect/TextEdit.text == "6,28,496":
+		j = randi()%12+1
+		label.text = array[j]
 	else:
 		i = i+1
 		if i==1:
@@ -52,8 +105,9 @@ func _on_Button_pressed():
 			$ColorRect/AnimatedSprite.play("10")
 		if i==11:
 			$ColorRect/AnimatedSprite.play("11")
-		get_node("ColorRect/Label").set_text("nooooooooo")
-		
+		label.text = array[j]
+	if i==12:
+		self.paused = false
 
 func set_paused(value: bool) -> void:
 	paused = value

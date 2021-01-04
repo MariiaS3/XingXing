@@ -2,10 +2,10 @@ extends Node
 
 
 signal updated
-signal died
+signal quiz
 
 var score: = 0 setget set_score
-var deaths: = 0 setget set_deaths
+var quize: = 0 setget set_quiz
 
 
 func reset():
@@ -18,6 +18,6 @@ func set_score(new_score: int) -> void:
 	emit_signal("updated")
 
 
-func set_deaths(new_value: int) -> void:
-	deaths = new_value
-	emit_signal("died")
+func set_quiz(new_value: int) -> void:
+	quize = new_value
+	emit_signal("quiz")

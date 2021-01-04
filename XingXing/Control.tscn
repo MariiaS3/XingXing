@@ -81,6 +81,10 @@ animations = [ {
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -2.15756
+margin_top = -3.31573
+margin_right = -2.15759
+margin_bottom = -3.31573
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -89,40 +93,44 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 pause_mode = 2
 visible = false
-margin_left = 4.0
-margin_right = 1016.0
-margin_bottom = 600.0
-color = Color( 0.0627451, 0.533333, 0.423529, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = 5.0
+margin_right = -402.0
+margin_bottom = -133.0
+color = Color( 0.905882, 0.631373, 0.341176, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="ColorRect"]
-margin_left = 878.0
-margin_top = 528.0
-margin_right = 990.0
-margin_bottom = 555.0
+modulate = Color( 0.937255, 0.921569, 0.568627, 1 )
+margin_left = 711.218
+margin_top = 521.0
+margin_right = 862.218
+margin_bottom = 577.0
 text = "Press"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextEdit" type="TextEdit" parent="ColorRect"]
-margin_left = 1.49997
-margin_top = 528.0
-margin_right = 832.5
-margin_bottom = 588.0
+modulate = Color( 0.521569, 0.247059, 0.92549, 1 )
+margin_left = 2.36517
+margin_top = 515.939
+margin_right = 707.365
+margin_bottom = 577.939
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="ColorRect"]
-margin_left = 2.0
-margin_top = 448.0
-margin_right = 824.0
-margin_bottom = 512.0
-custom_colors/font_color = Color( 0.207843, 0.537255, 0.282353, 1 )
-custom_colors/font_color_shadow = Color( 0.482353, 0.203922, 0.203922, 1 )
+modulate = Color( 0.0431373, 0.0392157, 0.0392157, 1 )
+margin_left = 2.6546
+margin_top = 463.655
+margin_right = 876.655
+margin_bottom = 517.655
 text = "Godot"
 align = 1
 valign = 1
@@ -131,8 +139,8 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ColorRect"]
-position = Vector2( 417, 195 )
-scale = Vector2( 2.59687, 1.64167 )
+position = Vector2( 434.831, 233.849 )
+scale = Vector2( 2.63541, 1.87443 )
 frames = SubResource( 1 )
 animation = "0"
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_Button_pressed"]

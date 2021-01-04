@@ -15,28 +15,29 @@
 extents = Vector2( 816, 14.4142 )
 
 [node name="World" type="Node"]
+pause_mode = 1
 script = ExtResource( 44 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 100
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 6 )]
-margin_left = 5.49997
-margin_right = 5.5
+margin_left = 225.525
+margin_top = 22.9893
+margin_right = 225.525
+margin_bottom = 22.9893
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-pause_mode = 0
 collision_mask = 14
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.3, 0.6 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 motion_mirroring = Vector2( 1400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -4.48985, -120 )
+position = Vector2( 0.849505, -120 )
 scale = Vector2( 0.239599, 0.266667 )
 texture = ExtResource( 25 )
 centered = false
@@ -47,7 +48,7 @@ pause_mode = 1
 position = Vector2( -4.48985, 7.85723 )
 
 [node name="coin" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 572.49, 275.444 )
+position = Vector2( 564.49, 277.444 )
 
 [node name="coin2" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 648, 275.444 )
@@ -109,6 +110,7 @@ scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
 next_scene = "res://Control.tscn"
 player_spawn_location = Vector2( 168, 192 )
+player_direction = 1
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 tile_data = PoolIntArray( 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131089, 0, 0, 262141, 7, 0, 196623, 0, 0, 196624, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262169, 0, 0, 262170, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )

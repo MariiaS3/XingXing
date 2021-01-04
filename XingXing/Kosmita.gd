@@ -90,11 +90,11 @@ func Fall():
 	 get_tree().change_scene("res://World.tscn")
 
 
-
-func die() -> void:
-	PlayerData.deaths += 1
+func quiz() -> void:
+	PlayerData.quize += 1
 	queue_free()
 
 
 func _on_Area2D_body_entered(body):
-	die()
+	quiz()
+	
