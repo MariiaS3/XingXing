@@ -5,7 +5,9 @@ extents = Vector2( 816, 14.4142 )
 
 [node name="Fallzone" type="Area2D"]
 position = Vector2( 800, 640 )
+collision_layer = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 524288
 position = Vector2( 8, 0 )
 shape = SubResource( 1 )

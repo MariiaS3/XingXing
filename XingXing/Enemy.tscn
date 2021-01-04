@@ -22,19 +22,19 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 31.7749
-height = 30.923
+radius = 27.8462
+height = 0.216805
 
 [node name="Enemy" type="KinematicBody2D"]
+collision_layer = 16
 script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 7.63784, 6.57915 )
 scale = Vector2( 0.196143, 0.195851 )
 frames = SubResource( 1 )
-frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.82825, 26.2833 )
+position = Vector2( 0.986407, 10.0076 )
 shape = SubResource( 2 )
