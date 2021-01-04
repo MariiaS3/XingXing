@@ -34,8 +34,8 @@ func _on_quiz() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause"):
-		self.paused = not self.paused
+	if i == 0:
+		$ColorRect/AnimatedSprite.play("0")
 
 
 func _on_Button_pressed():

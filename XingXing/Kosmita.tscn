@@ -35,14 +35,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 14 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 31 ) ],
@@ -82,10 +82,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 12.5164, 34.4526 )
+extents = Vector2( 18.7746, 34.4526 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 13.761, 28.7105 )
+extents = Vector2( 25.0329, 28.7105 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( 169.191, 184.198 )
@@ -94,13 +94,13 @@ collision_mask = 6
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, 4.30646 )
-scale = Vector2( 0.225352, 0.201242 )
+position = Vector2( -7.70633, 8.47102 )
+scale = Vector2( 0.230201, 0.201242 )
 frames = SubResource( 1 )
 animation = "Idle"
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 37.5493, 4.30645 )
+position = Vector2( 30.3594, 17.0842 )
 __meta__ = {
 "_gizmo_extents_": 38.6
 }
@@ -117,7 +117,7 @@ smoothing_speed = 1.0
 editor_draw_limits = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 10.0487 )
+position = Vector2( -7.1899, 17.0842 )
 shape = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -126,7 +126,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0.514938, 5.46857 )
+position = Vector2( -7.1899, 12.7776 )
 shape = SubResource( 3 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
