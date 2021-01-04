@@ -121,7 +121,8 @@ tile_data = PoolIntArray( 524289, 1, 0, 524290, 2, 0, 524291, 4, 0, 524295, 1, 0
 position = Vector2( 616, 480 )
 
 [node name="Enemy" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1185.18, 430.068 )
+position = Vector2( 377.708, 63.7921 )
+direction = 1
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin3" to="HUD" method="_on_coin_collected"]

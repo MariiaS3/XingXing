@@ -48,6 +48,9 @@ pause={
 2d_physics/layer_2="Portal"
 2d_physics/layer_3="Portal_local"
 2d_physics/layer_4="Wiesielec"
+2d_physics/layer_5="Enemy"
+2d_physics/layer_6="Coins"
+2d_physics/layer_7="Fallzone"
 
 [rendering]
 
