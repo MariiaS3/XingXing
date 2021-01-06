@@ -20,5 +20,10 @@ func _physics_process(delta):
 	velocity.x = 50 * direction
 		
 	velocity = move_and_slide(velocity, Vector2.UP)
-		
+	
 
+	
+
+
+func _on_Checker_body_entered(body):
+	print("aaa")
