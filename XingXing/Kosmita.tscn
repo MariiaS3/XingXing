@@ -129,4 +129,4 @@ collision_mask = 8
 position = Vector2( -7.1899, 12.7776 )
 shape = SubResource( 3 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

@@ -90,8 +90,6 @@ func Fall():
 	 get_tree().change_scene("res://World.tscn")
 
 
-func quiz() -> void:
+
+func _on_Area2D_area_entered(area):
 	PlayerData.quize += 1
-	queue_free()
-
-

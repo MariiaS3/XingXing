@@ -81,10 +81,10 @@ animations = [ {
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2.15756
-margin_top = -3.31573
-margin_right = -2.15759
-margin_bottom = -3.31573
+margin_left = 5.0
+margin_top = 2.0
+margin_right = -398.0
+margin_bottom = -144.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -95,10 +95,6 @@ pause_mode = 2
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 7.0
-margin_top = 5.0
-margin_right = -402.0
-margin_bottom = -133.0
 color = Color( 0.905882, 0.631373, 0.341176, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -139,7 +135,7 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ColorRect"]
-position = Vector2( 434.831, 233.849 )
+position = Vector2( 435, 238 )
 scale = Vector2( 2.63541, 1.87443 )
 frames = SubResource( 1 )
 animation = "0"

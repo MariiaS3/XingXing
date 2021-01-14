@@ -4,9 +4,9 @@
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Floor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Wiesielec.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Control.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://grid.tscn" type="PackedScene" id=8]
 [ext_resource path="res://background/mars-landscape-alien-planet-martian-background/1781.jpg" type="Texture" id=25]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=40]
 [ext_resource path="res://World.gd" type="Script" id=44]
@@ -19,16 +19,8 @@ extents = Vector2( 816, 14.4142 )
 pause_mode = 1
 script = ExtResource( 44 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 100
-
-[node name="Control" parent="CanvasLayer" instance=ExtResource( 6 )]
-margin_left = 225.525
-margin_top = 22.9893
-margin_right = 225.525
-margin_bottom = 22.9893
-
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 176, 150.918 )
 collision_mask = 14
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -38,11 +30,20 @@ scroll_base_scale = Vector2( 0.3, 0.6 )
 motion_mirroring = Vector2( 1400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -3.38835, -124.238 )
-scale = Vector2( 0.239599, 0.266667 )
+position = Vector2( 0, -120 )
+scale = Vector2( 0.237682, 0.267556 )
 texture = ExtResource( 25 )
 centered = false
 offset = Vector2( 10, -10 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 6 )]
+margin_left = 248.0
+margin_top = 48.0
+margin_right = -155.0
+margin_bottom = -91.0
 
 [node name="coins" type="Node2D" parent="."]
 pause_mode = 1
@@ -55,7 +56,7 @@ position = Vector2( 912.928, 196.578 )
 position = Vector2( 1047.57, 141.064 )
 
 [node name="coin4" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 765.571, 206.089 )
+position = Vector2( 764.49, 196.699 )
 
 [node name="coin5" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 835.841, 201.332 )
@@ -64,16 +65,16 @@ position = Vector2( 835.841, 201.332 )
 position = Vector2( 994.113, 143.061 )
 
 [node name="coin13" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1484.49, 288.143 )
+position = Vector2( 1468.49, 280.143 )
 
 [node name="coin15" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1540.49, 288.143 )
+position = Vector2( 1548.49, 280.143 )
 
 [node name="coin16" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 1628.49, 196.699 )
 
 [node name="coin17" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1700.49, 192.143 )
+position = Vector2( 1700.49, 200.143 )
 
 [node name="coin7" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 316.49, 80.1428 )
@@ -114,12 +115,17 @@ tile_data = PoolIntArray( 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 131076, 0, 0, 1
 [node name="Floor" parent="." instance=ExtResource( 3 )]
 tile_data = PoolIntArray( 524289, 1, 0, 524290, 2, 0, 524291, 4, 0, 524295, 1, 0, 524296, 2, 0, 524297, 2, 0, 524298, 4, 0, 524306, 1, 0, 524307, 4, 0, 524312, 1, 0, 524313, 2, 0, 524314, 2, 0, 524315, 2, 0, 589824, 1, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 4, 0, 589830, 1, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 4, 0, 589838, 1, 0, 589839, 2, 0, 589840, 2, 0, 589841, 2, 0, 589842, 0, 0, 589843, 0, 0, 589844, 4, 0, 589847, 1, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0 )
 
-[node name="Wiesielec" parent="." instance=ExtResource( 5 )]
-position = Vector2( 616, 480 )
-
 [node name="Enemy" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1109.07, 68.5489 )
 direction = 1
+
+[node name="grid" parent="." instance=ExtResource( 8 )]
+anchor_left = 0.002
+anchor_right = 0.002
+margin_left = 445.44
+margin_top = 432.0
+margin_right = 701.44
+margin_bottom = 509.0
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
@@ -136,4 +142,3 @@ direction = 1
 [connection signal="coin_collected" from="coins/coin11" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin12" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
-[connection signal="body_entered" from="Wiesielec" to="." method="_on_Wiesielec_body_entered"]
