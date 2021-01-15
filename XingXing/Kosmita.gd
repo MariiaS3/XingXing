@@ -5,14 +5,15 @@ const GRAVITY = 10
 const SPEED = 200
 const HEIGHT = -600
 const FIREBALL = preload("res://Node2D.tscn")
+const HUD = preload("res://HUD.tscn")
+
 var motion = Vector2()
 var on_ground = false
 var is_attacking = false
-const HUD = preload("res://HUD.tscn")
 var hud = HUD.instance()
 
 func _ready():
-		_physics_process(true)
+	_physics_process(true)
 
 func _physics_process(_delta):
 	motion.y += GRAVITY
@@ -87,7 +88,7 @@ func _on_AnimatedSprite_animation_finished():
 	is_attacking = false
 	
 func Fall():
-	 get_tree().change_scene("res://World.tscn")
+	get_tree().change_scene("res://World.tscn")
 
 
 
