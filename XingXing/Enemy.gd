@@ -26,4 +26,4 @@ func _physics_process(delta):
 
 
 func _on_Checker_body_entered(body):
-	print("aaa")
+	get_tree().change_scene("res://World.tscn")

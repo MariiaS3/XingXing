@@ -25,7 +25,7 @@ animations = [ {
 extents = Vector2( 31.7748, 32.725 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 34.1643, 36.4675 )
+extents = Vector2( 34.1643, 28.0491 )
 
 [node name="Enemy" type="KinematicBody2D"]
 light_mask = -2147483648
@@ -53,10 +53,10 @@ collision_mask = 16
 
 [node name="Checker" type="Area2D" parent="."]
 light_mask = 0
-collision_layer = 16
+collision_layer = 16384
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checker"]
-light_mask = 0
-position = Vector2( 1.96428, 7.01538 )
+light_mask = 16384
+position = Vector2( 2.24489, 15.4338 )
 shape = SubResource( 3 )
 [connection signal="body_entered" from="Checker" to="." method="_on_Checker_body_entered"]
