@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Floor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://grid.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Control.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://background/mars-landscape-alien-planet-martian-background/1781.jpg" type="Texture" id=25]
@@ -118,6 +119,12 @@ tile_data = PoolIntArray( 524289, 1, 0, 524290, 2, 0, 524291, 4, 0, 524295, 1, 0
 [node name="Enemy" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1109.07, 68.5489 )
 direction = 1
+
+[node name="grid" parent="." instance=ExtResource( 5 )]
+margin_left = 376.0
+margin_top = 428.0
+margin_right = 778.0
+margin_bottom = 508.0
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
