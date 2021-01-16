@@ -5,6 +5,9 @@ var rndX
 var rndY
 
 func _ready():
+	if Global.quiz > 0:
+		$Wiesielec/CollisionShape2D.disabled =true
+		queue_free()
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var rndX = rng.randi_range(200, 50)

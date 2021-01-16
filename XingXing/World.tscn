@@ -25,6 +25,7 @@ script = ExtResource( 44 )
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 pause_mode = 1
 position = Vector2( 176, 150.918 )
+z_index = 1
 collision_mask = 14
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -120,7 +121,6 @@ scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
 next_scene = "res://Bonus_Scen.tscn"
 player_spawn_location = Vector2( 168, 192 )
-player_direction = 1
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 light_mask = 512
@@ -138,12 +138,14 @@ direction = 1
 [node name="Hearts" parent="." instance=ExtResource( 8 )]
 
 [node name="Szybienica" parent="." instance=ExtResource( 5 )]
+pause_mode = 0
 margin_left = 376.0
 margin_top = 428.0
 margin_right = 778.0
 margin_bottom = 508.0
 
 [node name="grid" parent="." instance=ExtResource( 9 )]
+pause_mode = 0
 margin_left = 1447.17
 margin_top = 445.909
 margin_right = 1788.17

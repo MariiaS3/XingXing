@@ -18,9 +18,9 @@ func _physics_process(delta):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
-	pass 
 
 
-func _on_Area2D_body_entered(_body):
+func _on_Area2D_body_entered(body):
+	if "Enemy" in body.name:
+		body.dead()
 	queue_free()
-	pass

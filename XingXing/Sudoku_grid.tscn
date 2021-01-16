@@ -20,6 +20,7 @@ wait_time = 5.0
 autostart = true
 
 [node name="Wiesielec" type="Area2D" parent="."]
+visible = false
 position = Vector2( 96, 32 )
 
 [node name="Sprite" type="Sprite" parent="Wiesielec"]
