@@ -53,10 +53,10 @@ margin_bottom = 580.591
 
 [node name="Control" parent="CanvasLayer2" instance=ExtResource( 6 )]
 pause_mode = 0
-margin_left = 90.7716
-margin_top = 23.8633
-margin_right = -312.228
-margin_bottom = -122.137
+margin_left = 63.4198
+margin_top = 29.8093
+margin_right = -339.58
+margin_bottom = -116.191
 
 [node name="coins" type="Node2D" parent="."]
 pause_mode = 1
