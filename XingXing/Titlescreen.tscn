@@ -1,4 +1,27 @@
-[gd_scene format=2]
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://alien_armor/armor__0000_idle_1.png" type="Texture" id=1]
+[ext_resource path="res://fonts/KiriFont.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://dodatki/UI/grey_button13.png" type="Texture" id=3]
+[ext_resource path="res://dodatki/UI/arrow-UP.png" type="Texture" id=4]
+[ext_resource path="res://fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Play.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 10
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.380392, 0.294118, 0.243137, 0.462745 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 55
+font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -10,3 +33,175 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1280.0
 margin_bottom = 720.0
+color = Color( 0.278431, 0.00784314, 0, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 38.7272
+margin_top = 262.273
+margin_right = 251.727
+margin_bottom = 691.273
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 367.09
+margin_top = 104.59
+margin_right = 933.09
+margin_bottom = 205.59
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.529412, 0.713726, 0.164706, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "XingXing"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 979.656
+margin_top = 400.09
+margin_right = 1247.66
+margin_bottom = 674.09
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 27.0
+margin_top = 190.0
+margin_right = 108.0
+margin_bottom = 243.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+margin_left = 27.0
+margin_top = 130.0
+margin_right = 76.0
+margin_bottom = 175.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+margin_left = 27.0
+margin_top = 10.0
+margin_right = 76.0
+margin_bottom = 55.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect4" type="TextureRect" parent="Panel"]
+margin_left = 27.0
+margin_top = 70.0
+margin_right = 76.0
+margin_bottom = 115.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect5" type="TextureRect" parent="Panel"]
+margin_left = 36.8409
+margin_top = 77.1591
+margin_right = 66.8409
+margin_bottom = 107.159
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="Panel"]
+margin_left = 35.0
+margin_top = 167.0
+margin_right = 65.0
+margin_bottom = 197.0
+rect_rotation = -90.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="TextureRect7" type="TextureRect" parent="Panel"]
+margin_left = 68.6818
+margin_top = 17.8409
+margin_right = 98.6818
+margin_bottom = 47.8409
+rect_rotation = 90.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 37.9547
+margin_top = 194.114
+margin_right = 97.9547
+margin_bottom = 239.114
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Ctrl"
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 140.0
+margin_top = 10.0
+margin_right = 221.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.964706, 0.960784, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Panel"]
+margin_left = 140.0
+margin_top = 70.0
+margin_right = 226.0
+margin_bottom = 115.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.964706, 0.960784, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Panel"]
+margin_left = 140.0
+margin_top = 130.0
+margin_right = 226.0
+margin_bottom = 175.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.964706, 0.960784, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Panel"]
+margin_left = 140.0
+margin_top = 190.0
+margin_right = 233.0
+margin_bottom = 235.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.964706, 0.960784, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Shoot"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 486.419
+margin_top = 307.361
+margin_right = 762.419
+margin_bottom = 451.361
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.996078, 0.988235, 0.984314, 1 )
+custom_colors/font_color_hover = Color( 0.529412, 0.713726, 0.164706, 1 )
+text = "Play"
+flat = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="Play" method="_on_Play_pressed"]
