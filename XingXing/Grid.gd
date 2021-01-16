@@ -5,7 +5,7 @@ var rndX
 var rndY
 
 func _ready():
-	if Global.quiz > 0:
+	if PlayerData.quize > 0:
 		$Wiesielec/CollisionShape2D.disabled =true
 		queue_free()
 	var rng = RandomNumberGenerator.new()
@@ -21,4 +21,4 @@ func _on_Timer_timeout():
 
 
 func _on_Wiesielec_body_entered(body):
-	Global.quiz+=1
+	PlayerData.quize+=1
