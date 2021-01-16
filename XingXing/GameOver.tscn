@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://alien_armor/armor__0025_dead_4.png" type="Texture" id=2]
+[ext_resource path="res://GameOverButton.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 11
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1.25989
+margin_right = 1281.26
+margin_bottom = 720.0
+color = Color( 0.941176, 0.113725, 0.113725, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="armor__0025_dead_4" type="Sprite" parent="TextureRect"]
+position = Vector2( 240.961, 607.612 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 269.329
+margin_top = 157.581
+margin_right = 980.329
+margin_bottom = 258.581
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.513726, 0.0313726, 0.0313726, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Game Over"
+
+[node name="GameOverButton" type="Button" parent="."]
+margin_left = 438.546
+margin_top = 361.859
+margin_right = 795.546
+margin_bottom = 459.859
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.529412, 0.713726, 0.164706, 1 )
+text = "Main Menu"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="GameOverButton" to="GameOverButton" method="_on_GameOverButton_pressed"]

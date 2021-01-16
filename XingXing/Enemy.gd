@@ -47,7 +47,7 @@ func _on_Checker_body_entered(_body):
 	hearts = hearts - 1
 	emit_signal("life_changed", hearts)
 	if hearts <= 0:
-		get_tree().change_scene("res://World.tscn")
+		get_tree().change_scene("res://GameOver.tscn")
 
 
 func _on_Timer_timeout():
