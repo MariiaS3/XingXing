@@ -17,12 +17,11 @@ var grid_origin
 var check_result = 3
 
 func _ready():
-	PlaySudoku.connect("sudoku", self, "clear_grid")
+	Global.connect("sudoku", self, "clear_grid")
 	
 func clear_grid():
 	self.paused = true
 	check_the_result.text = "Check the result: %s" % check_result
-	result()
 	sudoku_grid = [
 		[  0, 0, 2, 5, 0, 9, 6, 1, 7],
 		[  0, 1, 0, 4, 6, 7, 0, 2, 0],
@@ -41,12 +40,13 @@ func clear_grid():
 			var number = sudoku_grid[y][x]
 			$ColorRect/grid_tiles.set_cell(x, y, number - 1)
 	$ColorRect/grid_tiles.set_cell(0, 0,9)
+	result()
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if t==0:
 		$ColorRect/grid_tiles.set_cell(j,i,9)
-		
+		++t
 
 func result():
 	grid_origin = [

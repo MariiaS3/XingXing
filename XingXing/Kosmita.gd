@@ -91,11 +91,3 @@ func Fall():
 	get_tree().change_scene("res://World.tscn")
 
 
-
-func _on_Area2D_area_entered(area):
-	if quize < 1:
-		PlayerData.emit_signal("quiz")
-	elif quize >  2:
-		PlaySudoku.emit_signal("sudoku")
-	print(quize)
-	++quize
