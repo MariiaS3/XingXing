@@ -146,10 +146,10 @@ margin_bottom = 508.0
 
 [node name="grid" parent="." instance=ExtResource( 9 )]
 pause_mode = 0
-margin_left = 1447.17
-margin_top = 445.909
-margin_right = 1788.17
-margin_bottom = 502.909
+margin_left = 1437.08
+margin_top = 449.273
+margin_right = 1778.08
+margin_bottom = 506.273
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
