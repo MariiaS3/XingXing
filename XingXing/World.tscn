@@ -146,20 +146,21 @@ direction = 1
 [node name="Hearts" parent="." instance=ExtResource( 8 )]
 
 [node name="Szybienica" parent="." instance=ExtResource( 5 )]
-pause_mode = 0
-margin_left = 376.0
-margin_top = 428.0
-margin_right = 778.0
-margin_bottom = 508.0
+pause_mode = 2
+margin_left = 211.184
+margin_top = 429.682
+margin_right = 613.184
+margin_bottom = 509.682
 
 [node name="grid" parent="." instance=ExtResource( 9 )]
-pause_mode = 0
-margin_left = 888.0
-margin_top = 456.0
-margin_right = 1229.0
-margin_bottom = 513.0
+pause_mode = 2
+margin_left = 948.545
+margin_top = 452.636
+margin_right = 1289.54
+margin_bottom = 509.636
 
 [node name="garam_grid" parent="." instance=ExtResource( 12 )]
+pause_mode = 2
 margin_left = 1344.0
 margin_top = 440.0
 margin_right = 1792.0
