@@ -16,9 +16,29 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "2",
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "8",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "10",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "11",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ) ],
@@ -51,29 +71,9 @@ animations = [ {
 "name": "5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "3",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "6",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "8",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "10",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "11",
+"name": "2",
 "speed": 5.0
 } ]
 
@@ -81,9 +81,9 @@ animations = [ {
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
+margin_left = 1.0
 margin_top = 2.0
-margin_right = -398.0
+margin_right = -568.0
 margin_bottom = -144.0
 script = ExtResource( 1 )
 __meta__ = {
@@ -95,6 +95,7 @@ pause_mode = 2
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = 8.0
 color = Color( 0.905882, 0.631373, 0.341176, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -102,10 +103,10 @@ __meta__ = {
 
 [node name="Button" type="Button" parent="ColorRect"]
 modulate = Color( 0.937255, 0.921569, 0.568627, 1 )
-margin_left = 711.218
-margin_top = 521.0
-margin_right = 862.218
-margin_bottom = 577.0
+margin_left = 583.0
+margin_top = 510.0
+margin_right = 710.0
+margin_bottom = 566.0
 text = "Press"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -113,20 +114,20 @@ __meta__ = {
 
 [node name="TextEdit" type="TextEdit" parent="ColorRect"]
 modulate = Color( 0.521569, 0.247059, 0.92549, 1 )
-margin_left = 2.36517
-margin_top = 515.939
-margin_right = 707.365
-margin_bottom = 577.939
+margin_left = 5.14587
+margin_top = 510.0
+margin_right = 520.146
+margin_bottom = 572.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="ColorRect"]
 modulate = Color( 0.0431373, 0.0392157, 0.0392157, 1 )
-margin_left = 2.6546
-margin_top = 463.655
-margin_right = 876.655
-margin_bottom = 517.655
+margin_left = 7.0
+margin_top = 454.0
+margin_right = 695.0
+margin_bottom = 508.0
 text = "Godot"
 align = 1
 valign = 1
@@ -135,8 +136,8 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ColorRect"]
-position = Vector2( 435, 238 )
-scale = Vector2( 2.63541, 1.87443 )
+position = Vector2( 359, 230 )
+scale = Vector2( 2.21159, 1.87443 )
 frames = SubResource( 1 )
 animation = "0"
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_Button_pressed"]
