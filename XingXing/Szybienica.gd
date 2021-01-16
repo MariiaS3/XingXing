@@ -2,9 +2,6 @@ extends Control
 var i=0;
 var j=0;
 
-const PLAYER = preload("res://Kosmita.tscn")
-var player = PLAYER.instance()
-
 var array = ["Wypisz pięć pierwszych liczb pierwszych",
 "Wypisz liczby parzyste mniejsze od 13 binarne licząc od 1",
 "Dodaj do siebie dwie liczby binarne: 10111+11001",
@@ -126,7 +123,6 @@ func _on_Button_pressed():
 		$ColorRect/AnimatedSprite.play("0")
 		get_tree().paused= false
 		self.paused = false
-		player.position = Vector2()
 	
 
 

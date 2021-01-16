@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://Szybienica.gd" type="Script" id=1]
 [ext_resource path="res://wiesielec/Sprite-0002_1.png" type="Texture" id=2]
 [ext_resource path="res://wiesielec/Sprite-0002_0.png" type="Texture" id=3]
 [ext_resource path="res://wiesielec/Sprite-0002_7.png" type="Texture" id=4]

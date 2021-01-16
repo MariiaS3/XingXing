@@ -6,7 +6,7 @@ const SPEED = 200
 const HEIGHT = -600
 const FIREBALL = preload("res://Node2D.tscn")
 const HUD = preload("res://HUD.tscn")
-
+var quize =0
 var motion = Vector2()
 var on_ground = false
 var is_attacking = false
@@ -93,4 +93,9 @@ func Fall():
 
 
 func _on_Area2D_area_entered(area):
-	PlayerData.quize += 1
+	if quize < 1:
+		PlayerData.emit_signal("quiz")
+	elif quize >  2:
+		PlaySudoku.emit_signal("sudoku")
+	print(quize)
+	++quize

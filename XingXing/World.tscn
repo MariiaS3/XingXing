@@ -1,13 +1,14 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Floor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://grid.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Control.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Szybienica.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Hearts.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sudoku.tscn" type="PackedScene" id=9]
 [ext_resource path="res://background/mars-landscape-alien-planet-martian-background/1781.jpg" type="Texture" id=25]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=40]
 [ext_resource path="res://World.gd" type="Script" id=44]
@@ -38,14 +39,22 @@ centered = false
 offset = Vector2( 10, -10 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 100
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 6 )]
-light_mask = 512
-margin_left = 248.0
-margin_top = 48.0
-margin_right = -155.0
-margin_bottom = -91.0
+pause_mode = 0
+margin_left = 232.042
+margin_top = -1.36359
+margin_right = -170.958
+margin_bottom = -147.364
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Sudoku" parent="CanvasLayer2" instance=ExtResource( 9 )]
+pause_mode = 1
+margin_left = 294.986
+margin_top = -1.99994
+margin_right = -196.094
+margin_bottom = 574.0
 
 [node name="coins" type="Node2D" parent="."]
 pause_mode = 1
@@ -110,6 +119,7 @@ scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
 next_scene = "res://Bonus_Scen.tscn"
 player_spawn_location = Vector2( 168, 192 )
+player_direction = 1
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 light_mask = 512
@@ -125,6 +135,7 @@ position = Vector2( 1109.07, 68.5489 )
 direction = 1
 
 [node name="grid" parent="." instance=ExtResource( 5 )]
+pause_mode = 1
 margin_left = 376.0
 margin_top = 428.0
 margin_right = 778.0
