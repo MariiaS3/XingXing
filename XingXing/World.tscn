@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Hearts.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sudoku_grid.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Sudoku.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Garam.tscn" type="PackedScene" id=11]
+[ext_resource path="res://garam_grid.tscn" type="PackedScene" id=12]
 [ext_resource path="res://background/mars-landscape-alien-planet-martian-background/1781.jpg" type="Texture" id=25]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=40]
 [ext_resource path="res://World.gd" type="Script" id=44]
@@ -44,19 +46,25 @@ offset = Vector2( 10, -10 )
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 pause_mode = 2
 
+[node name="Garam" parent="CanvasLayer2" instance=ExtResource( 11 )]
+margin_left = 374.08
+margin_top = 32.0
+margin_right = 1145.08
+margin_bottom = 608.0
+
 [node name="Sudoku" parent="CanvasLayer2" instance=ExtResource( 10 )]
 pause_mode = 0
-margin_left = 411.077
-margin_top = 4.59106
-margin_right = 1180.08
-margin_bottom = 580.591
+margin_left = 182.08
+margin_top = 32.0
+margin_right = 951.083
+margin_bottom = 608.0
 
 [node name="Control" parent="CanvasLayer2" instance=ExtResource( 6 )]
 pause_mode = 0
-margin_left = 63.4198
-margin_top = 29.8093
-margin_right = -339.58
-margin_bottom = -116.191
+margin_left = 63.0
+margin_top = 30.0
+margin_right = -508.0
+margin_bottom = -116.0
 
 [node name="coins" type="Node2D" parent="."]
 pause_mode = 1
@@ -146,10 +154,16 @@ margin_bottom = 508.0
 
 [node name="grid" parent="." instance=ExtResource( 9 )]
 pause_mode = 0
-margin_left = 1437.08
-margin_top = 449.273
-margin_right = 1778.08
-margin_bottom = 506.273
+margin_left = 888.0
+margin_top = 456.0
+margin_right = 1229.0
+margin_bottom = 513.0
+
+[node name="garam_grid" parent="." instance=ExtResource( 12 )]
+margin_left = 1344.0
+margin_top = 440.0
+margin_right = 1792.0
+margin_bottom = 504.08
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
