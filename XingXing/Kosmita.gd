@@ -85,6 +85,6 @@ func _on_AnimatedSprite_animation_finished():
 	is_attacking = false
 	
 func Fall():
-	get_tree().change_scene("res://World.tscn")
+	get_tree().change_scene("res://GameOver.tscn")
 
 

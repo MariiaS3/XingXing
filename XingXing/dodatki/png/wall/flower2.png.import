@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flower2.png-1387e3b6f2c18eb1b030d5601b1bc4ef.stex"
+path="res://.import/flower2.png-f081b9168c19d41db6a49f526119e675.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dodatki/png/wall/flower2.png"
-dest_files=[ "res://.import/flower2.png-1387e3b6f2c18eb1b030d5601b1bc4ef.stex" ]
+source_file="res://dodatki/PNG/wall/flower2.png"
+dest_files=[ "res://.import/flower2.png-f081b9168c19d41db6a49f526119e675.stex" ]
 
 [params]
 
