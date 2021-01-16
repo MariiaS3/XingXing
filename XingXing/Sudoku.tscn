@@ -275,6 +275,7 @@
 
 [node name="Sudoku" type="Control"]
 pause_mode = 2
+modulate = Color( 0.933333, 0.92549, 0.74902, 1 )
 anchor_left = 0.014
 anchor_right = 0.014
 margin_left = -6.92
@@ -292,19 +293,20 @@ anchor_bottom = 0.003
 margin_left = 1.0
 margin_right = 769.0
 margin_bottom = 572.272
-color = Color( 0.929412, 0.929412, 0.858824, 1 )
+color = Color( 0.894118, 0.894118, 0.411765, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="sudoku_grid_image" type="Sprite" parent="ColorRect"]
-position = Vector2( 288, 288 )
+position = Vector2( 288, 289.335 )
 scale = Vector2( 0.998123, 1 )
 texture = ExtResource( 4 )
 
 [node name="grid_tiles" type="TileMap" parent="ColorRect"]
 tile_set = SubResource( 1 )
 format = 1
+tile_data = PoolIntArray( 262147, 9, 0 )
 
 [node name="UP" type="Button" parent="ColorRect"]
 margin_left = 640.0

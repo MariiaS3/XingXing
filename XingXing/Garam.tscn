@@ -147,6 +147,8 @@
 9/z_index = 0
 
 [node name="Garam" type="Control"]
+modulate = Color( 0.87451, 0.968627, 0.756863, 1 )
+self_modulate = Color( 0.6, 0.176471, 0.176471, 1 )
 anchor_left = 0.014
 anchor_right = 0.014
 margin_left = -6.92
@@ -164,7 +166,7 @@ anchor_bottom = 0.003
 margin_left = 1.0
 margin_right = 769.0
 margin_bottom = 572.272
-color = Color( 0.941176, 0.941176, 0.941176, 1 )
+color = Color( 0.466667, 0.756863, 0.627451, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -222,9 +224,9 @@ __meta__ = {
 
 [node name="1" type="Button" parent="ColorRect"]
 margin_left = 576.0
-margin_top = 376.0
+margin_top = 382.727
 margin_right = 640.0
-margin_bottom = 444.0
+margin_bottom = 450.727
 text = "1"
 __meta__ = {
 "_edit_use_anchors_": false

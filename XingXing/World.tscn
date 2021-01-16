@@ -54,16 +54,16 @@ margin_bottom = 608.0
 
 [node name="Sudoku" parent="CanvasLayer2" instance=ExtResource( 10 )]
 pause_mode = 0
-margin_left = 182.08
-margin_top = 32.0
-margin_right = 951.083
-margin_bottom = 608.0
+margin_left = 181.762
+margin_top = 34.0454
+margin_right = 953.762
+margin_bottom = 610.045
 
 [node name="Control" parent="CanvasLayer2" instance=ExtResource( 6 )]
 pause_mode = 0
-margin_left = 63.0
-margin_top = 30.0
-margin_right = -508.0
+margin_left = 61.3182
+margin_top = 30.0001
+margin_right = -509.682
 margin_bottom = -116.0
 
 [node name="coins" type="Node2D" parent="."]
@@ -147,10 +147,10 @@ direction = 1
 
 [node name="Szybienica" parent="." instance=ExtResource( 5 )]
 pause_mode = 2
-margin_left = 211.184
-margin_top = 429.682
-margin_right = 613.184
-margin_bottom = 509.682
+margin_left = 300.319
+margin_top = 421.273
+margin_right = 702.319
+margin_bottom = 501.273
 
 [node name="grid" parent="." instance=ExtResource( 9 )]
 pause_mode = 2
