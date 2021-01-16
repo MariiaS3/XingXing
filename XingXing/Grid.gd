@@ -19,6 +19,5 @@ func _on_Timer_timeout():
 	$Wiesielec.visible = !$Wiesielec.visible
 	_ready()
 
-
 func _on_Wiesielec_body_entered(body):
 	PlayerData.quize+=1
