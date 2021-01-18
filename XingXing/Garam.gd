@@ -2,7 +2,10 @@ extends Control
 
 var i=0
 var j=0
-var t=0
+var t=4
+var reward = 2
+var index = PlayerReward.index
+
 
 onready var scene_tree: SceneTree = get_tree()
 onready var pause_overlay: ColorRect = $ColorRect
@@ -17,22 +20,23 @@ var check_result = 3
 func _ready():
 	PlayerData.connect("garam", self, "clear_grid")
 
+
 func _unhandled_input(_event: InputEvent) -> void:
 	if t==0:
 		$ColorRect/grid_tiles.set_cell(j,i,9)
-		++t
+		--t
 
 func result():
 	grid_origin = [
-		[  6,10,1,10,7,10,4,10,3],
-		[  10,10,10,10,10,10,10,10,10],
+		[  6,11,1,11,7,11,4,11,3],
+		[  11,10,10,10,11,10,10,10,11],
 		[  4,10,10,10,7,10,10,10,3],
-		[  10,10,10,10,10,10,10,10,10],
-		[  2,10,2,10,1,10,8,10,9],
-		[  10,10,10,10,10,10,10,10,10],
+		[  11,10,10,10,11,10,10,10,11],
+		[  2,11,1,11,1,11,8,11,9],
+		[  11,10,10,10,11,10,10,10,11],
 		[  4,10,10,10,5,10,10,10,3],
-		[  10,10,10,10,10,10,10,10,10],
-		[  8,10,3,10,5,10,2,10,3]
+		[  11,10,10,10,11,10,10,10,11],
+		[  8,11,3,11,5,11,2,11,3]
 	]
 	
 func clear_grid():
@@ -40,7 +44,7 @@ func clear_grid():
 	sudoku_grid = [
 		[  0,11,1,11,7,11,0,11,0],
 		[  11,10,10,10,11,10,10,10,11],
-		[  4,10,10,10,0,10,10,10,3],
+		[  4,10,10,10,7,10,10,10,3],
 		[  11,10,10,10,11,10,10,10,11],
 		[  0,11,0,11,1,11,0,11,9],
 		[  11,10,10,10,11,10,10,10,11],
@@ -56,6 +60,7 @@ func clear_grid():
 			if number !=10 && number !=11:
 				$ColorRect/grid_tiles.set_cell(x, y, number - 1)
 	$ColorRect/grid_tiles.set_cell(0, 0,9)
+	result()
 
 
 func _on_UP_pressed():
@@ -366,10 +371,9 @@ func _on_9_pressed():
 
 
 func _on_0_pressed():
-	if sudoku_grid[select_position_index[0]][select_position_index[1]]!=0:
+	if sudoku_grid[select_position_index[0]][select_position_index[1]]!=0 &&  sudoku_grid[select_position_index[0]][select_position_index[1]] !=  grid_origin[select_position_index[0]][select_position_index[1]]:
 		$ColorRect/grid_tiles.set_cell(select_position_index[1],select_position_index[0],9)
 	sudoku_grid[select_position_index[0]][select_position_index[1]]=0
-
 
 func set_paused(value: bool) -> void:
 	paused = value
@@ -377,5 +381,17 @@ func set_paused(value: bool) -> void:
 	pause_overlay.visible = value
 
 func _on_SOLVE_pressed():
-	get_tree().paused= false
-	self.paused = false
+	for y in range (0, sudoku_grid.size()):
+			for x in range(0, sudoku_grid.size()):
+				if sudoku_grid[y][x] != grid_origin[y][x]:
+					t=t-1
+					if t==2  || t==0 :
+						reward = reward-1
+	if reward !=0:
+		PlayerReward.index += reward
+		PlayerReward.add_item(PlayerReward.index-reward)
+		get_tree().paused= false
+		self.paused = false
+	else:
+		get_tree().paused= false
+		self.paused = false
