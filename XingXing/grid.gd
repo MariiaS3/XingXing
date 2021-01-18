@@ -18,5 +18,8 @@ func _on_Timer_timeout():
 		$Sudoku/CollisionShape2D.disabled =true
 		queue_free()
 
-func _on_Wiesielec_body_entered(_body):
+
+
+
+func _on_Sudoku_body_entered(body):
 	PlayerData.sudok+=1
