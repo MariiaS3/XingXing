@@ -36,7 +36,7 @@ func _on_quiz() -> void:
 	label.text = array[j]
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if i == 0:
 		$ColorRect/AnimatedSprite.play("0")
 

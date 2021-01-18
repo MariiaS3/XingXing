@@ -17,7 +17,7 @@ var grid_origin
 var check_result = 3
 
 func _ready():
-	Global.connect("sudoku", self, "clear_grid")
+	PlayerData.connect("sudoku", self, "clear_grid")
 	
 func clear_grid():
 	self.paused = true
@@ -43,7 +43,7 @@ func clear_grid():
 	result()
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if t==0:
 		$ColorRect/grid_tiles.set_cell(j,i,9)
 		++t

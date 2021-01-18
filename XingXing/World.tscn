@@ -132,12 +132,12 @@ player_spawn_location = Vector2( 168, 192 )
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 light_mask = 512
-tile_data = PoolIntArray( 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131089, 0, 0, 262141, 7, 0, 196618, 0, 0, 196623, 0, 0, 196624, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262169, 0, 0, 262170, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
+tile_data = PoolIntArray( 65554, 0, 0, 65555, 0, 0, 65556, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131089, 0, 0, 262141, 7, 0, 196618, 0, 0, 196623, 0, 0, 196624, 0, 0, 196635, 0, 0, 196636, 0, 0, 196637, 0, 0, 196638, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262169, 0, 0, 262170, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
 
 [node name="Floor" parent="." instance=ExtResource( 3 )]
 light_mask = 512
 collision_layer = 128
-tile_data = PoolIntArray( 524289, 1, 0, 524290, 2, 0, 524291, 4, 0, 524295, 1, 0, 524296, 2, 0, 524297, 2, 0, 524298, 4, 0, 524306, 1, 0, 524307, 4, 0, 524312, 1, 0, 524313, 2, 0, 524314, 2, 0, 524315, 2, 0, 589824, 1, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 4, 0, 589830, 1, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 4, 0, 589838, 1, 0, 589839, 2, 0, 589840, 2, 0, 589841, 2, 0, 589842, 0, 0, 589843, 0, 0, 589844, 4, 0, 589847, 1, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0 )
+tile_data = PoolIntArray( 524289, 1, 0, 524290, 2, 0, 524291, 4, 0, 524295, 1, 0, 524296, 2, 0, 524297, 2, 0, 524298, 4, 0, 524306, 1, 0, 524307, 4, 0, 524312, 1, 0, 524313, 2, 0, 524314, 2, 0, 524315, 2, 0, 524316, 2, 0, 524317, 2, 0, 524318, 2, 0, 524319, 4, 0, 589824, 1, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 4, 0, 589830, 1, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 4, 0, 589838, 1, 0, 589839, 2, 0, 589840, 2, 0, 589841, 2, 0, 589842, 0, 0, 589843, 0, 0, 589844, 4, 0, 589847, 1, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 4, 0 )
 
 [node name="Enemy" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1109.07, 68.5489 )
@@ -147,24 +147,24 @@ direction = 1
 
 [node name="Szybienica" parent="." instance=ExtResource( 5 )]
 pause_mode = 2
-margin_left = 300.319
-margin_top = 421.273
-margin_right = 702.319
-margin_bottom = 501.273
+margin_left = 399.0
+margin_top = 445.0
+margin_right = 768.0
+margin_bottom = 508.0
 
-[node name="grid" parent="." instance=ExtResource( 9 )]
+[node name="grid_sudoku" parent="." instance=ExtResource( 9 )]
 pause_mode = 2
-margin_left = 948.545
-margin_top = 452.636
-margin_right = 1289.54
-margin_bottom = 509.636
+margin_left = 901.0
+margin_top = 453.0
+margin_right = 1338.0
+margin_bottom = 510.0
 
 [node name="garam_grid" parent="." instance=ExtResource( 12 )]
 pause_mode = 2
-margin_left = 1344.0
-margin_top = 440.0
-margin_right = 1792.0
-margin_bottom = 504.08
+margin_left = 1545.81
+margin_top = 433.273
+margin_right = 1993.81
+margin_bottom = 497.353
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]

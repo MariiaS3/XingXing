@@ -15,9 +15,9 @@ var grid_origin
 var check_result = 3
 
 func _ready():
-	PlayGaram.connect("garam", self, "clear_grid")
+	PlayerData.connect("garam", self, "clear_grid")
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if t==0:
 		$ColorRect/grid_tiles.set_cell(j,i,9)
 		++t
@@ -366,7 +366,7 @@ func _on_9_pressed():
 
 
 func _on_0_pressed():
-	if sudoku_grid[select_position_index[0]][select_position_index[1]]!=0 &&  sudoku_grid[select_position_index[0]][select_position_index[1]] !=  grid_origin[select_position_index[0]][select_position_index[1]]:
+	if sudoku_grid[select_position_index[0]][select_position_index[1]]!=0:
 		$ColorRect/grid_tiles.set_cell(select_position_index[1],select_position_index[0],9)
 	sudoku_grid[select_position_index[0]][select_position_index[1]]=0
 

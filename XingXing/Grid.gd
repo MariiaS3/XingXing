@@ -1,23 +1,22 @@
 extends Control
 
-
+var PauseTime = Timer.new()
 var rndX 
 var rndY
 
 func _ready():
-	if PlayerData.quize > 0:
-		$Wiesielec/CollisionShape2D.disabled =true
-		queue_free()
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var rndX = rng.randi_range(200, 50)
-	var rndY = rng.randi_range(30, 30)
+	rndX = rng.randi_range(200, 50)
+	rndY = rng.randi_range(30, 30)
 	$Wiesielec.position = Vector2(rndX, rndY)
-	$Timer.connect("timeout",self,"_on_Timer_timeout()")
+	PauseTime.connect("timeout",$Wiesielec,"_on_Timer_timeout()")
 
 func _on_Timer_timeout():
 	$Wiesielec.visible = !$Wiesielec.visible
-	_ready()
+	if PlayerData.quize > 0:
+		$Wiesielec/CollisionShape2D.disabled =true
+		queue_free()
 
-func _on_Wiesielec_body_entered(body):
+func _on_Wiesielec_body_entered(_body):
 	PlayerData.quize+=1

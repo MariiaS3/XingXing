@@ -1,9 +1,5 @@
 extends Node2D
  
-signal sudoku
-
-var quiz: = 0 setget set_quiz
-
 var player_initial_map_position = Vector2(168,192)
 var player_facing_direction = 1
 var DisplayValue = 0
@@ -23,6 +19,3 @@ func load_game(section,key):
 	DisplayValue = config.get_value(section,key,DisplayValue)
 	
 
-func set_quiz(new_value: int) -> void:
-	quiz = new_value
-	emit_signal("sudoku")
