@@ -9,17 +9,14 @@ func _ready():
 	rng.randomize()
 	rndX = rng.randi_range(200, 50)
 	rndY = rng.randi_range(30, 30)
-	$Sudoku.position = Vector2(rndX, rndY)
-	PauseTime.connect("timeout",$Sudoku,"_on_Timer_timeout()")
+	$Wiesielec.position = Vector2(rndX, rndY)
+	PauseTime.connect("timeout",$Wiesielec,"_on_Timer_timeout()")
 
 func _on_Timer_timeout():
-	$Sudoku.visible = !$Sudoku.visible
-	if PlayerData.sudok > 0:
-		$Sudoku/CollisionShape2D.disabled =true
+	$Wiesielec.visible = !$Wiesielec.visible
+	if PlayerData.quize > 0:
+		$Wiesielec/CollisionShape2D.disabled =true
 		queue_free()
 
-
-
-
-func _on_Sudoku_body_entered(body):
-	PlayerData.sudok+=1
+func _on_Wiesielec_body_entered(_body):
+	PlayerData.quize+=1
