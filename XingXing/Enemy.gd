@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 signal life_changed(player_hearts)
 
 var velocity = Vector2()
@@ -7,7 +8,6 @@ export var direction = -1
 
 var max_hearts = 3
 var hearts = max_hearts
-
 var is_dead = false 
 var i=0
 
@@ -44,6 +44,11 @@ func dead():
 
 func _on_Checker_body_entered(_body):
 	hearts = hearts - 1
+	if Global.bounce == false:
+		_body.position.x -=50
+	else:
+		_body.position.x +=50
+	print(_body.position)
 	emit_signal("life_changed", hearts)
 	if hearts <= 0:
 		get_tree().change_scene("res://GameOver.tscn")

@@ -6,6 +6,7 @@ var DisplayValue = 0
 var save_path = "res://save-file.cfg"
 var config = ConfigFile.new()
 var _settings = config.load(save_path)
+var bounce = false
 
 func _ready():
 	pass

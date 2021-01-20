@@ -14,10 +14,10 @@ func _ready():
 
 func _physics_process(_delta):
 	motion.y += GRAVITY
-	
 	if Input.is_action_pressed("ui_right" ):
 		if is_attacking == false || is_on_floor() == false: 
 			motion.x = SPEED 
+			Global.bounce = false
 			if is_attacking == false:
 				$AnimatedSprite.flip_h = false
 				$AnimatedSprite.play("Walk")
@@ -26,6 +26,7 @@ func _physics_process(_delta):
 	elif Input.is_action_pressed("ui_left"):
 		if is_attacking == false || is_on_floor() == false: 
 			motion.x = -SPEED
+			Global.bounce = true
 			if is_attacking == false:
 				$AnimatedSprite.flip_h = true
 				$AnimatedSprite.play("Walk")
@@ -74,10 +75,7 @@ func _physics_process(_delta):
 					motion.x = -SPEED
 					$AnimatedSprite.flip_h = true
 					$AnimatedSprite.play("jump_r_l")
-			
 		
-	
-	
 	motion = move_and_slide(motion, UP)
 	
 
@@ -88,3 +86,5 @@ func Fall():
 	get_tree().change_scene("res://GameOver.tscn")
 
 
+func _on_Area2D_body_entered(body):
+	pass # Replace with function body.
