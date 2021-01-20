@@ -38,7 +38,6 @@ func dead():
 	if i==2:
 		is_dead = true
 		velocity = Vector2(0,0)
-		$CollisionShape2D.disabled = true
 		$Timer.start()
 	i=i+1
 

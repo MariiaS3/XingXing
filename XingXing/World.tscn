@@ -4,14 +4,14 @@
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Floor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://grid.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Szybienica.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Quiz/Sudoku.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Quiz/Garam.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Hearts.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Sudoku_grid.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Sudoku.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Garam.tscn" type="PackedScene" id=11]
-[ext_resource path="res://garam_grid.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Quiz/Szybienica.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Quiz/Portal_Sudoku.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Quiz/Portal_Garam.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Quiz/Portal_Wiesielec.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Rewards.tscn" type="PackedScene" id=13]
 [ext_resource path="res://CanvasLayer.gd" type="Script" id=14]
 [ext_resource path="res://background/mars-landscape-alien-planet-martian-background/1781.jpg" type="Texture" id=25]
@@ -52,28 +52,26 @@ script = ExtResource( 14 )
 visible = false
 position = Vector2( 92.4985, 45.4084 )
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="Quiz" type="CanvasLayer" parent="."]
+
+[node name="Garam" parent="Quiz" instance=ExtResource( 6 )]
 pause_mode = 2
+margin_left = 351.301
+margin_top = 8.40897
+margin_right = 1122.3
+margin_bottom = 584.409
 
-[node name="Garam" parent="CanvasLayer2" instance=ExtResource( 11 )]
-margin_left = 374.08
-margin_top = 32.0
-margin_right = 1145.08
-margin_bottom = 608.0
+[node name="Sudoku" parent="Quiz" instance=ExtResource( 5 )]
+margin_left = 156.214
+margin_top = 10.0908
+margin_right = 925.214
+margin_bottom = 586.091
 
-[node name="Sudoku" parent="CanvasLayer2" instance=ExtResource( 10 )]
-pause_mode = 0
-margin_left = 181.762
-margin_top = 34.0454
-margin_right = 953.762
-margin_bottom = 610.045
-
-[node name="Wiesielec" parent="CanvasLayer2" instance=ExtResource( 6 )]
-pause_mode = 0
-margin_left = 61.3182
-margin_top = 30.0001
-margin_right = -509.682
-margin_bottom = -116.0
+[node name="Szybienica" parent="Quiz" instance=ExtResource( 9 )]
+margin_left = 34.6359
+margin_top = 8.72717
+margin_right = -534.364
+margin_bottom = -137.273
 
 [node name="coins" type="Node2D" parent="."]
 pause_mode = 1
@@ -138,6 +136,7 @@ scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
 next_scene = "res://Bonus_Scen.tscn"
 player_spawn_location = Vector2( 168, 192 )
+player_direction = 1
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 light_mask = 512
@@ -154,26 +153,23 @@ direction = 1
 
 [node name="Hearts" parent="." instance=ExtResource( 8 )]
 
-[node name="Szybienica" parent="." instance=ExtResource( 5 )]
-pause_mode = 2
-margin_left = 399.0
-margin_top = 445.0
-margin_right = 768.0
-margin_bottom = 508.0
+[node name="Portal_Garam" parent="." instance=ExtResource( 11 )]
+margin_left = 1550.61
+margin_top = 433.903
+margin_right = 1998.61
+margin_bottom = 497.983
 
-[node name="grid_sudoku" parent="." instance=ExtResource( 9 )]
-pause_mode = 2
-margin_left = 901.0
-margin_top = 453.0
-margin_right = 1338.0
-margin_bottom = 510.0
+[node name="Portal_Sudoku" parent="." instance=ExtResource( 10 )]
+margin_left = 900.0
+margin_top = 439.0
+margin_right = 1340.0
+margin_bottom = 511.0
 
-[node name="garam_grid" parent="." instance=ExtResource( 12 )]
-pause_mode = 2
-margin_left = 1545.81
-margin_top = 433.273
-margin_right = 1993.81
-margin_bottom = 497.353
+[node name="Portal_Wiesielec" parent="." instance=ExtResource( 12 )]
+margin_left = 355.226
+margin_top = 442.273
+margin_right = 785.226
+margin_bottom = 506.273
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
