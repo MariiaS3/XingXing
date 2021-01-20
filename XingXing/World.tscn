@@ -136,7 +136,6 @@ scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
 next_scene = "res://Bonus_Scen.tscn"
 player_spawn_location = Vector2( 168, 192 )
-player_direction = 1
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 light_mask = 512

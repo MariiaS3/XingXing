@@ -6,7 +6,7 @@ export(Vector2) var  player_spawn_location = Vector2.ZERO
 export(int) var  player_direction = 1
 
 func  _get_configuration_warning() -> String:
-	return "The next scene property  can't be empty" if not next_scene else ""
+	return "The next scene property can't be empty" if not next_scene else ""
 
 
 func _on_Portal_body_entered(_body):
