@@ -3,7 +3,7 @@ extends CanvasLayer
 var coins = 0
 
 func _ready():
-	$coins.text = String(coins)
+	$coins.text = String(Global.DisplayValue)
 	Save_hud()
 
 
@@ -13,7 +13,7 @@ func _on_coin_collected():
 	_ready()
 
 func Save_hud():
-	get_node("/root/Global").save_game("Values","ValueOne")
+	get_node("/root/Global").save_game("Values","ValueOne",Global.DisplayValue)
 
 
 

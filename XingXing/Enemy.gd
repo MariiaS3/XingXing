@@ -6,8 +6,6 @@ signal life_changed(player_hearts)
 var velocity = Vector2()
 export var direction = -1
 
-var max_hearts = 3
-var hearts = max_hearts
 var is_dead = false 
 var i=0
 
@@ -18,7 +16,7 @@ func _ready():
 	$RayCast2D.position.x = $CollisionShape2D.shape.get_extents().x * direction
 	
 	connect("life_changed", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
-	emit_signal("life_changed", max_hearts)
+	emit_signal("life_changed", Global.hearts_max)
 		
 func _physics_process(_delta):
 	
@@ -43,14 +41,14 @@ func dead():
 
 
 func _on_Checker_body_entered(_body):
-	hearts = hearts - 1
+	Global.hearts = Global.hearts - 1
 	if Global.bounce == false:
 		_body.position.x -=50
 	else:
 		_body.position.x +=50
 	print(_body.position)
-	emit_signal("life_changed", hearts)
-	if hearts <= 0:
+	emit_signal("life_changed", Global.hearts)
+	if Global.hearts <= 0:
 		get_tree().change_scene("res://GameOver.tscn")
 
 

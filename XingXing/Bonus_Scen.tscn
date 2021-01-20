@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Bonus_Scen.gd" type="Script" id=7]
 [ext_resource path="res://Local_portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Area2D.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Hearts.tscn" type="PackedScene" id=10]
 
 [node name="Bonus_Scen" type="Node2D"]
 script = ExtResource( 7 )
@@ -59,7 +60,7 @@ position = Vector2( 424, 72 )
 position = Vector2( 808, 688 )
 
 [node name="TileMap" parent="." instance=ExtResource( 5 )]
-tile_data = PoolIntArray( 65531, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 262141, 7, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
+tile_data = PoolIntArray( 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 262141, 7, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
 
 [node name="Local_portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1488.88, 14.3611 )
@@ -72,6 +73,9 @@ position = Vector2( 32, 480 )
 collision_mask = 2147483651
 next_scene = "res://World.tscn"
 player_spawn_location = Vector2( 168, 192 )
+player_direction = 1
+
+[node name="Hearts" parent="." instance=ExtResource( 10 )]
 [connection signal="coin_collected" from="Node/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Node/coin5" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Node/coin6" to="HUD" method="_on_coin_collected"]
