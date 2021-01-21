@@ -63,275 +63,269 @@ script = ExtResource( 14 )
 visible = false
 position = Vector2( 92.4985, 45.4084 )
 
-[node name="Local_portal" parent="." instance=ExtResource( 15 )]
-position = Vector2( 2913.2, 133.242 )
+[node name="Dekoracje" type="Node2D" parent="."]
 
-[node name="Local_portal2" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1821.27, 520.326 )
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="flower1" type="Sprite" parent="Node2D"]
+[node name="flower1" type="Sprite" parent="Dekoracje"]
 position = Vector2( 115.474, 429.438 )
 scale = Vector2( 0.20561, 0.157048 )
 texture = ExtResource( 18 )
 
-[node name="flower26" type="Sprite" parent="Node2D"]
+[node name="flower26" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3046.51, 558.509 )
 scale = Vector2( 0.22651, 0.151896 )
 texture = ExtResource( 19 )
 
-[node name="flower27" type="Sprite" parent="Node2D"]
+[node name="flower27" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3365.46, 492.582 )
 scale = Vector2( 0.22651, 0.151896 )
 texture = ExtResource( 19 )
 
-[node name="flower12" type="Sprite" parent="Node2D"]
+[node name="flower12" type="Sprite" parent="Dekoracje"]
 position = Vector2( 872.262, 492.233 )
 scale = Vector2( 0.270711, 0.219018 )
 texture = ExtResource( 23 )
 
-[node name="flower3" type="Sprite" parent="Node2D"]
+[node name="flower3" type="Sprite" parent="Dekoracje"]
 position = Vector2( 226.665, 491.872 )
 scale = Vector2( 0.20561, 0.157048 )
 texture = ExtResource( 18 )
 
-[node name="flower7" type="Sprite" parent="Node2D"]
+[node name="flower7" type="Sprite" parent="Dekoracje"]
 position = Vector2( 277.8, 493.061 )
 scale = Vector2( 0.20561, 0.157048 )
 texture = ExtResource( 18 )
 
-[node name="bush1" type="Sprite" parent="Node2D"]
+[node name="bush1" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2045.16, 344.467 )
 scale = Vector2( 0.453985, 0.318041 )
 texture = ExtResource( 20 )
 
-[node name="bush8" type="Sprite" parent="Node2D"]
+[node name="bush8" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2541.38, 533.777 )
 scale = Vector2( 0.453985, 0.318041 )
 texture = ExtResource( 20 )
 
-[node name="bush11" type="Sprite" parent="Node2D"]
+[node name="bush11" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3634.52, 414.842 )
 scale = Vector2( 0.387993, 0.280779 )
 texture = ExtResource( 20 )
 
-[node name="tree2" type="Sprite" parent="Node2D"]
+[node name="tree2" type="Sprite" parent="Dekoracje"]
 position = Vector2( 767.474, 485.667 )
 scale = Vector2( 0.227565, 0.235915 )
 texture = ExtResource( 17 )
 
-[node name="tree7" type="Sprite" parent="Node2D"]
+[node name="tree7" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1485.65, 423.217 )
 scale = Vector2( 0.227565, 0.235915 )
 texture = ExtResource( 17 )
 
-[node name="flower8" type="Sprite" parent="Node2D"]
+[node name="flower8" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1194.84, 561.373 )
 scale = Vector2( 0.238358, 0.119185 )
 texture = ExtResource( 18 )
 
-[node name="flower9" type="Sprite" parent="Node2D"]
+[node name="flower9" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1328.49, 561.087 )
 scale = Vector2( 0.238358, 0.119185 )
 texture = ExtResource( 18 )
 
-[node name="flower28" type="Sprite" parent="Node2D"]
+[node name="flower28" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1437.51, 496.903 )
 scale = Vector2( 0.238358, 0.119185 )
 texture = ExtResource( 18 )
 
-[node name="bush5" type="Sprite" parent="Node2D"]
+[node name="bush5" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1263.05, 548.31 )
 scale = Vector2( 0.323885, 0.251568 )
 texture = ExtResource( 20 )
 
-[node name="bush14" type="Sprite" parent="Node2D"]
+[node name="bush14" type="Sprite" parent="Dekoracje"]
 position = Vector2( 957.369, 417.495 )
 scale = Vector2( 0.323885, 0.251568 )
 texture = ExtResource( 20 )
 
-[node name="tree3" type="Sprite" parent="Node2D"]
+[node name="tree3" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2943.61, 485.663 )
 scale = Vector2( 0.227565, 0.235915 )
 texture = ExtResource( 17 )
 
-[node name="tree5" type="Sprite" parent="Node2D"]
+[node name="tree5" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2199.27, 257.263 )
 scale = Vector2( 0.163252, 0.166505 )
 texture = ExtResource( 17 )
 
-[node name="tree1" type="Sprite" parent="Node2D"]
+[node name="tree1" type="Sprite" parent="Dekoracje"]
 position = Vector2( 438.71, 480.446 )
 scale = Vector2( 0.227565, 0.235915 )
 texture = ExtResource( 16 )
 
-[node name="tree4" type="Sprite" parent="Node2D"]
+[node name="tree4" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3250.19, 476.388 )
 scale = Vector2( 0.198136, 0.244828 )
 texture = ExtResource( 16 )
 
-[node name="tree6" type="Sprite" parent="Node2D"]
+[node name="tree6" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1664.04, 292.039 )
 scale = Vector2( 0.185341, 0.224454 )
 texture = ExtResource( 16 )
 
-[node name="bush2" type="Sprite" parent="Node2D"]
+[node name="bush2" type="Sprite" parent="Dekoracje"]
 position = Vector2( 607.319, 545.398 )
 scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
-[node name="flower2" type="Sprite" parent="Node2D"]
+[node name="flower2" type="Sprite" parent="Dekoracje"]
 position = Vector2( 804.188, 553.798 )
 scale = Vector2( 0.316287, 0.189224 )
 texture = ExtResource( 21 )
 
-[node name="flower4" type="Sprite" parent="Node2D"]
+[node name="flower4" type="Sprite" parent="Dekoracje"]
 position = Vector2( 712.688, 554.798 )
 scale = Vector2( 0.316287, 0.189224 )
 texture = ExtResource( 21 )
 
-[node name="flower5" type="Sprite" parent="Node2D"]
+[node name="flower5" type="Sprite" parent="Dekoracje"]
 position = Vector2( 368.469, 558.699 )
 scale = Vector2( 0.265046, 0.150678 )
 texture = ExtResource( 22 )
 
-[node name="flower6" type="Sprite" parent="Node2D"]
+[node name="flower6" type="Sprite" parent="Dekoracje"]
 position = Vector2( 485.642, 558.069 )
 scale = Vector2( 0.265046, 0.150678 )
 texture = ExtResource( 22 )
 
-[node name="bush4" type="Sprite" parent="Node2D"]
+[node name="bush4" type="Sprite" parent="Dekoracje"]
 position = Vector2( 50.9593, 416.654 )
 scale = Vector2( 0.291614, 0.258441 )
 texture = ExtResource( 20 )
 
-[node name="bush6" type="Sprite" parent="Node2D"]
+[node name="bush6" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1591.53, 553.283 )
 scale = Vector2( 0.328587, 0.210512 )
 texture = ExtResource( 24 )
 
-[node name="bush13" type="Sprite" parent="Node2D"]
+[node name="bush13" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1004.86, 425.806 )
 scale = Vector2( 0.328587, 0.210512 )
 texture = ExtResource( 24 )
 
-[node name="flower13" type="Sprite" parent="Node2D"]
+[node name="flower13" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1754.46, 564.277 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 19 )
 
-[node name="flower16" type="Sprite" parent="Node2D"]
+[node name="flower16" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2353.48, 307.712 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 19 )
 
-[node name="flower10" type="Sprite" parent="Node2D"]
+[node name="flower10" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1716.3, 367.465 )
 scale = Vector2( 0.297724, 0.13307 )
 texture = ExtResource( 18 )
 
-[node name="flower17" type="Sprite" parent="Node2D"]
+[node name="flower17" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2243.07, 305.584 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 19 )
 
-[node name="flower11" type="Sprite" parent="Node2D"]
+[node name="flower11" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1793.24, 368.726 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 18 )
 
-[node name="flower15" type="Sprite" parent="Node2D"]
+[node name="flower15" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1953.61, 369.617 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 18 )
 
-[node name="flower18" type="Sprite" parent="Node2D"]
+[node name="flower18" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2149.6, 369.617 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 18 )
 
-[node name="flower14" type="Sprite" parent="Node2D"]
+[node name="flower14" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1680.27, 564.159 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 19 )
 
-[node name="flower29" type="Sprite" parent="Node2D"]
+[node name="flower29" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1519.81, 499.504 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 19 )
 
-[node name="bush3" type="Sprite" parent="Node2D"]
+[node name="bush3" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2434.08, 290.049 )
 scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
-[node name="bush9" type="Sprite" parent="Node2D"]
+[node name="bush9" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1882.68, 356.396 )
 scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
-[node name="flower19" type="Sprite" parent="Node2D"]
+[node name="flower19" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2597.45, 550.688 )
 scale = Vector2( 0.379845, 0.21875 )
 texture = ExtResource( 21 )
 
-[node name="flower20" type="Sprite" parent="Node2D"]
+[node name="flower20" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2401.43, 550.816 )
 scale = Vector2( 0.379845, 0.21875 )
 texture = ExtResource( 21 )
 
-[node name="flower21" type="Sprite" parent="Node2D"]
+[node name="flower21" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1124, 489.5 )
 scale = Vector2( 0.379845, 0.200893 )
 texture = ExtResource( 21 )
 
-[node name="flower22" type="Sprite" parent="Node2D"]
+[node name="flower22" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2901.74, 558.063 )
 scale = Vector2( 0.288661, 0.160805 )
 texture = ExtResource( 21 )
 
-[node name="flower24" type="Sprite" parent="Node2D"]
+[node name="flower24" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2988.61, 554.945 )
 scale = Vector2( 0.288661, 0.160805 )
 texture = ExtResource( 18 )
 
-[node name="flower25" type="Sprite" parent="Node2D"]
+[node name="flower25" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3188.17, 554.054 )
 scale = Vector2( 0.288661, 0.160805 )
 texture = ExtResource( 18 )
 
-[node name="flower23" type="Sprite" parent="Node2D"]
+[node name="flower23" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3296.41, 556.281 )
 scale = Vector2( 0.288661, 0.160805 )
 texture = ExtResource( 21 )
 
-[node name="bush7" type="Sprite" parent="Node2D"]
+[node name="bush7" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2505.47, 546.912 )
 scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
-[node name="bush10" type="Sprite" parent="Node2D"]
+[node name="bush10" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3126.43, 546.022 )
 scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
-[node name="bush12" type="Sprite" parent="Node2D"]
+[node name="bush12" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3607.51, 422.187 )
 scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
-[node name="scarecrow" type="Sprite" parent="Node2D"]
+[node name="scarecrow" type="Sprite" parent="Dekoracje"]
 position = Vector2( 1062.45, 398.017 )
 scale = Vector2( 0.191361, 0.150986 )
 texture = ExtResource( 26 )
 
-[node name="scarecrow2" type="Sprite" parent="Node2D"]
+[node name="scarecrow2" type="Sprite" parent="Dekoracje"]
 position = Vector2( 2327.71, 276.348 )
 scale = Vector2( 0.176731, 0.138508 )
 texture = ExtResource( 26 )
 
-[node name="scarecrow3" type="Sprite" parent="Node2D"]
+[node name="scarecrow3" type="Sprite" parent="Dekoracje"]
 position = Vector2( 3464.41, 464.878 )
 scale = Vector2( 0.191361, 0.150986 )
 texture = ExtResource( 26 )
@@ -621,13 +615,6 @@ shape = SubResource( 1 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 
-[node name="Area2D" parent="." instance=ExtResource( 45 )]
-position = Vector2( 2275.51, 541.525 )
-scale = Vector2( 0.99857, 1.01353 )
-collision_mask = 1
-next_scene = "res://Bonus_Scen.tscn"
-player_spawn_location = Vector2( 168, 192 )
-
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 light_mask = 512
 tile_data = PoolIntArray( 12, 0, 0, 13, 0, 0, 14, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 43, 0, 0, 44, 0, 0, 45, 0, 0, 46, 0, 0, 47, 0, 0, 48, 0, 0, 49, 0, 0, 50, 0, 0, 51, 0, 0, 65555, 0, 0, 65556, 0, 0, 65557, 0, 0, 65558, 0, 0, 65562, 0, 0, 65565, 0, 0, 65566, 0, 0, 65572, 0, 0, 65573, 0, 0, 65574, 0, 0, 65575, 0, 0, 65576, 0, 0, 65577, 0, 0, 65578, 0, 0, 65579, 0, 0, 65580, 0, 0, 65591, 0, 0, 65592, 0, 0, 65593, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131089, 0, 0, 131090, 0, 0, 131091, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131097, 0, 0, 131098, 0, 0, 131102, 0, 0, 131103, 0, 0, 131104, 0, 0, 131105, 0, 0, 131106, 0, 0, 131107, 0, 0, 131108, 0, 0, 131116, 0, 0, 131125, 0, 0, 131126, 0, 0, 131127, 0, 0, 262141, 7, 0, 196618, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196652, 0, 0, 196653, 0, 0, 196654, 0, 0, 196655, 0, 0, 196656, 0, 0, 196659, 0, 0, 196660, 0, 0, 196661, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262192, 0, 0, 262193, 0, 0, 262194, 0, 0, 262195, 0, 0, 589831, 8, 0, 589832, 8, 0, 589833, 8, 0, 589834, 8, 0, 589835, 8, 0, 589836, 8, 0 )
@@ -643,25 +630,38 @@ direction = 1
 
 [node name="Hearts" parent="." instance=ExtResource( 8 )]
 
-[node name="Portal_Garam" parent="." instance=ExtResource( 11 )]
+[node name="Local_portal" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2933.97, 128.167 )
+
+[node name="Local_portal2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1806.31, 510.892 )
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Area2D" parent="Portals" instance=ExtResource( 45 )]
+position = Vector2( 2289.63, 516.734 )
+scale = Vector2( 0.99857, 1.01353 )
+collision_mask = 1
+next_scene = "res://Bonus_Scen.tscn"
+player_spawn_location = Vector2( 168, 192 )
+
+[node name="Portal_Garam" parent="Portals" instance=ExtResource( 11 )]
 margin_left = 2879.0
 margin_top = 502.0
 margin_right = 3321.0
 margin_bottom = 566.08
 
-[node name="Portal_Sudoku" parent="." instance=ExtResource( 10 )]
+[node name="Portal_Sudoku" parent="Portals" instance=ExtResource( 10 )]
 margin_left = 1599.75
 margin_top = 316.251
 margin_right = 2180.75
 margin_bottom = 384.251
 
-[node name="Portal_Wiesielec" parent="." instance=ExtResource( 12 )]
+[node name="Portal_Wiesielec" parent="Portals" instance=ExtResource( 12 )]
 margin_left = 320.0
 margin_top = 512.0
 margin_right = 831.0
 margin_bottom = 576.0
-[connection signal="body_entered" from="Local_portal" to="." method="_on_Local_portal_body_entered"]
-[connection signal="body_entered" from="Local_portal2" to="." method="_on_Local_portal2_body_entered"]
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
@@ -747,3 +747,5 @@ margin_bottom = 576.0
 [connection signal="coin_collected" from="coins/coin11" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin12" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
+[connection signal="body_entered" from="Local_portal" to="." method="_on_Local_portal_body_entered"]
+[connection signal="body_entered" from="Local_portal2" to="." method="_on_Local_portal2_body_entered"]
