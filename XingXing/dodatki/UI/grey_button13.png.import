@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grey_button13.png-38b73eb350f548871c228af99828e524.stex"
+path="res://.import/grey_button13.png-d84ecb332b876657a77da9754fc2ff01.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/grey_button13.png"
-dest_files=[ "res://.import/grey_button13.png-38b73eb350f548871c228af99828e524.stex" ]
+source_file="res://dodatki/UI/grey_button13.png"
+dest_files=[ "res://.import/grey_button13.png-d84ecb332b876657a77da9754fc2ff01.stex" ]
 
 [params]
 
