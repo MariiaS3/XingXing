@@ -49,8 +49,7 @@ height = 0.0
 
 [node name="Plant" type="StaticBody2D"]
 light_mask = 0
-collision_layer = 16
-collision_mask = 17
+collision_layer = 128
 script = ExtResource( 31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -58,7 +57,7 @@ light_mask = 127
 position = Vector2( 1.52588e-05, -2.28882e-05 )
 scale = Vector2( 0.247279, 0.207689 )
 frames = SubResource( 1 )
-frame = 19
+frame = 20
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -68,6 +67,7 @@ shape = SubResource( 4 )
 
 [node name="Plant" type="Area2D" parent="."]
 position = Vector2( -8, 8 )
+collision_layer = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plant"]
 light_mask = -2147483648

@@ -57,6 +57,7 @@ reward={
 2d_physics/layer_5="Enemy"
 2d_physics/layer_6="Coins"
 2d_physics/layer_7="Fallzone"
+2d_physics/layer_8="Plant"
 
 [rendering]
 

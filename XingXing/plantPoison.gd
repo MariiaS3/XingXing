@@ -12,6 +12,8 @@ func _ready():
 	connect("life_change", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
 	emit_signal("life_change", Global.hearts_max)
 
+
+
 func dead():
 	if i==2:
 		is_dead = true
