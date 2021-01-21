@@ -85,6 +85,3 @@ func _on_AnimatedSprite_animation_finished():
 func Fall():
 	get_tree().change_scene("res://GameOver.tscn")
 
-
-func _on_Area2D_body_entered(body):
-	pass # Replace with function body.

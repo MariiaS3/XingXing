@@ -10,7 +10,7 @@ func _ready():
 	rndX = rng.randi_range(400, 50)
 	rndY = rng.randi_range(30, 30)
 	$Garam.position = Vector2(rndX, rndY)
-	PauseTime.connect("timeout",$Garam,"_on_Timer_timeout()")
+	PauseTime.connect("timeout",self,"_on_Timer_timeout")
 
 func _on_Timer_timeout():
 	$Garam.visible = !$Garam.visible

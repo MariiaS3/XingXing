@@ -10,7 +10,7 @@ func _ready():
 	rndX = rng.randi_range(400, 50)
 	rndY = rng.randi_range(30, 30)
 	$Wiesielec.position = Vector2(rndX, rndY)
-	PauseTime.connect("timeout",$Wiesielec,"_on_Timer_timeout()")
+	PauseTime.connect("timeout",self,"_on_Timer_timeout")
 
 func _on_Timer_timeout():
 	$Wiesielec.visible = !$Wiesielec.visible

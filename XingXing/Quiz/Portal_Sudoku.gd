@@ -10,7 +10,7 @@ func _ready():
 	rndX = rng.randi_range(500, 50)
 	rndY = rng.randi_range(40, 40)
 	$Sudoku.position = Vector2(rndX, rndY)
-	PauseTime.connect("timeout",$Sudoku,"_on_Timer_timeout()")
+	PauseTime.connect("timeout",self,"_on_Timer_timeout")
 
 func _on_Timer_timeout():
 	$Sudoku.visible = !$Sudoku.visible
