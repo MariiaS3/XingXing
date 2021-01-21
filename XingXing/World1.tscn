@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://plantPoison.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=2]
 [ext_resource path="res://background/1.png" type="Texture" id=3]
 [ext_resource path="res://Fallzone.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World1.gd" type="Script" id=5]
+[ext_resource path="res://Area2D.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 256, 160, 0, 160, 0, 0, 256, 0 )
@@ -40,7 +41,7 @@ position = Vector2( 887.098, 399.514 )
 scale = Vector2( 0.2, 0.3 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 54.769, 504.156 )
+position = Vector2( 614.769, 360.156 )
 collision_mask = 22
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -50,4 +51,8 @@ tile_data = PoolIntArray( 458760, 0, 0, 458763, 536870912, 0, 524291, 0, 0, 5242
 
 [node name="Fallzone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1431.44, 765.017 )
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 56, 510 )
+next_scene = "res://World.tscn"
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]

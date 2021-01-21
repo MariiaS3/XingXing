@@ -643,7 +643,7 @@ position = Vector2( 1806.31, 510.892 )
 position = Vector2( 2289.63, 516.734 )
 scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
-next_scene = "res://Bonus_Scen.tscn"
+next_scene = "res://World1.tscn"
 player_spawn_location = Vector2( 168, 192 )
 
 [node name="Portal_Garam" parent="Portals" instance=ExtResource( 11 )]

@@ -8,7 +8,7 @@ var config = ConfigFile.new()
 var _settings = config.load(save_path)
 var bounce = false
 var coins=0
-var hearts_max = 3
+var hearts_max = 4
 var hearts = hearts_max
 
 func _ready():
