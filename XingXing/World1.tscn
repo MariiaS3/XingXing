@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://plantPoison.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=2]
@@ -7,11 +7,15 @@
 [ext_resource path="res://World1.gd" type="Script" id=5]
 [ext_resource path="res://Area2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Hearts.tscn" type="PackedScene" id=7]
+[ext_resource path="res://background/2.png" type="Texture" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 256, 160, 4, 160, 4, 3, 256, 3 )
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 114.889, 32.0948, 0.465553, 32.0948, 0.465553, 1.6284, 114.889, 1.6284 )
+
+[sub_resource type="TileSet" id=3]
 0/name = "1.png 0"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
@@ -33,19 +37,43 @@ points = PoolVector2Array( 256, 160, 4, 160, 4, 3, 256, 3 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
+1/name = "2.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 116, 33 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 4 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Area2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 897.693, 412.228 )
+position = Vector2( 1287.58, 469.439 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 614.769, 360.156 )
+position = Vector2( 174.032, 502.124 )
 collision_mask = 22
 
 [node name="Fallzone" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1431.44, 765.017 )
+position = Vector2( 961.038, 773.493 )
+
+[node name="Fallzone2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2592.61, 773.493 )
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
 position = Vector2( 56, 510 )
@@ -54,7 +82,8 @@ next_scene = "res://World.tscn"
 [node name="Hearts" parent="." instance=ExtResource( 7 )]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
+tile_set = SubResource( 3 )
 format = 1
-tile_data = PoolIntArray( 524304, 0, 0, 524308, 536870912, 0, 655359, 0, 0, 589827, 536870912, 0, 589833, 0, 0, 589837, 536870912, 0, 589846, 0, 0, 589850, 536870912, 0 )
+tile_data = PoolIntArray( 262175, 1, 0, 262178, 1, 0, 327708, 1, 0, 327717, 1, 0, 393241, 1, 0, 524304, 0, 0, 524308, 536870912, 0, 524326, 0, 0, 524330, 536870912, 0, 655359, 0, 0, 589827, 536870912, 0, 589833, 0, 0, 589837, 536870912, 0, 589846, 0, 0, 589850, 536870912, 0, 589869, 0, 0, 589873, 536870912, 0 )
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
+[connection signal="body_entered" from="Fallzone2" to="." method="_on_Fallzone_body_entered"]
