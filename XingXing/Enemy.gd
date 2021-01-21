@@ -10,14 +10,9 @@ var is_dead = false
 var i=0
 
 func _ready():
-	if direction == 1:
-		$AnimatedSprite.flip_h = true
-		
-	$RayCast2D.position.x = $CollisionShape2D.shape.get_extents().x * direction
-	
 	connect("life_changed", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
-	emit_signal("life_changed", Global.hearts_max)
-		
+	emit_signal("life_changed", Global.hearts)
+	
 func _physics_process(_delta):
 	
 	if is_on_wall():
@@ -36,7 +31,7 @@ func dead():
 	if i==2:
 		is_dead = true
 		velocity = Vector2(0,0)
-		$Timer.start()
+		queue_free()
 	i=i+1
 
 
@@ -52,5 +47,3 @@ func _on_Checker_body_entered(_body):
 		get_tree().change_scene("res://GameOver.tscn")
 
 
-func _on_Timer_timeout():
-	queue_free()

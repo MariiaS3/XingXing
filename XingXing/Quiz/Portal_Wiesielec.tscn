@@ -21,6 +21,7 @@ autostart = true
 
 [node name="Wiesielec" type="Area2D" parent="."]
 position = Vector2( 96, 32 )
+collision_layer = 2
 
 [node name="Sprite" type="Sprite" parent="Wiesielec"]
 scale = Vector2( 0.109375, 0.109375 )

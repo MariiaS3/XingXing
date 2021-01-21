@@ -21,6 +21,7 @@ autostart = true
 
 [node name="Garam" type="Area2D" parent="."]
 position = Vector2( 88, 32 )
+collision_layer = 2
 
 [node name="Sprite" type="Sprite" parent="Garam"]
 position = Vector2( 8, 5.08435 )

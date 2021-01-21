@@ -22,6 +22,7 @@ autostart = true
 [node name="Sudoku" type="Area2D" parent="."]
 visible = false
 position = Vector2( 96, 32 )
+collision_layer = 2
 
 [node name="Sprite" type="Sprite" parent="Sudoku"]
 position = Vector2( 9.53674e-07, 4 )

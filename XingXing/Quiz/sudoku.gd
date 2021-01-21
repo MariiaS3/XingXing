@@ -3,7 +3,7 @@ extends Control
 var i=0
 var j=0
 var t=9
-var reward = 4
+var reward = 7
 var index = PlayerReward.index
 
 onready var scene_tree: SceneTree = get_tree()

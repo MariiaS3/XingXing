@@ -9,7 +9,13 @@ var motion = Vector2()
 var on_ground = false
 var is_attacking = false
 
+signal life(player_hearts)
+
+
 func _ready():
+	connect("life", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
+	emit_signal("life", Global.hearts)
+	
 	_physics_process(true)
 
 func _physics_process(_delta):
@@ -82,6 +88,17 @@ func _physics_process(_delta):
 func _on_AnimatedSprite_animation_finished():
 	is_attacking = false
 	
-func Fall():
-	get_tree().change_scene("res://GameOver.tscn")
+
+func Fall(_body):
+	Global.hearts = Global.hearts - 1
+	if Global.bounce == false:
+		_body.position.x -=100
+		_body.position.y -=200
+	else:
+		_body.position.x +=150
+		_body.position.y -=100
+	emit_signal("life", Global.hearts)
+	if Global.hearts <= 0:
+		get_tree().change_scene("res://GameOver.tscn")
+
 
