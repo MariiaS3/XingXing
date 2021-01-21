@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrow-UP.png-d6e4922847d20bd175dda5f2aba618e2.stex"
+path="res://.import/arrow-UP.png-20972f4c8743f8bfa3408d90101dc2aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/arrow-UP.png"
-dest_files=[ "res://.import/arrow-UP.png-d6e4922847d20bd175dda5f2aba618e2.stex" ]
+source_file="res://dodatki/UI/arrow-UP.png"
+dest_files=[ "res://.import/arrow-UP.png-20972f4c8743f8bfa3408d90101dc2aa.stex" ]
 
 [params]
 

@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://plantPoison.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=2]
 [ext_resource path="res://background/1.png" type="Texture" id=3]
+[ext_resource path="res://Fallzone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World1.gd" type="Script" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 256, 160, 0, 160, 0, 0, 256, 0 )
@@ -31,6 +33,7 @@ points = PoolVector2Array( 256, 160, 0, 160, 0, 0, 256, 0 )
 0/z_index = 0
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Area2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 887.098, 399.514 )
@@ -44,3 +47,7 @@ collision_mask = 22
 tile_set = SubResource( 2 )
 format = 1
 tile_data = PoolIntArray( 458760, 0, 0, 458763, 536870912, 0, 524291, 0, 0, 524292, 536870912, 0, 655358, 0, 0, 589825, 536870912, 0, 589828, 536870912, 0, 589831, 536870912, 0, 589833, 536870912, 0, 589834, 0, 0, 589837, 0, 0, 589841, 536870912, 0 )
+
+[node name="Fallzone" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1431.44, 765.017 )
+[connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]

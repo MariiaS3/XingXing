@@ -67,14 +67,14 @@ animations = [ {
 "name": "Walk",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 34 ), ExtResource( 33 ), ExtResource( 25 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 13 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "fall",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 14 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Run",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
@@ -82,9 +82,9 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 33 ), ExtResource( 25 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 14 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "hurt",
+"name": "Run",
 "speed": 5.0
 } ]
 
@@ -136,4 +136,3 @@ collision_mask = 8
 position = Vector2( -7.1899, 12.7776 )
 shape = SubResource( 3 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
