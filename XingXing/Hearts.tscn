@@ -6,18 +6,20 @@
 [node name="Hearts" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
-margin_right = 178.0
-margin_bottom = 97.0
+margin_left = 1.82837
+margin_top = 3.0
+margin_right = 211.828
+margin_bottom = 73.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
-margin_left = 140.182
-margin_top = 17.185
-margin_right = 340.182
-margin_bottom = 184.185
+margin_left = 130.544
+margin_top = 11.5147
+margin_right = 341.544
+margin_bottom = 178.515
 rect_scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 expand = true

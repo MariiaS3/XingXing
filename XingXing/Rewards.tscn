@@ -5,19 +5,23 @@
 [ext_resource path="res://Rewards.gd" type="Script" id=3]
 
 [node name="Rewards" type="Node2D"]
+modulate = Color( 0.882353, 0.909804, 0.627451, 1 )
+self_modulate = Color( 0.831373, 0.458824, 0.458824, 1 )
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 125.558
-margin_top = 74.7939
-margin_right = 844.558
-margin_bottom = 463.794
+margin_left = 126.0
+margin_top = 75.0
+margin_right = 845.0
+margin_bottom = 464.0
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="GridContainer" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.847059, 0.901961, 0.866667, 1 )
+self_modulate = Color( 0.501961, 0.627451, 0.372549, 1 )
 margin_left = 256.0
 margin_top = 144.0
 margin_right = 832.0
