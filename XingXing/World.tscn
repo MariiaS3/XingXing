@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
@@ -26,7 +26,6 @@
 [ext_resource path="res://dodatki/wall/bush2.png" type="Texture" id=24]
 [ext_resource path="res://background/mars-landscape-alien-planet-martian-background/1781.jpg" type="Texture" id=25]
 [ext_resource path="res://dodatki/wall/scarecrow.png" type="Texture" id=26]
-[ext_resource path="res://plantPoison.tscn" type="PackedScene" id=27]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=40]
 [ext_resource path="res://World.gd" type="Script" id=44]
 [ext_resource path="res://Area2D.tscn" type="PackedScene" id=45]
@@ -363,7 +362,7 @@ position = Vector2( 911.668, 204.138 )
 position = Vector2( 1050.09, 147.364 )
 
 [node name="coin4" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1196.68, -20.0858 )
+position = Vector2( 653.617, 84.566 )
 
 [node name="coin5" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 834.581, 206.372 )
@@ -591,7 +590,7 @@ position = Vector2( 2196.1, 88.827 )
 position = Vector2( 2272.72, 88.827 )
 
 [node name="coin7" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 459.117, -19.4693 )
+position = Vector2( 572.254, 85.1825 )
 
 [node name="coin8" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 422.948, 83.9225 )
@@ -643,7 +642,7 @@ position = Vector2( 1806.31, 510.892 )
 position = Vector2( 2289.63, 516.734 )
 scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
-next_scene = "res://World1.tscn"
+next_scene = "res://Bonus_Scen.tscn"
 player_spawn_location = Vector2( 168, 192 )
 
 [node name="Portal_Garam" parent="Portals" instance=ExtResource( 11 )]
@@ -663,9 +662,6 @@ margin_left = 320.0
 margin_top = 512.0
 margin_right = 831.0
 margin_bottom = 576.0
-
-[node name="Plant" parent="." instance=ExtResource( 27 )]
-position = Vector2( 653.354, 69.7573 )
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
