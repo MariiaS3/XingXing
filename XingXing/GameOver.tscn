@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://alien_armor/armor__0025_dead_4.png" type="Texture" id=2]
 [ext_resource path="res://GameOverButton.gd" type="Script" id=3]
+[ext_resource path="res://Quit.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -48,10 +49,10 @@ custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "Game Over"
 
 [node name="GameOverButton" type="Button" parent="."]
-margin_left = 438.546
-margin_top = 361.859
-margin_right = 795.546
-margin_bottom = 459.859
+margin_left = 440.0
+margin_top = 352.0
+margin_right = 797.0
+margin_bottom = 450.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.529412, 0.713726, 0.164706, 1 )
@@ -61,4 +62,20 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 440.0
+margin_top = 456.0
+margin_right = 797.0
+margin_bottom = 554.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.529412, 0.713726, 0.164706, 1 )
+text = "Quit"
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="GameOverButton" to="GameOverButton" method="_on_GameOverButton_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]

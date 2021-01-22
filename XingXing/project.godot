@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="XingXing"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Titlescreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -58,6 +58,8 @@ reward={
 2d_physics/layer_6="Coins"
 2d_physics/layer_7="Fallzone"
 2d_physics/layer_8="Plant"
+2d_physics/layer_9="Mushrum"
+2d_physics/layer_10="Sheng"
 
 [rendering]
 

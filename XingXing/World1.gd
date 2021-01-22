@@ -1,4 +1,6 @@
-extends Node2D
+extends Node
+
 
 func _on_Fallzone_body_entered(body):
-	$KinematicBody2D.Fall()
+	$KinematicBody2D.Fall(body)
+
