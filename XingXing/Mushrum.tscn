@@ -18,18 +18,19 @@ animations = [ {
 extents = Vector2( 8, 32 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 16, 8 )
+extents = Vector2( 24, 8 )
 
 [node name="Mushrum" type="StaticBody2D"]
 position = Vector2( 32, 32 )
 collision_layer = 2147483904
+collision_mask = 129
 script = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1.43051e-06, 2.6226e-06 )
 scale = Vector2( 1.25, 1.25 )
 frames = SubResource( 1 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -39,5 +40,6 @@ shape = SubResource( 2 )
 collision_layer = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 8 )
 shape = SubResource( 3 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

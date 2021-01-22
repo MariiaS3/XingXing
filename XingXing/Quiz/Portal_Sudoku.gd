@@ -8,7 +8,7 @@ func _ready():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	rndX = rng.randi_range(500, 50)
-	rndY = rng.randi_range(40, 40)
+	rndY = rng.randi_range(30, 30)
 	$Sudoku.position = Vector2(rndX, rndY)
 	PauseTime.connect("timeout",self,"_on_Timer_timeout")
 

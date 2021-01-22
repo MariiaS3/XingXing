@@ -39,7 +39,7 @@ script = ExtResource( 44 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 pause_mode = 1
-position = Vector2( 176, 150.918 )
+position = Vector2( 152, 152 )
 z_index = 1
 collision_mask = 14
 
@@ -55,40 +55,6 @@ scale = Vector2( 0.312596, 0.300968 )
 texture = ExtResource( 25 )
 centered = false
 offset = Vector2( 10, -10 )
-
-[node name="Portals" type="Node2D" parent="."]
-
-[node name="Area2D" parent="Portals" instance=ExtResource( 45 )]
-position = Vector2( 259.505, 396.96 )
-scale = Vector2( 0.99857, 1.01353 )
-collision_mask = 1
-next_scene = "res://Bonus_Scen.tscn"
-player_spawn_location = Vector2( 168, 192 )
-
-[node name="Portal_Garam" parent="Portals" instance=ExtResource( 11 )]
-margin_left = 2881.25
-margin_top = 578.327
-margin_right = 3323.25
-margin_bottom = 642.407
-
-[node name="Portal_Sudoku" parent="Portals" instance=ExtResource( 10 )]
-margin_left = 1726.56
-margin_top = 381.747
-margin_right = 2177.56
-margin_bottom = 452.747
-
-[node name="Portal_Wiesielec" parent="Portals" instance=ExtResource( 12 )]
-margin_left = 321.975
-margin_top = 579.185
-margin_right = 832.975
-margin_bottom = 643.185
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource( 14 )
-
-[node name="Rewards" parent="CanvasLayer" instance=ExtResource( 13 )]
-visible = false
-position = Vector2( 92.4985, 45.4084 )
 
 [node name="Dekoracje" type="Node2D" parent="."]
 
@@ -123,7 +89,7 @@ scale = Vector2( 0.20561, 0.157048 )
 texture = ExtResource( 18 )
 
 [node name="bush1" type="Sprite" parent="Dekoracje"]
-position = Vector2( 2103.23, 408.539 )
+position = Vector2( 2099.86, 414.151 )
 scale = Vector2( 0.453985, 0.318041 )
 texture = ExtResource( 20 )
 
@@ -138,13 +104,13 @@ scale = Vector2( 0.387993, 0.280779 )
 texture = ExtResource( 20 )
 
 [node name="tree2" type="Sprite" parent="Dekoracje"]
-position = Vector2( 769.256, 552.484 )
-scale = Vector2( 0.227565, 0.235915 )
+position = Vector2( 760.25, 521.23 )
+scale = Vector2( 0.313622, 0.313337 )
 texture = ExtResource( 17 )
 
 [node name="tree7" type="Sprite" parent="Dekoracje"]
-position = Vector2( 1474.54, 422.026 )
-scale = Vector2( 0.230431, 0.241003 )
+position = Vector2( 1496.27, 392.809 )
+scale = Vector2( 0.298044, 0.315918 )
 texture = ExtResource( 17 )
 
 [node name="flower8" type="Sprite" parent="Dekoracje"]
@@ -158,8 +124,8 @@ scale = Vector2( 0.238358, 0.119185 )
 texture = ExtResource( 18 )
 
 [node name="flower28" type="Sprite" parent="Dekoracje"]
-position = Vector2( 1437.51, 496.903 )
-scale = Vector2( 0.238358, 0.119185 )
+position = Vector2( 1456.96, 500.439 )
+scale = Vector2( 0.210073, 0.107826 )
 texture = ExtResource( 18 )
 
 [node name="bush5" type="Sprite" parent="Dekoracje"]
@@ -173,28 +139,28 @@ scale = Vector2( 0.323885, 0.251568 )
 texture = ExtResource( 20 )
 
 [node name="tree3" type="Sprite" parent="Dekoracje"]
-position = Vector2( 2942.94, 553.072 )
-scale = Vector2( 0.227565, 0.235915 )
+position = Vector2( 2945.94, 538.089 )
+scale = Vector2( 0.270837, 0.282017 )
 texture = ExtResource( 17 )
 
 [node name="tree5" type="Sprite" parent="Dekoracje"]
-position = Vector2( 2329.4, 306.437 )
-scale = Vector2( 0.207237, 0.207254 )
+position = Vector2( 2335.95, 301.015 )
+scale = Vector2( 0.225472, 0.22884 )
 texture = ExtResource( 17 )
 
 [node name="tree1" type="Sprite" parent="Dekoracje"]
-position = Vector2( 423.565, 546.373 )
-scale = Vector2( 0.227565, 0.235915 )
+position = Vector2( 432.041, 496.578 )
+scale = Vector2( 0.260833, 0.347974 )
 texture = ExtResource( 16 )
 
 [node name="tree4" type="Sprite" parent="Dekoracje"]
-position = Vector2( 3264.78, 542.613 )
-scale = Vector2( 0.198136, 0.244828 )
+position = Vector2( 3281.16, 512.375 )
+scale = Vector2( 0.237699, 0.317516 )
 texture = ExtResource( 16 )
 
 [node name="tree6" type="Sprite" parent="Dekoracje"]
-position = Vector2( 1800.71, 351.028 )
-scale = Vector2( 0.194697, 0.24615 )
+position = Vector2( 1809.69, 344.854 )
+scale = Vector2( 0.216387, 0.26099 )
 texture = ExtResource( 16 )
 
 [node name="bush2" type="Sprite" parent="Dekoracje"]
@@ -258,17 +224,17 @@ scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 19 )
 
 [node name="flower11" type="Sprite" parent="Dekoracje"]
-position = Vector2( 1823.27, 437.47 )
-scale = Vector2( 0.243846, 0.115039 )
+position = Vector2( 2047.2, 433.541 )
+scale = Vector2( 0.288744, 0.119547 )
 texture = ExtResource( 18 )
 
 [node name="flower15" type="Sprite" parent="Dekoracje"]
-position = Vector2( 1986.98, 435.692 )
+position = Vector2( 2008.31, 433.447 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 18 )
 
 [node name="flower18" type="Sprite" parent="Dekoracje"]
-position = Vector2( 2031.47, 435.692 )
+position = Vector2( 2161.68, 435.692 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 18 )
 
@@ -278,7 +244,7 @@ scale = Vector2( 0.243846, 0.139741 )
 texture = ExtResource( 19 )
 
 [node name="flower29" type="Sprite" parent="Dekoracje"]
-position = Vector2( 1519.81, 499.504 )
+position = Vector2( 1524.76, 501.625 )
 scale = Vector2( 0.243846, 0.115039 )
 texture = ExtResource( 19 )
 
@@ -288,7 +254,7 @@ scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
 [node name="bush9" type="Sprite" parent="Dekoracje"]
-position = Vector2( 1910.04, 419.801 )
+position = Vector2( 1853.92, 422.046 )
 scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
@@ -318,7 +284,7 @@ scale = Vector2( 0.288661, 0.160805 )
 texture = ExtResource( 18 )
 
 [node name="flower25" type="Sprite" parent="Dekoracje"]
-position = Vector2( 3188.17, 554.054 )
+position = Vector2( 3156.39, 621.86 )
 scale = Vector2( 0.288661, 0.160805 )
 texture = ExtResource( 18 )
 
@@ -333,7 +299,7 @@ scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
 [node name="bush10" type="Sprite" parent="Dekoracje"]
-position = Vector2( 3110.72, 611.125 )
+position = Vector2( 3231.5, 611.125 )
 scale = Vector2( 0.312331, 0.274511 )
 texture = ExtResource( 24 )
 
@@ -357,6 +323,13 @@ position = Vector2( 3441.72, 528.283 )
 scale = Vector2( 0.191361, 0.150986 )
 texture = ExtResource( 26 )
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 14 )
+
+[node name="Rewards" parent="CanvasLayer" instance=ExtResource( 13 )]
+visible = false
+position = Vector2( 92.4985, 45.4084 )
+
 [node name="Quiz" type="CanvasLayer" parent="."]
 
 [node name="Garam" parent="Quiz" instance=ExtResource( 6 )]
@@ -368,9 +341,9 @@ margin_bottom = 634.409
 
 [node name="Sudoku" parent="Quiz" instance=ExtResource( 5 )]
 margin_left = 136.214
-margin_top = 62.0908
+margin_top = 60.756
 margin_right = 905.214
-margin_bottom = 638.091
+margin_bottom = 636.756
 
 [node name="Szybienica" parent="Quiz" instance=ExtResource( 9 )]
 margin_left = 16.006
@@ -378,15 +351,41 @@ margin_top = 58.7272
 margin_right = -552.994
 margin_bottom = -87.273
 
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Area2D" parent="Portals" instance=ExtResource( 45 )]
+position = Vector2( 2304, 584 )
+scale = Vector2( 0.99857, 1.01353 )
+collision_mask = 1
+next_scene = "res://Bonus_Scen.tscn"
+player_spawn_location = Vector2( 168, 192 )
+
+[node name="Portal_Garam" parent="Portals" instance=ExtResource( 11 )]
+margin_left = 3048.86
+margin_top = 553.632
+margin_right = 3142.86
+margin_bottom = 617.632
+
+[node name="Portal_Sudoku" parent="Portals" instance=ExtResource( 10 )]
+margin_left = 1728.0
+margin_top = 376.0
+margin_right = 2173.0
+margin_bottom = 445.0
+
+[node name="Portal_Wiesielec" parent="Portals" instance=ExtResource( 12 )]
+margin_left = 597.33
+margin_top = 554.679
+margin_right = 677.33
+margin_bottom = 626.679
+
 [node name="Enemy" parent="." instance=ExtResource( 7 )]
-position = Vector2( 763.328, 593.724 )
-collision_mask = 129
+position = Vector2( 544, 584 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2118.12, 399.577 )
+position = Vector2( 2086.69, 389.475 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3221.06, 592.356 )
+position = Vector2( 3211.52, 588.118 )
 
 [node name="coins" type="Node2D" parent="."]
 pause_mode = 1
@@ -525,7 +524,7 @@ position = Vector2( 1377.31, 284.384 )
 position = Vector2( 1129.57, 544.121 )
 
 [node name="coin61" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1222.68, 598.212 )
+position = Vector2( 1219.85, 600.333 )
 
 [node name="coin62" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 1311.08, 599.824 )
@@ -534,10 +533,10 @@ position = Vector2( 1311.08, 599.824 )
 position = Vector2( 1378.35, 535.865 )
 
 [node name="coin64" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1442.73, 473.968 )
+position = Vector2( 1446.97, 478.211 )
 
 [node name="coin65" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1510.34, 473.2 )
+position = Vector2( 1510.34, 478.15 )
 
 [node name="coin91" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 1629.14, 337.436 )
@@ -606,7 +605,7 @@ position = Vector2( 172.203, 480.181 )
 position = Vector2( 233.521, 479.313 )
 
 [node name="coin20" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1441.9, 23.3663 )
+position = Vector2( 1436.49, 24.1428 )
 
 [node name="coin21" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 1515.31, 86.8371 )
@@ -651,7 +650,7 @@ position = Vector2( 496.003, 82.8026 )
 position = Vector2( 422.948, 83.9225 )
 
 [node name="coin9" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 572.422, 82.6626 )
+position = Vector2( 588.49, 80.1428 )
 
 [node name="coin10" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 987.783, 147.994 )

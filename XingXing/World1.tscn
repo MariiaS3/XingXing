@@ -35,30 +35,31 @@ points = PoolVector2Array( 256, 160, 0, 160, 0, 0, 256, 0 )
 } ]
 0/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node"]
+pause_mode = 1
 script = ExtResource( 5 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 668.769, 264.156 )
+position = Vector2( 333.791, 289.101 )
 collision_mask = 2147483862
 
-[node name="Area2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 887.098, 399.514 )
-scale = Vector2( 0.2, 0.3 )
+[node name="HUD" parent="." instance=ExtResource( 8 )]
+
+[node name="Hearts" parent="." instance=ExtResource( 7 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 format = 1
-tile_data = PoolIntArray( 458760, 0, 0, 458763, 536870912, 0, 524291, 0, 0, 524292, 536870912, 0, 655358, 0, 0, 589825, 536870912, 0, 589828, 536870912, 0, 589831, 536870912, 0, 589833, 536870912, 0, 589834, 0, 0, 589837, 0, 0, 589841, 536870912, 0 )
-
-[node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 56, 510 )
-next_scene = "res://World.tscn"
+tile_data = PoolIntArray( 524303, 0, 0, 589826, 0, 0, 589834, 0, 0, 655360, 0, 0, 655363, 0, 0, 655364, 0, 0, 655366, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0 )
 
 [node name="Fallzone" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1526, 644 )
+position = Vector2( 1339.16, 775.203 )
 
-[node name="Hearts" parent="." instance=ExtResource( 7 )]
+[node name="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1122, 496.883 )
+scale = Vector2( 0.2, 0.3 )
 
-[node name="HUD" parent="." instance=ExtResource( 8 )]
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 176, 384 )
+next_scene = "res://World.tscn"
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]

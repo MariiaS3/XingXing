@@ -8,7 +8,8 @@ extents = Vector2( 24, 16 )
 
 [node name="Portal_Garam" type="Control"]
 anchor_bottom = 0.011
-margin_right = 448.0
+margin_left = 20.0
+margin_right = 118.0
 margin_bottom = 64.08
 script = ExtResource( 2 )
 __meta__ = {
@@ -20,12 +21,12 @@ wait_time = 3.0
 autostart = true
 
 [node name="Garam" type="Area2D" parent="."]
-position = Vector2( 88, 32 )
+position = Vector2( 52.0812, 38.7347 )
 collision_layer = 2
 
 [node name="Sprite" type="Sprite" parent="Garam"]
-position = Vector2( 8, 5.08435 )
-scale = Vector2( 0.125, 0.113611 )
+position = Vector2( -3.22461, -1.65057 )
+scale = Vector2( 0.116231, 0.113611 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garam"]

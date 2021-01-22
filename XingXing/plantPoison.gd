@@ -4,7 +4,7 @@ var velocity = Vector2()
 export var direction = -1
 
 var is_dead = false 
-var i=0
+
 
 signal life_plant(player_hearts)
 
@@ -15,11 +15,11 @@ func _ready():
 
 
 func dead():
-	if i==2:
-		is_dead = true
-		velocity = Vector2(0,0)
-		$Timer.start()
-	i=i+1
+	
+	is_dead = true
+	velocity = Vector2(0,0)
+	queue_free()
+
 
 func _on_Plant_body_entered(_body):
 	Global.hearts = Global.hearts - 1
