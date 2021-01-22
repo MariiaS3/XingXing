@@ -13,7 +13,7 @@ func _ready():
 	if direction == 1:
 		$AnimatedSprite.flip_h = true
 	
-	connect("life_changed", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
+	connect("life_changed", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_changed", Global.hearts_max)
 		
 func _physics_process(_delta):

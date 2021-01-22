@@ -13,7 +13,7 @@ signal life(player_hearts)
 
 
 func _ready():
-	connect("life", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
+	connect("life", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life", Global.hearts)
 	
 	_physics_process(true)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1796.74, 14.4142 )
+extents = Vector2( 3345.46, 14.4142 )
 
 [node name="Fallzone" type="Area2D"]
 position = Vector2( 800, 727.453 )
