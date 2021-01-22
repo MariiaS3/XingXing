@@ -23,4 +23,10 @@ func _on_Area2D_body_entered(body):
 		body.dead()
 	if "Enemy"  in body.name:
 		body.dead()
+	if "Mushrum"  in body.name:
+		body.dead()
+	if "Sheng"  in body.name:
+		body.dead()
+	if "Alien_red"  in body.name:
+		body.dead()
 	queue_free()

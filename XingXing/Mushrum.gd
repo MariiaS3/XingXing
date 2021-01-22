@@ -1,0 +1,31 @@
+extends StaticBody2D
+
+var velocity = Vector2()
+export var direction = -1
+
+var is_dead = false 
+
+
+signal life_mashrum(player_hearts)
+
+func _ready():
+	connect("life_mashrum", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
+	emit_signal("life_mashrum", Global.hearts)
+
+func dead():
+	is_dead = true
+	velocity = Vector2(0,0)
+	queue_free()
+	
+
+
+func _on_Area2D_body_entered(_body):
+	Global.hearts = Global.hearts - 1
+	if Global.bounce == false:
+		_body.position.x -=50
+	else:
+		_body.position.x +=50
+	emit_signal("life_mashrum", Global.hearts)
+	if Global.hearts <= 0:
+		get_tree().change_scene("res://GameOver.tscn")
+
