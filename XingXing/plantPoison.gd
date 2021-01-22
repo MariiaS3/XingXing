@@ -9,7 +9,7 @@ var is_dead = false
 signal life_plant(player_hearts)
 
 func _ready():
-	connect("life_plant", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
+	connect("life_plant", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_plant", Global.hearts)
 
 

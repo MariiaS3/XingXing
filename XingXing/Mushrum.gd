@@ -9,7 +9,7 @@ var is_dead = false
 signal life_mashrum(player_hearts)
 
 func _ready():
-	connect("life_mashrum", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
+	connect("life_mashrum", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_mashrum", Global.hearts)
 
 func dead():

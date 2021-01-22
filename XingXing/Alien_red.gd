@@ -13,7 +13,7 @@ var is_dead = false
 var i=0
 
 func _ready():
-	connect("life_red", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
+	connect("life_red", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_red", Global.hearts)
 	
 	

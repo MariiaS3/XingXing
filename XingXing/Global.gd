@@ -11,7 +11,7 @@ var hearts_max = 3
 var hearts = hearts_max
 
 var retry_coins =0
-var retry_heart = 4
+var retry_heart = 3
 
 func _ready():
 	pass

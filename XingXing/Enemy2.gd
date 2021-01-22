@@ -14,7 +14,7 @@ func _ready():
 		
 	#$RayCast2D.position.x = $CollisionShape2D.shape.get_extents().x * direction
 	
-	connect("life_changed", get_parent().get_node("Hearts/Control"), "on_player_life_changed")
+	connect("life_changed", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_changed", Global.hearts_max)
 		
 func _physics_process(_delta):
