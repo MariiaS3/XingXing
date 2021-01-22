@@ -7,14 +7,14 @@ const FLOOR = Vector2(0,-1)
 var velocity  = Vector2()
 var direction =1 
 
-signal life_(player_hearts)
+signal life_changed(player_hearts)
 
 var is_dead = false 
 var i=0
 
 func _ready():
-	connect("life_", get_parent().get_node("Hearts"), "on_player_life_changed")
-	emit_signal("life_", Global.hearts)
+	connect("life_changed", get_parent().get_node("Hearts"), "on_player_life_changed")
+	emit_signal("life_changed", Global.hearts)
 	
 	
 func _physics_process(delta):
@@ -60,6 +60,6 @@ func _on_Area2D_body_entered(_body):
 		_body.position.x -=50
 	else:
 		_body.position.x +=50
-	emit_signal("life_", Global.hearts)
+	emit_signal("life_changed", Global.hearts)
 	if Global.hearts <= 0:
 		get_tree().change_scene("res://GameOver.tscn")

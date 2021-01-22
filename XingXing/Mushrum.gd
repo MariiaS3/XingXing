@@ -6,11 +6,11 @@ export var direction = -1
 var is_dead = false 
 
 
-signal life_mashrum(player_hearts)
+signal life_plant(player_hearts)
 
 func _ready():
-	connect("life_mashrum", get_parent().get_node("Hearts"), "on_player_life_changed")
-	emit_signal("life_mashrum", Global.hearts)
+	connect("life_plant", get_parent().get_node("Hearts"), "on_player_life_changed")
+	emit_signal("life_plant", Global.hearts)
 
 func dead():
 	is_dead = true
@@ -25,7 +25,7 @@ func _on_Area2D_body_entered(_body):
 		_body.position.x -=50
 	else:
 		_body.position.x +=50
-	emit_signal("life_mashrum", Global.hearts)
+	emit_signal("life_plant", Global.hearts)
 	if Global.hearts <= 0:
 		get_tree().change_scene("res://GameOver.tscn")
 
