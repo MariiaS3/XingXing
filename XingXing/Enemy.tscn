@@ -22,10 +22,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 20.474, 26.2896 )
+extents = Vector2( 37.7326, 27.4212 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 30.4174, 29.6543 )
+extents = Vector2( 42.6936, 30.5852 )
 
 [node name="Enemy" type="KinematicBody2D"]
 light_mask = -2147483648
@@ -35,32 +35,32 @@ script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 light_mask = -2147483648
-position = Vector2( 7.63784, 6.57915 )
+position = Vector2( -0.837819, 1.81157 )
 scale = Vector2( 0.196143, 0.195851 )
 frames = SubResource( 1 )
+<<<<<<< HEAD
 frame = 4
+=======
+frame = 5
+>>>>>>> 98768da20ee17c180bab7038717cbf24ce4dc9e7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 0
-position = Vector2( 2.42385, 20.8886 )
+position = Vector2( -3.93275, 15.0615 )
 shape = SubResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 0.280609, 0.841843 )
-cast_to = Vector2( 0, 60 )
-collision_mask = 16
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+position = Vector2( -28.6649, -1.11893 )
+collide_with_areas = true
 
 [node name="Checker" type="Area2D" parent="."]
 light_mask = 0
-collision_layer = 16384
+position = Vector2( -2.64871, 0 )
+collision_layer = 512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checker"]
 light_mask = 16384
-position = Vector2( 3.81979, 11.3391 )
+position = Vector2( -0.947571, 5.51202 )
 shape = SubResource( 3 )
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Checker" to="." method="_on_Checker_body_entered"]

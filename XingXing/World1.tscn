@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=17 format=2]
+=======
+[gd_scene load_steps=15 format=2]
+>>>>>>> 98768da20ee17c180bab7038717cbf24ce4dc9e7
 
 [ext_resource path="res://plantPoison.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=2]
@@ -7,20 +11,32 @@
 [ext_resource path="res://World1.gd" type="Script" id=5]
 [ext_resource path="res://Area2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Hearts.tscn" type="PackedScene" id=7]
+<<<<<<< HEAD
 [ext_resource path="res://background/5.png" type="Texture" id=8]
 [ext_resource path="res://background/3.png" type="Texture" id=9]
 [ext_resource path="res://background/4.png" type="Texture" id=10]
 [ext_resource path="res://background/6.png" type="Texture" id=11]
 [ext_resource path="res://background/7.png" type="Texture" id=12]
 [ext_resource path="res://Enemy2.tscn" type="PackedScene" id=13]
+=======
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=9]
+[ext_resource path="res://CanvasLayer.gd" type="Script" id=10]
+[ext_resource path="res://Rewards.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Pause_canvas.gd" type="Script" id=12]
+>>>>>>> 98768da20ee17c180bab7038717cbf24ce4dc9e7
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 256, 160, 4, 160, 4, 3, 256, 3 )
+points = PoolVector2Array( 256, 160, 0, 160, 0, 0, 256, 0 )
 
+<<<<<<< HEAD
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 192, 96, 0, 96, 0, 0, 192, 0 )
 
 [sub_resource type="TileSet" id=3]
+=======
+[sub_resource type="TileSet" id=2]
+>>>>>>> 98768da20ee17c180bab7038717cbf24ce4dc9e7
 0/name = "1.png 0"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
@@ -42,6 +58,7 @@ points = PoolVector2Array( 192, 96, 0, 96, 0, 0, 192, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
+<<<<<<< HEAD
 2/name = "3.png 2"
 2/texture = ExtResource( 9 )
 2/tex_offset = Vector2( 0, 0 )
@@ -119,30 +136,37 @@ points = PoolVector2Array( 192, 96, 0, 96, 0, 0, 192, 0 )
 6/shape_one_way_margin = 0.0
 6/shapes = [  ]
 6/z_index = 0
+=======
+>>>>>>> 98768da20ee17c180bab7038717cbf24ce4dc9e7
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node"]
+pause_mode = 2
 script = ExtResource( 5 )
 
-[node name="Area2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1287.58, 469.439 )
-
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 174.032, 502.124 )
-collision_mask = 22
+position = Vector2( 333.791, 289.101 )
+collision_mask = 2147483862
 
-[node name="Fallzone" parent="." instance=ExtResource( 4 )]
-position = Vector2( 961.038, 773.493 )
+[node name="Pause" type="CanvasLayer" parent="."]
+pause_mode = 2
+script = ExtResource( 12 )
 
-[node name="Fallzone2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2592.61, 773.493 )
+[node name="Pause" parent="Pause" instance=ExtResource( 9 )]
+visible = false
 
-[node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 56, 510 )
-next_scene = "res://World.tscn"
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+script = ExtResource( 10 )
+
+[node name="Rewards" parent="CanvasLayer" instance=ExtResource( 11 )]
+visible = false
+
+[node name="HUD" parent="." instance=ExtResource( 8 )]
 
 [node name="Hearts" parent="." instance=ExtResource( 7 )]
 
 [node name="TileMap" type="TileMap" parent="."]
+<<<<<<< HEAD
 tile_set = SubResource( 3 )
 format = 1
 tile_data = PoolIntArray( 131118, 536870915, 0, 131120, 536870915, 0, 131122, 536870915, 0, 196649, 536870915, 0, 262175, 1, 0, 262178, 1, 0, 327708, 1, 0, 327716, 536870915, 0, 327717, 1, 0, 393241, 1, 0, 458783, 536870915, 0, 524304, 0, 0, 524308, 536870912, 0, 524326, 0, 0, 524330, 536870912, 0, 524343, 0, 0, 524347, 536870912, 0, 524351, 536870914, 0, 524353, 536870914, 0, 524356, 0, 0, 524357, 536870912, 0, 655359, 0, 0, 589827, 536870912, 0, 589831, 2, 0, 589833, 0, 0, 589837, 536870912, 0, 589846, 0, 0, 589850, 536870912, 0, 589869, 0, 0, 589873, 536870912, 0, 589876, 536870912, 0 )
@@ -150,5 +174,20 @@ tile_data = PoolIntArray( 131118, 536870915, 0, 131120, 536870915, 0, 131122, 53
 [node name="Enemy2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 3066.09, 553.04 )
 scale = Vector2( 0.2, 0.2 )
+=======
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( 524303, 0, 0, 589826, 0, 0, 589834, 0, 0, 655360, 0, 0, 655363, 0, 0, 655364, 0, 0, 655366, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0 )
+
+[node name="Fallzone" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1339.16, 775.203 )
+
+[node name="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1122, 496.883 )
+scale = Vector2( 0.2, 0.3 )
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 176, 384 )
+next_scene = "res://World.tscn"
+>>>>>>> 98768da20ee17c180bab7038717cbf24ce4dc9e7
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
-[connection signal="body_entered" from="Fallzone2" to="." method="_on_Fallzone_body_entered"]
