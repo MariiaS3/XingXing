@@ -7,9 +7,11 @@ var save_path = "res://save-file.cfg"
 var config = ConfigFile.new()
 var _settings = config.load(save_path)
 var bounce = false
-var coins=0
 var hearts_max = 3
 var hearts = hearts_max
+
+var retry_coins =0
+var retry_heart = 4
 
 func _ready():
 	pass
