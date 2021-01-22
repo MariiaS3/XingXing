@@ -23,20 +23,21 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 22.0
-margin_top = 9.0
-margin_right = 127.0
-margin_bottom = 63.0
+margin_left = 12.6562
+margin_top = 7.66516
+margin_right = 117.656
+margin_bottom = 61.6652
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="x" type="Label" parent="."]
-margin_left = 67.0
-margin_top = 18.0
-margin_right = 92.0
-margin_bottom = 54.0
+margin_left = 57.6561
+margin_top = 17.3326
+margin_right = 82.6561
+margin_bottom = 53.3326
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.937255, 0.882353, 0.141176, 1 )
 text = "x"
@@ -45,10 +46,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 27.0
-margin_top = 17.0
-margin_right = 67.0
-margin_bottom = 55.0
+margin_left = 16.3213
+margin_top = 14.9978
+margin_right = 56.3213
+margin_bottom = 52.9978
 texture = ExtResource( 3 )
 expand = true
 __meta__ = {
@@ -56,10 +57,10 @@ __meta__ = {
 }
 
 [node name="coins" type="Label" parent="."]
-margin_left = 83.0
-margin_top = 20.0
-margin_right = 123.0
-margin_bottom = 56.0
+margin_left = 74.991
+margin_top = 19.3326
+margin_right = 114.991
+margin_bottom = 55.3326
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.937255, 0.882353, 0.141176, 1 )
 text = "00"

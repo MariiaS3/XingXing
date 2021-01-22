@@ -38,7 +38,7 @@ light_mask = -2147483648
 position = Vector2( 7.63784, 6.57915 )
 scale = Vector2( 0.196143, 0.195851 )
 frames = SubResource( 1 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -51,9 +51,6 @@ position = Vector2( 0.280609, 0.841843 )
 cast_to = Vector2( 0, 60 )
 collision_mask = 16
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-
 [node name="Checker" type="Area2D" parent="."]
 light_mask = 0
 collision_layer = 16384
@@ -62,5 +59,8 @@ collision_layer = 16384
 light_mask = 16384
 position = Vector2( 3.81979, 11.3391 )
 shape = SubResource( 3 )
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
 [connection signal="body_entered" from="Checker" to="." method="_on_Checker_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

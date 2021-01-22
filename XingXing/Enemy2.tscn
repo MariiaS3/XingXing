@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://background/SlimeOrange/SlimeOrange_00000.png" type="Texture" id=1]
 [ext_resource path="res://background/SlimeOrange/SlimeOrange_00001.png" type="Texture" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://background/SlimeOrange/SlimeOrange_00010.png" type="Texture" id=29]
 [ext_resource path="res://background/SlimeOrange/SlimeOrange_00023.png" type="Texture" id=30]
 [ext_resource path="res://Enemy2.gd" type="Script" id=31]
+[ext_resource path="res://background/SlimeOrange/output-onlinepngtools.png" type="Texture" id=32]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -38,27 +39,37 @@ animations = [ {
 "loop": true,
 "name": "default",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": false,
+"name": "Squashed",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 135.376
-height = 148.325
+radius = 50.4046
+height = 100.224
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 222.252, 89.8658 )
+extents = Vector2( 103.592, 45.7497 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 72.9274, 10 )
 
 [node name="Enemy2" type="KinematicBody2D"]
 collision_layer = 16
-collision_mask = 17
+collision_mask = 1041
 script = ExtResource( 31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 3.17834, -11.6541 )
+scale = Vector2( 0.455727, 0.47802 )
 frames = SubResource( 1 )
-frame = 29
+frame = 27
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 10.5946, -8.47568 )
+position = Vector2( 9.18015, -2.1069 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
@@ -66,7 +77,19 @@ shape = SubResource( 2 )
 collision_layer = 16384
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Check1"]
-position = Vector2( 10.5947, 10.5946 )
+position = Vector2( 10.5923, 1.41659 )
 shape = SubResource( 3 )
 
+[node name="Check2" type="Area2D" parent="."]
+collision_layer = 16384
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Check2"]
+position = Vector2( 11.3137, -53.7401 )
+shape = SubResource( 4 )
+
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.015
+one_shot = true
+[connection signal="body_entered" from="Check1" to="." method="_on_Check1_body_entered"]
+[connection signal="body_entered" from="Check2" to="." method="_on_Check2_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
