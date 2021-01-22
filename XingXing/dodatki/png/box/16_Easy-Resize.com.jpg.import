@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/16_Easy-Resize.com.jpg-67f8af5f82b586be970ef2a5ba57d5bf.stex"
+path="res://.import/16_Easy-Resize.com.jpg-8c23a540056022207471b4047666d6f9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dodatki/png/box/16_Easy-Resize.com.jpg"
-dest_files=[ "res://.import/16_Easy-Resize.com.jpg-67f8af5f82b586be970ef2a5ba57d5bf.stex" ]
+source_file="res://dodatki/PNG/box/16_Easy-Resize.com.jpg"
+dest_files=[ "res://.import/16_Easy-Resize.com.jpg-8c23a540056022207471b4047666d6f9.stex" ]
 
 [params]
 

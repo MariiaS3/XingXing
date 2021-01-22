@@ -8,8 +8,7 @@ extents = Vector2( 16, 16 )
 
 [node name="Portal_Wiesielec" type="Control"]
 pause_mode = 1
-margin_left = 12.0
-margin_right = 100.0
+margin_right = 640.0
 margin_bottom = 64.0
 script = ExtResource( 2 )
 __meta__ = {
@@ -17,15 +16,13 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 3.0
 autostart = true
 
 [node name="Wiesielec" type="Area2D" parent="."]
-position = Vector2( 43.8645, 32 )
-collision_layer = 2
+position = Vector2( 96, 32 )
 
 [node name="Sprite" type="Sprite" parent="Wiesielec"]
-position = Vector2( -3.36365, 3.36362 )
 scale = Vector2( 0.109375, 0.109375 )
 texture = ExtResource( 1 )
 

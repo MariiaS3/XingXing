@@ -2,7 +2,7 @@ extends Control
 
 var i=0
 var j=0
-var t=3
+var t=4
 var reward = 2
 var index = PlayerReward.index
 
@@ -24,7 +24,7 @@ func _ready():
 func _unhandled_input(_event: InputEvent) -> void:
 	if t==0:
 		$ColorRect/grid_tiles.set_cell(j,i,9)
-
+		--t
 
 func result():
 	grid_origin = [

@@ -10,4 +10,4 @@ func on_player_life_changed(player_hearts):
 	Save_hud()
 
 func Save_hud():
-	get_node("/root/Global").save_game("Values","ValueTwo",Global.hearts)
+	get_node("/root/Global").save_game("Values","ValuTwo",Global.hearts)
