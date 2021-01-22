@@ -46,9 +46,8 @@ func clear_grid():
 
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if t==0:
+	if t==9:
 		$ColorRect/grid_tiles.set_cell(j,i,9)
-		++t
 
 func result():
 	grid_origin = [
@@ -271,7 +270,6 @@ func _on_ENTER_pressed():
 	if check_result!=0:
 		for y in range (0, sudoku_grid.size()):
 			for x in range(0, sudoku_grid.size()):
-				var number = sudoku_grid[y][x]
 				if(sudoku_grid[x][y]!=grid_origin[x][y]):
 					if(sudoku_grid[x][y]==1):
 						$ColorRect/grid_tiles.set_cell(y, x,10)

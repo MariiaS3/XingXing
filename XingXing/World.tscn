@@ -382,10 +382,10 @@ margin_right = 3142.86
 margin_bottom = 617.632
 
 [node name="Portal_Sudoku" parent="Portals" instance=ExtResource( 10 )]
-margin_left = 1728.0
+margin_left = 1912.0
 margin_top = 376.0
-margin_right = 2173.0
-margin_bottom = 445.0
+margin_right = 2000.0
+margin_bottom = 440.0
 
 [node name="Portal_Wiesielec" parent="Portals" instance=ExtResource( 12 )]
 margin_left = 597.33

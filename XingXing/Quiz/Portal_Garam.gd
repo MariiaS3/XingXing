@@ -13,5 +13,5 @@ func _on_Timer_timeout():
 		$Garam/CollisionShape2D.disabled =true
 		queue_free()
 
-func _on_Garam_body_entered(body):
+func _on_Garam_body_entered(_body):
 	PlayerData.garam+=1

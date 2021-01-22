@@ -4,32 +4,39 @@
 [ext_resource path="res://Quiz/Portal_Sudoku.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 16 )
+extents = Vector2( 21.5044, 16 )
 
 [node name="Portal_Sudoku" type="Control"]
 pause_mode = 1
-margin_right = 512.0
-margin_bottom = 72.0
+anchor_left = 0.000585282
+anchor_top = -0.00104048
+anchor_right = 0.000585282
+anchor_bottom = -0.00104048
+margin_left = 44.2508
+margin_top = 5.74915
+margin_right = 134.251
+margin_bottom = 75.7491
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 4.0
 autostart = true
 
 [node name="Sudoku" type="Area2D" parent="."]
 visible = false
-position = Vector2( 96, 32 )
+position = Vector2( 45.8067, 31.2508 )
 collision_layer = 2
 
 [node name="Sprite" type="Sprite" parent="Sudoku"]
-position = Vector2( 9.53674e-07, 4 )
+position = Vector2( 0.427856, 1.00336 )
 scale = Vector2( 0.125, 0.109375 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sudoku"]
+position = Vector2( 0.764389, 1.11612 )
 shape = SubResource( 1 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Sudoku" to="." method="_on_Sudoku_body_entered"]
