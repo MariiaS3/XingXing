@@ -35,13 +35,13 @@ func dead():
 	i=i+1
 
 
-func _on_Checker_body_entered(_body):
+func _on_Checker_body_entered(body):
 	Global.hearts = Global.hearts - 1
 	if Global.bounce == false:
-		_body.position.x -=50
+		body.position.x -=50
 	else:
-		_body.position.x +=50
-	print(_body.position)
+		body.position.x +=50
+	print(body.position)
 	emit_signal("life_changed", Global.hearts)
 	if Global.hearts <= 0:
 		get_tree().change_scene("res://GameOver.tscn")
