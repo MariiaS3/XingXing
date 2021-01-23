@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://plantPoison.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://background/4.png" type="Texture" id=10]
 [ext_resource path="res://background/6.png" type="Texture" id=11]
 [ext_resource path="res://background/7.png" type="Texture" id=12]
-[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -132,10 +131,10 @@ collision_mask = 22
 position = Vector2( 961.038, 773.493 )
 
 [node name="Fallzone2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2592.61, 773.493 )
+position = Vector2( 2592, 752 )
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 832, 504 )
+position = Vector2( 3816, 424 )
 next_scene = "res://World.tscn"
 
 [node name="Hearts" parent="." instance=ExtResource( 7 )]
@@ -147,10 +146,6 @@ tile_data = PoolIntArray( 131118, 536870915, 0, 131120, 536870915, 0, 131122, 53
 
 [node name="Area2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1287.58, 469.439 )
-
-[node name="Enemy2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 3066.09, 553.04 )
-scale = Vector2( 0.2, 0.2 )
 
 [node name="HUD" parent="." instance=ExtResource( 14 )]
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
