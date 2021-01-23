@@ -134,33 +134,6 @@ script = ExtResource( 5 )
 position = Vector2( 174.032, 502.124 )
 collision_mask = 22
 
-[node name="Fallzone" parent="." instance=ExtResource( 4 )]
-position = Vector2( 961.038, 773.493 )
-
-[node name="Fallzone2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2592.61, 773.493 )
-
-[node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 832, 504 )
-next_scene = "res://World.tscn"
-
-[node name="Hearts" parent="." instance=ExtResource( 7 )]
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 3 )
-collision_mask = 17
-format = 1
-tile_data = PoolIntArray( 131118, 536870915, 0, 131120, 536870915, 0, 131122, 536870915, 0, 196649, 536870915, 0, 262175, 1, 0, 262178, 1, 0, 327708, 1, 0, 327716, 536870915, 0, 327717, 1, 0, 393241, 1, 0, 458783, 536870915, 0, 524304, 0, 0, 524308, 536870912, 0, 524326, 0, 0, 524330, 536870912, 0, 524343, 0, 0, 524347, 536870912, 0, 524351, 536870914, 0, 524353, 536870914, 0, 524356, 0, 0, 524357, 536870912, 0, 655359, 0, 0, 589827, 536870912, 0, 589831, 2, 0, 589833, 0, 0, 589837, 536870912, 0, 589846, 0, 0, 589850, 536870912, 0, 589869, 0, 0, 589873, 536870912, 0, 589876, 536870912, 0 )
-
-[node name="Area2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1287.58, 469.439 )
-
-[node name="Enemy2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 343.269, 438.618 )
-scale = Vector2( 0.2, 0.2 )
-
-[node name="HUD" parent="." instance=ExtResource( 14 )]
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -207,5 +180,29 @@ motion_mirroring = Vector2( 1980, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
 texture = ExtResource( 17 )
 centered = false
+
+[node name="Fallzone" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2728, 800 )
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 832, 504 )
+next_scene = "res://World.tscn"
+
+[node name="Hearts" parent="." instance=ExtResource( 7 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 3 )
+collision_layer = 128
+collision_mask = 2147483649
+format = 1
+tile_data = PoolIntArray( 131118, 536870915, 0, 131120, 536870915, 0, 131122, 536870915, 0, 196649, 536870915, 0, 262175, 1, 0, 262178, 1, 0, 327708, 1, 0, 327716, 536870915, 0, 327717, 1, 0, 393241, 1, 0, 458783, 536870915, 0, 524304, 0, 0, 524308, 536870912, 0, 524326, 0, 0, 524330, 536870912, 0, 524343, 0, 0, 524347, 536870912, 0, 524351, 536870914, 0, 524353, 536870914, 0, 524356, 0, 0, 524357, 536870912, 0, 655359, 0, 0, 589827, 536870912, 0, 589831, 2, 0, 589833, 0, 0, 589837, 536870912, 0, 589846, 0, 0, 589850, 536870912, 0, 589869, 0, 0, 589873, 536870912, 0, 589876, 536870912, 0 )
+
+[node name="Area2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1287.58, 469.439 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 343.269, 438.618 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="HUD" parent="." instance=ExtResource( 14 )]
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
-[connection signal="body_entered" from="Fallzone2" to="." method="_on_Fallzone_body_entered"]

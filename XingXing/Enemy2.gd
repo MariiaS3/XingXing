@@ -4,36 +4,57 @@ signal life_changed(player_hearts)
 
 var velocity = Vector2()
 var speed = 50
-export var direction = -1
+export var direction = 1
+
+
+const GRAVITY = 10
+const SPEED = 200
+const FLOOR = Vector2(0,-1)
 
 var is_dead = false 
 var i=0
 
 func _ready():
-	if direction == 1:
-		$AnimatedSprite.flip_h = true
-	
 	connect("life_changed", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_changed", Global.hearts_max)
-		
+	
 func _physics_process(_delta):
+	velocity.x = SPEED * direction
+	
+	if direction == 1:
+		$AnimatedSprite.flip_h = true
+	else:
+		$AnimatedSprite.flip_h = false
+	
+	$AnimatedSprite.play("walk")
+	
+	velocity.y += GRAVITY
+	
+	if is_dead==false:
+		velocity.y += 20
+		velocity.x = speed * direction
+
+	velocity = move_and_slide(velocity,FLOOR)
+	
 	if is_on_wall():
 		direction = direction * -1
-		$AnimatedSprite.flip_h = not $AnimatedSprite.flip_h
+		$RayCast2D.position.x *= -1
+		
+	if $RayCast2D.is_colliding() == false:
+		direction = direction * -1
+		$RayCast2D.position.x *= -1
 
-	velocity.y += 20
-	velocity.x = speed * direction
-	velocity = move_and_slide(velocity, Vector2.UP)
+	
 
 func _on_Check2_body_entered(body):
-	speed = 0
 	set_collision_layer_bit(4, false)
 	set_collision_mask_bit(0, false)
 	$Check2.set_collision_layer_bit(14, false)
 	$Check2.set_collision_mask_bit(0, false)
 	$Check1.set_collision_layer_bit(14, false)
 	$Check1.set_collision_mask_bit(0, false)
-	$Timer.start()
+	is_dead = true
+	queue_free()
 
 
 func _on_Check1_body_entered(body):
@@ -48,5 +69,5 @@ func _on_Check1_body_entered(body):
 		get_tree().change_scene("res://GameOver.tscn")
 
 
-func _on_Timer_timeout():
-	queue_free()
+
+

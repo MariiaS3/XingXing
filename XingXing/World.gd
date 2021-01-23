@@ -21,3 +21,5 @@ func _on_Local_portal3_body_entered(_body):
 
 func _on_Local_portal4_body_entered(body):
 	$Local_portal2.tel($KinematicBody2D, $Local_portal3,OFFSET_RIGHT)
+
+

@@ -36,50 +36,61 @@
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 24 ), ExtResource( 29 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 19 ), ExtResource( 27 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 25 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 8 ), ExtResource( 20 ), ExtResource( 23 ), ExtResource( 26 ) ],
 "loop": true,
-"name": "default",
-"speed": 5.0
+"name": "walk",
+"speed": 20.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 110.514
-height = 211.939
+radius = 83.8674
+height = 73.121
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 222.252, 89.8658 )
+extents = Vector2( 208.786, 87.2781 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 152.832, 18.1699 )
 
 [node name="Enemy2" type="KinematicBody2D"]
-collision_layer = 16
+collision_layer = 0
+collision_mask = 129
 script = ExtResource( 31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1.25989, 1.25993 )
 frames = SubResource( 1 )
-frame = 21
+animation = "walk"
+frame = 24
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 13.423, 15.566 )
+position = Vector2( 15.79, 44.8128 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 98.2739, -2.51984 )
+scale = Vector2( 2, 3 )
+enabled = true
+collision_mask = 2147483776
+
+[node name="Timer" type="Timer" parent="."]
+
 [node name="Check1" type="Area2D" parent="."]
+position = Vector2( -5.0397, -2.51987 )
 collision_layer = 16384
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Check1"]
-position = Vector2( 10.5947, 10.5946 )
+position = Vector2( 11.3329, 46.6367 )
 shape = SubResource( 3 )
 
 [node name="Check2" type="Area2D" parent="."]
+position = Vector2( -1.25992, -3.05176e-05 )
 collision_layer = 2147500032
 collision_mask = 2147483649
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Check2"]
-position = Vector2( 31.1128, -96.8739 )
+position = Vector2( 9.69416, -62.856 )
 shape = SubResource( 4 )
-
-[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Check1" to="." method="_on_Check1_body_entered"]
 [connection signal="body_entered" from="Check2" to="." method="_on_Check2_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

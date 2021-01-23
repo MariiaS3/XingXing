@@ -37,7 +37,7 @@ animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 8 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 22 ), ExtResource( 13 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 20.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -57,7 +57,7 @@ light_mask = 127
 position = Vector2( -3.65174, 6.58418 )
 scale = Vector2( 0.233015, 0.181969 )
 frames = SubResource( 1 )
-frame = 8
+frame = 12
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
