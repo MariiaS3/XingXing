@@ -266,10 +266,10 @@ __meta__ = {
 }
 
 [node name="Play" type="Button" parent="."]
-margin_left = 486.0
-margin_top = 314.0
-margin_right = 762.0
-margin_bottom = 448.0
+margin_left = 472.0
+margin_top = 248.0
+margin_right = 748.0
+margin_bottom = 382.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.996078, 0.988235, 0.984314, 1 )
 custom_colors/font_color_hover = Color( 0.529412, 0.713726, 0.164706, 1 )
@@ -282,9 +282,9 @@ __meta__ = {
 
 [node name="Quit" type="Button" parent="."]
 margin_left = 480.0
-margin_top = 437.921
+margin_top = 392.0
 margin_right = 756.96
-margin_bottom = 563.921
+margin_bottom = 518.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.996078, 0.988235, 0.984314, 1 )
 custom_colors/font_color_hover = Color( 0.529412, 0.713726, 0.164706, 1 )
