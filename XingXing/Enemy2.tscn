@@ -56,7 +56,7 @@ script = ExtResource( 31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 18
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -80,6 +80,8 @@ position = Vector2( 31.1128, -96.8739 )
 shape = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.037
+one_shot = true
 [connection signal="body_entered" from="Check1" to="." method="_on_Check1_body_entered"]
 [connection signal="body_entered" from="Check2" to="." method="_on_Check2_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
