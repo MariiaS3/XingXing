@@ -172,6 +172,7 @@ position = Vector2( 4752, 656.657 )
 collision_mask = 2147483651
 next_scene = "res://World.tscn"
 player_spawn_location = Vector2( 168, 192 )
+player_direction = 1
 
 [node name="coins" type="Node" parent="."]
 

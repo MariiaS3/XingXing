@@ -12,7 +12,7 @@
 [ext_resource path="res://background/4.png" type="Texture" id=10]
 [ext_resource path="res://background/6.png" type="Texture" id=11]
 [ext_resource path="res://background/7.png" type="Texture" id=12]
-[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemy_UP.tscn" type="PackedScene" id=13]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=14]
 [ext_resource path="res://background/Layers/4.png" type="Texture" id=15]
 [ext_resource path="res://background/Layers/5.png" type="Texture" id=16]
@@ -181,14 +181,18 @@ motion_mirroring = Vector2( 1980, 0 )
 texture = ExtResource( 17 )
 centered = false
 
+[node name="Hearts" parent="." instance=ExtResource( 7 )]
+
+[node name="HUD" parent="." instance=ExtResource( 14 )]
+
 [node name="Fallzone" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2728, 800 )
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
 position = Vector2( 832, 504 )
 next_scene = "res://World.tscn"
-
-[node name="Hearts" parent="." instance=ExtResource( 7 )]
+player_spawn_location = Vector2( 0, 0 )
+player_direction = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
@@ -200,9 +204,6 @@ tile_data = PoolIntArray( 131118, 536870915, 0, 131120, 536870915, 0, 131122, 53
 [node name="Area2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1287.58, 469.439 )
 
-[node name="Enemy2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 343.269, 438.618 )
-scale = Vector2( 0.2, 0.2 )
-
-[node name="HUD" parent="." instance=ExtResource( 14 )]
+[node name="Enemy_UP" parent="." instance=ExtResource( 13 )]
+position = Vector2( 392, 488 )
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
