@@ -25,11 +25,7 @@ func _physics_process(_delta):
 	velocity.x = speed * direction
 	velocity = move_and_slide(velocity, Vector2.UP)
 
-
-
-
 func _on_Check2_body_entered(body):
-	$AnimatedSprite.play("Squashed")
 	speed = 0
 	set_collision_layer_bit(4, false)
 	set_collision_mask_bit(0, false)
