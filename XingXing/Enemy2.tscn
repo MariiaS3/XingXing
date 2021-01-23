@@ -58,7 +58,10 @@ script = ExtResource( 31 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1.25989, 1.25993 )
 frames = SubResource( 1 )
+<<<<<<< HEAD
 animation = "walk"
+=======
+>>>>>>> 5616940e26277dc168677c508ed728b07abe88a8
 frame = 24
 playing = true
 
@@ -91,6 +94,13 @@ collision_mask = 2147483649
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Check2"]
 position = Vector2( 9.69416, -62.856 )
 shape = SubResource( 4 )
+<<<<<<< HEAD
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+=======
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.044
+one_shot = true
+>>>>>>> 5616940e26277dc168677c508ed728b07abe88a8
 [connection signal="body_entered" from="Check1" to="." method="_on_Check1_body_entered"]
 [connection signal="body_entered" from="Check2" to="." method="_on_Check2_body_entered"]
