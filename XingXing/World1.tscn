@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://plantPoison.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://background/Layers/3.png" type="Texture" id=18]
 [ext_resource path="res://background/Layers/2.png" type="Texture" id=19]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=20]
+[ext_resource path="res://background/7.png" type="Texture" id=21]
+[ext_resource path="res://background/6.png" type="Texture" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 253, 156, 4, 156, 4, 5, 253, 5 )
@@ -70,6 +72,34 @@ points = PoolVector2Array( 96, 32, 0, 32, 0, 0, 96, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
+2/name = "7.png 2"
+2/texture = ExtResource( 21 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 128, 160 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "6.png 3"
+3/texture = ExtResource( 22 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 32, 0, 128, 160 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
 
 [node name="Node2D" type="Node2D"]
 pause_mode = 2
@@ -151,59 +181,159 @@ position = Vector2( 74.991, 64 )
 position = Vector2( 2505.08, 857.398 )
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 5232, 544 )
+position = Vector2( 5307.68, 544 )
 next_scene = "res://WinScreen.tscn"
 
 [node name="Enemy_UP" parent="." instance=ExtResource( 13 )]
-position = Vector2( 696, 592 )
+position = Vector2( 983.586, 548.273 )
+scale = Vector2( 0.9, 0.7 )
+
+[node name="Enemy_UP2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1730.3, 612.182 )
+scale = Vector2( 0.9, 0.7 )
+
+[node name="Enemy_UP3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 4172.26, 613.863 )
+scale = Vector2( 0.9, 0.7 )
+
+[node name="Enemy_UP4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 4584, 288 )
 scale = Vector2( 0.9, 0.7 )
 
 [node name="TileMap" type="TileMap" parent="."]
+show_behind_parent = true
 tile_set = SubResource( 3 )
 collision_layer = 128
 collision_mask = 2147483649
 format = 1
-tile_data = PoolIntArray( -65538, -1610612736, 0, -130987, -2147483648, 0, 131070, -1610612736, 0, 65621, -2147483648, 0, 196646, 1, 0, 196647, 536870913, 0, 196648, 536870913, 0, 196649, 536870913, 0, 327678, -1610612736, 0, 262177, 1, 0, 262178, 536870913, 0, 262179, 536870913, 0, 262188, 1, 0, 262189, 536870913, 0, 262190, 536870913, 0, 262229, -2147483648, 0, 327684, 1, 0, 327685, 536870913, 0, 327686, 536870913, 0, 327687, 536870913, 0, 327708, 1, 0, 327709, 536870913, 0, 327710, 536870913, 0, 327729, 1, 0, 327730, 536870913, 0, 327731, 536870913, 0, 327732, 536870913, 0, 327749, 1, 0, 327750, 536870913, 0, 327751, 536870913, 0, 327752, 536870913, 0, 327753, 536870913, 0, 393239, 1, 0, 393240, 536870913, 0, 393241, 536870913, 0, 393271, 1, 0, 393272, 536870913, 0, 393280, 1, 0, 393281, 536870913, 0, 393282, 536870913, 0, 393293, 1, 0, 393294, 536870913, 0, 393295, 536870913, 0, 524286, -536870912, 0, 458761, 1, 0, 458762, 536870913, 0, 458787, 0, 0, 458791, 536870912, 0, 458812, 1, 0, 458813, 536870913, 0, 458837, -2147483648, 0, 524306, 0, 0, 524307, 536870912, 0, 524319, 0, 0, 524321, 536870912, 0, 524325, 0, 0, 524329, 536870912, 0, 589837, 0, 0, 589841, 536870912, 0, 589893, 0, 0, 589897, 536870912, 0, 589900, 536870912, 0, 720894, 0, 0, 655362, 536870912, 0, 655368, 0, 0, 655372, 536870912, 0, 655376, 0, 0, 655380, 536870912, 0, 655383, 536870912, 0, 655386, 536870912, 0, 655388, 536870912, 0, 655392, 0, 0, 655395, 536870912, 0, 655398, 536870912, 0, 655401, 536870912, 0, 655404, 536870912, 0, 655421, 0, 0, 655425, 536870912, 0, 655428, 536870912, 0, 655432, 0, 0, 655436, 536870912, 0, 655439, 536870912, 0, 655442, 536870912, 0, 655445, 536870912, 0 )
+tile_data = PoolIntArray( -65538, -1610612736, 0, -130987, -2147483648, 0, 131070, -1610612736, 0, 65621, -2147483648, 0, 196646, 1, 0, 196647, 536870913, 0, 196648, 536870913, 0, 196649, 536870913, 0, 327678, -1610612736, 0, 262177, 1, 0, 262178, 536870913, 0, 262179, 536870913, 0, 262188, 1, 0, 262189, 536870913, 0, 262190, 536870913, 0, 262229, -2147483648, 0, 327684, 1, 0, 327685, 536870913, 0, 327686, 536870913, 0, 327687, 536870913, 0, 327708, 1, 0, 327709, 536870913, 0, 327710, 536870913, 0, 327715, 2, 0, 327716, 3, 0, 327717, 3, 0, 327719, 3, 0, 327720, 2, 0, 327721, 3, 0, 327729, 1, 0, 327730, 536870913, 0, 327731, 536870913, 0, 327732, 536870913, 0, 327749, 1, 0, 327750, 536870913, 0, 327751, 536870913, 0, 327752, 536870913, 0, 327753, 536870913, 0, 393234, 3, 0, 393235, 3, 0, 393237, 3, 0, 393239, 1, 0, 393240, 536870913, 0, 393241, 536870913, 0, 393249, 3, 0, 393250, 2, 0, 393271, 1, 0, 393272, 536870913, 0, 393280, 1, 0, 393281, 536870913, 0, 393282, 536870913, 0, 393293, 1, 0, 393294, 536870913, 0, 393295, 536870913, 0, 524286, -536870912, 0, 458761, 1, 0, 458762, 536870913, 0, 458768, 2, 0, 458769, 3, 0, 458787, 0, 0, 458791, 536870912, 0, 458812, 1, 0, 458813, 536870913, 0, 458821, 3, 0, 458823, 3, 0, 458824, 2, 0, 458825, 3, 0, 458826, 3, 0, 458828, 3, 0, 458829, 2, 0, 458830, 3, 0, 458837, -2147483648, 0, 589823, 2, 0, 524300, 3, 0, 524306, 0, 0, 524307, 536870912, 0, 524310, 2, 0, 524319, 0, 0, 524321, 536870912, 0, 524325, 0, 0, 524329, 536870912, 0, 524332, 3, 0, 524334, 3, 0, 524355, 2, 0, 524356, 2, 0, 524367, 2, 0, 524372, 3, 0, 589837, 0, 0, 589841, 536870912, 0, 589893, 0, 0, 589897, 536870912, 0, 589900, 536870912, 0, 720894, 0, 0, 655362, 536870912, 0, 655368, 0, 0, 655372, 536870912, 0, 655376, 0, 0, 655380, 536870912, 0, 655383, 536870912, 0, 655386, 536870912, 0, 655388, 536870912, 0, 655392, 0, 0, 655395, 536870912, 0, 655398, 536870912, 0, 655401, 536870912, 0, 655404, 536870912, 0, 655421, 0, 0, 655425, 536870912, 0, 655428, 536870912, 0, 655432, 0, 0, 655436, 536870912, 0, 655439, 536870912, 0, 655442, 536870912, 0, 655445, 536870912, 0 )
 
 [node name="Plant" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1336, 476 )
+position = Vector2( 1317.5, 486.091 )
 
-[node name="coin" parent="." instance=ExtResource( 9 )]
-position = Vector2( 295.59, 255.331 )
+[node name="Plant2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2471.21, 418.819 )
 
-[node name="coin2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 398.358, 254.271 )
+[node name="Plant3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2945.47, 613.907 )
 
-[node name="coin3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 497.948, 256.39 )
+[node name="Plant4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4570.08, 544.953 )
 
-[node name="coin4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 603.894, 397.299 )
+[node name="Plant5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4862.72, 541.59 )
 
-[node name="coin5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 715.064, 394.12 )
+[node name="Coins" type="Node2D" parent="."]
 
-[node name="coin6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1535.16, 556.218 )
+[node name="coin" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 688, 392 )
 
-[node name="coin7" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1664.42, 553.04 )
+[node name="coin2" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 616, 392 )
 
-[node name="coin8" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1786.25, 553.04 )
+[node name="coin3" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 472, 264 )
 
-[node name="coin10" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2274.67, 397.298 )
+[node name="coin4" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 384, 264 )
 
-[node name="coin11" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2411.34, 394.12 )
+[node name="coin5" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 296, 264 )
 
-[node name="coin12" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2551.19, 388.823 )
+[node name="coin6" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 1528, 544 )
 
-[node name="coin13" parent="." instance=ExtResource( 9 )]
-position = Vector2( 2679.38, 390.942 )
+[node name="coin10" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2168, 216 )
 
-[node name="coin9" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1904.91, 553.04 )
+[node name="coin11" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2568, 144 )
+
+[node name="coin12" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2264, 216 )
+
+[node name="coin13" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2648, 144 )
+
+[node name="coin15" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 3960, 560 )
+
+[node name="coin27" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 3196.47, 242.141 )
+
+[node name="coin28" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 3332.69, 240.46 )
+
+[node name="coin20" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 4456, 240 )
+
+[node name="coin22" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 4688, 240 )
+
+[node name="coin21" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 4584, 240 )
+
+[node name="coin16" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 4056, 560 )
+
+[node name="coin17" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 4152, 560 )
+
+[node name="coin18" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 4248, 560 )
+
+[node name="coin19" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 4352, 560 )
+
+[node name="coin14" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2488, 144 )
+
+[node name="coin7" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 1640, 544 )
+
+[node name="coin8" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 1760, 544 )
+
+[node name="coin9" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 1880, 544 )
+
+[node name="coin23" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2064, 440 )
+
+[node name="coin25" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2784, 464 )
+
+[node name="coin26" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2864, 464 )
+
+[node name="coin24" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( 2168, 440 )
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
+[connection signal="coin_collected" from="Coins/coin" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin2" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin3" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin4" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin5" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin6" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin10" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin11" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin12" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin13" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin15" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin27" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin28" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin20" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin22" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin21" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin16" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin17" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin18" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin19" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin14" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin7" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin8" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin9" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin23" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin25" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin26" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="Coins/coin24" to="HUD" method="_on_coin_coin_collected"]
