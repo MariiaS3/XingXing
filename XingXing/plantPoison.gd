@@ -1,7 +1,6 @@
 extends StaticBody2D
 
 var velocity = Vector2()
-export var direction = -1
 
 var is_dead = false 
 
@@ -13,10 +12,7 @@ func _ready():
 	connect("life_plant", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_plant", Global.hearts)
 
-
-
 func dead():
-	
 	is_dead = true
 	velocity = Vector2(0,0)
 	queue_free()

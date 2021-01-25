@@ -41,23 +41,24 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 16 )
+extents = Vector2( 8, 16 )
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 32.0
-height = 0.0
+height = 16.0
 
 [node name="Plant" type="StaticBody2D"]
 light_mask = 0
-collision_layer = 128
+collision_layer = 0
+collision_mask = 129
 script = ExtResource( 31 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 light_mask = 127
-position = Vector2( -3.65174, 6.58418 )
-scale = Vector2( 0.233015, 0.181969 )
+position = Vector2( 2.17408, -4.70796 )
+scale = Vector2( 0.241507, 0.20036 )
 frames = SubResource( 1 )
-frame = 12
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -65,11 +66,11 @@ shape = SubResource( 2 )
 
 [node name="Plant" type="Area2D" parent="."]
 position = Vector2( -8, 8 )
-collision_layer = 128
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plant"]
-light_mask = -2147483648
-position = Vector2( 8, 0 )
+light_mask = -2147483647
+position = Vector2( 16, -8 )
 rotation = 1.5708
 shape = SubResource( 3 )
 [connection signal="body_entered" from="Plant" to="." method="_on_Plant_body_entered"]
