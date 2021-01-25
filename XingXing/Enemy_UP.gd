@@ -34,7 +34,7 @@ func _physics_process(_delta):
 		velocity.y += 20
 		velocity.x = speed * direction
 
-	velocity = move_and_slide(velocity,FLOOR)
+	velocity = move_and_slide(velocity,Vector2.UP)
 	
 	if is_on_wall():
 		direction = direction * -1
