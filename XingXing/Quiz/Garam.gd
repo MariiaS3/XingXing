@@ -53,8 +53,7 @@ func clear_grid():
 		[  11,10,10,10,11,10,10,10,11],
 		[  8,11,0,11,5,11,0,11,3]
 	]
-	# This is not needed on the first load of the program
-	# But is needed more for when the user presses the reset button
+
 	for y in range (0, sudoku_grid.size()):
 		for x in range(0, sudoku_grid.size()):
 			var number = sudoku_grid[y][x]

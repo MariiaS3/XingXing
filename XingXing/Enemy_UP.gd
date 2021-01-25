@@ -15,7 +15,6 @@ var is_dead = false
 var i=0
 
 func _ready():
-# warning-ignore:return_value_discarded
 	connect("life_changed", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_changed", Global.hearts_max)
 	
