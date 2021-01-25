@@ -30,6 +30,7 @@ var paused: = false setget set_paused
 
 
 func _ready() -> void:
+# warning-ignore:return_value_discarded
 	PlayerData.connect("quiz", self, "_on_quiz")
 
 

@@ -19,6 +19,7 @@ var grid_origin
 var check_result = 3
 
 func _ready():
+# warning-ignore:return_value_discarded
 	PlayerData.connect("sudoku", self, "clear_grid")
 	
 func clear_grid():

@@ -10,6 +10,7 @@ var is_dead = false
 var i=0
 
 func _ready():
+# warning-ignore:return_value_discarded
 	connect("life_changed", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_changed", Global.hearts)
 	
@@ -44,6 +45,7 @@ func _on_Checker_body_entered(body):
 	print(body.position)
 	emit_signal("life_changed", Global.hearts)
 	if Global.hearts <= 0:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://GameOver.tscn")
 
 

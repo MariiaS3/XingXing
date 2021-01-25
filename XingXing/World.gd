@@ -19,7 +19,7 @@ func _on_Local_portal3_body_entered(_body):
 	$Local_portal.tel($KinematicBody2D, $Local_portal4,OFFSET_LEFT)
 
 
-func _on_Local_portal4_body_entered(body):
+func _on_Local_portal4_body_entered(_body):
 	$Local_portal2.tel($KinematicBody2D, $Local_portal3,OFFSET_RIGHT)
 
 

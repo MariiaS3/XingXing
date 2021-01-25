@@ -9,6 +9,7 @@ var is_dead = false
 signal life_plant(player_hearts)
 
 func _ready():
+# warning-ignore:return_value_discarded
 	connect("life_plant", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life_plant", Global.hearts)
 
@@ -29,5 +30,6 @@ func _on_Plant_body_entered(_body):
 		_body.position.x +=50
 	emit_signal("life_plant", Global.hearts)
 	if Global.hearts <= 0:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://GameOver.tscn")
 

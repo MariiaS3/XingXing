@@ -13,6 +13,7 @@ signal life(player_hearts)
 
 
 func _ready():
+# warning-ignore:return_value_discarded
 	connect("life", get_parent().get_node("Hearts"), "on_player_life_changed")
 	emit_signal("life", Global.hearts)
 	
@@ -99,6 +100,7 @@ func Fall(_body):
 		_body.position.y -=100
 	emit_signal("life", Global.hearts)
 	if Global.hearts <= 0:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://GameOver.tscn")
 
 
