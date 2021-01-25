@@ -1,5 +1,6 @@
 extends Node2D
- 
+var level=0
+var path = "res://World1.tscn"
 var player_initial_map_position = Vector2(168,192)
 var player_facing_direction = 1
 var DisplayValue = 0

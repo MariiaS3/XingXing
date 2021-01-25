@@ -42,7 +42,6 @@ func _on_Checker_body_entered(body):
 		body.position.x -=50
 	else:
 		body.position.x +=50
-	print(body.position)
 	emit_signal("life_changed", Global.hearts)
 	if Global.hearts <= 0:
 # warning-ignore:return_value_discarded

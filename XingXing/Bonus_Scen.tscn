@@ -139,8 +139,8 @@ collision_mask = 2
 motion_mirroring = Vector2( 2800, 0 )
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxLayer"]
-position = Vector2( 1383.23, 401.006 )
-scale = Vector2( 2.96826, 2.01109 )
+position = Vector2( 1396.54, 405.006 )
+scale = Vector2( 2.996, 2.0259 )
 texture = ExtResource( 13 )
 
 [node name="Pause" type="CanvasLayer" parent="."]
@@ -170,9 +170,8 @@ position = Vector2( 1791.51, 904 )
 [node name="Portal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 4752, 656.657 )
 collision_mask = 2147483651
-next_scene = "res://World.tscn"
+next_scene = "res://WinScreen.tscn"
 player_spawn_location = Vector2( 168, 192 )
-player_direction = 1
 
 [node name="coins" type="Node" parent="."]
 

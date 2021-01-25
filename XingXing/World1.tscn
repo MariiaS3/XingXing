@@ -151,10 +151,8 @@ position = Vector2( 74.991, 64 )
 position = Vector2( 2505.08, 857.398 )
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 666.991, 384 )
-next_scene = "res://World.tscn"
-player_spawn_location = Vector2( 0, 0 )
-player_direction = 1
+position = Vector2( 5232, 544 )
+next_scene = "res://WinScreen.tscn"
 
 [node name="Enemy_UP" parent="." instance=ExtResource( 13 )]
 position = Vector2( 696, 592 )
@@ -183,7 +181,7 @@ position = Vector2( 497.948, 256.39 )
 position = Vector2( 603.894, 397.299 )
 
 [node name="coin5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 695.008, 396.239 )
+position = Vector2( 715.064, 394.12 )
 
 [node name="coin6" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1535.16, 556.218 )
