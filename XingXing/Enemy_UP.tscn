@@ -49,7 +49,7 @@ height = 31.944
 extents = Vector2( 48, 24 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 32, 8 )
+extents = Vector2( 24, 8 )
 
 [node name="Enemy_UP" type="KinematicBody2D"]
 collision_layer = 0

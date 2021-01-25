@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
 [ext_resource path="res://dodatki/PNG/Tiles_lava/lava_tile3.png" type="Texture" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://dodatki/PNG/Tiles_rock/tile28.png" type="Texture" id=12]
 [ext_resource path="res://dodatki/PNG/Background/Bright/Background.png" type="Texture" id=13]
 [ext_resource path="res://Mushrum.tscn" type="PackedScene" id=14]
-[ext_resource path="res://plantPoison.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Sheng.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Alien_red.tscn" type="PackedScene" id=17]
 [ext_resource path="res://CanvasLayer.gd" type="Script" id=18]
@@ -178,20 +177,14 @@ player_spawn_location = Vector2( 168, 192 )
 [node name="coin" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 355.997, 225.142 )
 
-[node name="coin5" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 802.531, 156.94 )
-
-[node name="coin6" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 607.498, 165.877 )
-
 [node name="coin7" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 805.077, 356.667 )
+position = Vector2( 3014.07, 600.133 )
 
 [node name="coin8" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 867.959, 356.534 )
+position = Vector2( 3076.95, 600 )
 
 [node name="coin9" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 938.37, 358.171 )
+position = Vector2( 3142.07, 601.637 )
 
 [node name="coin10" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 1256.15, -21.8676 )
@@ -199,35 +192,23 @@ position = Vector2( 1256.15, -21.8676 )
 [node name="coin11" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 1317.23, -23.6494 )
 
-[node name="coin12" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1192.84, 303.063 )
-
-[node name="coin13" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1259.2, 302.48 )
-
 [node name="coin14" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 2562.32, 674.355 )
 
 [node name="coin15" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1625.93, 41.98 )
+position = Vector2( 2944, 600 )
 
 [node name="coin16" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1703.51, 45.3918 )
+position = Vector2( 2000, 605.556 )
 
 [node name="coin17" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1771.45, 44.5612 )
+position = Vector2( 1920, 600 )
 
 [node name="coin18" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1828.2, 46.3606 )
-
-[node name="coin19" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1132.7, 302.333 )
+position = Vector2( 1832, 603.775 )
 
 [node name="coin20" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 2210.61, 544.33 )
-
-[node name="coin21" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 667.695, 162.72 )
 
 [node name="coin22" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 2475.5, 677.213 )
@@ -238,12 +219,6 @@ position = Vector2( 2087.97, 546.267 )
 [node name="coin24" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 2143.28, 544.68 )
 
-[node name="coin25" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 2240.04, 160.518 )
-
-[node name="coin27" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 2324.36, 162.763 )
-
 [node name="coin28" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 2639.1, 670.478 )
 
@@ -251,16 +226,16 @@ position = Vector2( 2639.1, 670.478 )
 position = Vector2( 2661.46, 298.557 )
 
 [node name="coin31" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1300.33, 550.321 )
+position = Vector2( 1632, 32.7911 )
 
 [node name="coin48" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1234.4, 605.556 )
+position = Vector2( 1827.7, 34.5721 )
 
 [node name="coin49" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1166.7, 603.775 )
+position = Vector2( 1760, 32.7911 )
 
 [node name="coin32" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 1362.67, 543.335 )
+position = Vector2( 1696, 32 )
 
 [node name="coin33" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 1445.31, 487.776 )
@@ -284,19 +259,13 @@ position = Vector2( 2795.16, -27.9213 )
 position = Vector2( 2854.68, -27.7722 )
 
 [node name="coin44" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 2840.67, 161.067 )
+position = Vector2( 1888, 227.662 )
 
 [node name="coin50" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 2921.3, 158.547 )
+position = Vector2( 1968.63, 225.142 )
 
 [node name="coin51" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 2979.26, 161.067 )
-
-[node name="coin52" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 3110.29, 98.0707 )
-
-[node name="coin53" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 3193.44, 98.0707 )
+position = Vector2( 2026.59, 227.662 )
 
 [node name="coin54" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 3362.27, 289.579 )
@@ -307,35 +276,17 @@ position = Vector2( 3430.31, 289.579 )
 [node name="coin56" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 3493.3, 292.099 )
 
-[node name="coin57" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 3551.26, 158.547 )
-
 [node name="coin60" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 3296.55, -39.2296 )
+position = Vector2( 800, 344 )
 
 [node name="coin61" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 3365.47, -39.2296 )
+position = Vector2( 868.92, 344 )
 
 [node name="coin62" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 3428.4, -33.2364 )
-
-[node name="coin58" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 3664, 162.72 )
-
-[node name="coin63" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 4000, 152 )
+position = Vector2( 936, 344 )
 
 [node name="coin74" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 3912, -27.9213 )
-
-[node name="coin64" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 4104, 154.871 )
-
-[node name="coin65" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 4200, 282.507 )
-
-[node name="coin66" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 4296, 292.099 )
 
 [node name="coin67" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 4600, 25.8051 )
@@ -346,23 +297,8 @@ position = Vector2( 4696, 32 )
 [node name="coin69" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 4784, 25.8051 )
 
-[node name="coin70" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 4912, 140.207 )
-
-[node name="coin71" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 5008, 143.802 )
-
-[node name="coin72" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 5176, 276.167 )
-
-[node name="coin73" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 5280, 276.167 )
-
 [node name="coin59" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 3752, -27.9213 )
-
-[node name="coin36" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 478.854, 420.201 )
 
 [node name="coin45" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 630.306, 674.998 )
@@ -373,29 +309,17 @@ position = Vector2( 706.924, 674.998 )
 [node name="coin47" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 790.668, 674.998 )
 
-[node name="coin37" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 547.658, 423.061 )
-
 [node name="coin38" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 1195.22, -22.8852 )
-
-[node name="coin39" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 610.38, 425.551 )
 
 [node name="coin30" parent="coins" instance=ExtResource( 4 )]
 position = Vector2( 2591.55, 296.723 )
 
-[node name="coin26" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 2157.18, 160.763 )
-
-[node name="coin4" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 739.51, 159.185 )
-
 [node name="coin3" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 486.528, 233.551 )
+position = Vector2( 488, 223.802 )
 
 [node name="coin2" parent="coins" instance=ExtResource( 4 )]
-position = Vector2( 422.813, 230.743 )
+position = Vector2( 416, 227.662 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 4 )
@@ -406,11 +330,8 @@ tile_data = PoolIntArray( -131073, 2, 0, -196608, 2, 0, -196607, 2, 0, -196606, 
 [node name="Mushrum" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2552.68, 39.0648 )
 
-[node name="Plant2" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1936, 603.775 )
-
 [node name="Mushrum4" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1952, 244 )
+position = Vector2( 1952, 232 )
 
 [node name="Mushrum6" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3424, 292.099 )
@@ -419,16 +340,10 @@ position = Vector2( 3424, 292.099 )
 position = Vector2( 3832, -24 )
 
 [node name="Mushrum3" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4672, 41.98 )
-
-[node name="Plant7" parent="." instance=ExtResource( 15 )]
-position = Vector2( 5208, 288 )
-
-[node name="Plant6" parent="." instance=ExtResource( 15 )]
-position = Vector2( 4352, 88.5631 )
+position = Vector2( 4384, 87.0648 )
 
 [node name="Mushrum2" parent="." instance=ExtResource( 14 )]
-position = Vector2( 725.498, 171.181 )
+position = Vector2( 706.924, 175.427 )
 
 [node name="Sheng" parent="." instance=ExtResource( 16 )]
 position = Vector2( 4736, 452.363 )
@@ -440,40 +355,32 @@ position = Vector2( 719.454, 632 )
 position = Vector2( 1529.59, 443.616 )
 
 [node name="Alien_red3" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1726.05, 8.98993 )
+position = Vector2( 2152, 517.711 )
 
 [node name="Alien_red6" parent="." instance=ExtResource( 17 )]
 position = Vector2( 3072, 584 )
 
 [node name="Alien_red4" parent="." instance=ExtResource( 17 )]
-position = Vector2( 2930.69, 134.848 )
+position = Vector2( 1736, -8 )
 
 [node name="Alien_red5" parent="." instance=ExtResource( 17 )]
-position = Vector2( 4144, 531.708 )
+position = Vector2( 4136, 480 )
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin5" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin6" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin7" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin8" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin9" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin10" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin11" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin12" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin13" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin14" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin15" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin16" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin17" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin18" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin19" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin20" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin21" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin22" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin23" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin24" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin25" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin27" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin28" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin29" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin31" to="HUD" method="_on_coin_collected"]
@@ -490,38 +397,21 @@ position = Vector2( 4144, 531.708 )
 [connection signal="coin_collected" from="coins/coin44" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin50" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin51" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin52" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin53" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin54" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin55" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin56" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin57" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin60" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin61" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin62" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin58" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin63" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin74" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin64" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin65" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin66" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin67" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin68" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin69" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin70" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin71" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin72" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin73" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin59" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin36" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin45" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin46" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin47" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin37" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin38" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin39" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin30" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin26" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin3" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]

@@ -92,18 +92,8 @@ func _on_AnimatedSprite_animation_finished():
 
 func Fall(body):
 	Global.hearts = Global.hearts - 1
-	if Global.bounce == false:
-		body.position.x -=100
-		body.position.y -=200
-	else:
-		body.position.x +=150
-		body.position.y -=100
+	body.position = Global.map_position
 	emit_signal("life", Global.hearts)
 	if Global.hearts <= 0:
 # warning-ignore:return_value_discarded
 		get_tree().change_scene("res://GameOver.tscn")
-		body.position.x -=200
-		body.position.y -=200
-	else:
-		body.position.x +=200
-		body.position.y -=200
