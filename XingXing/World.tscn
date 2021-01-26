@@ -47,11 +47,11 @@ collision_mask = 158
 scroll_base_scale = Vector2( 0.3, 0.6 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 2750, 0 )
+motion_mirroring = Vector2( 1980, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -15.401, -140.864 )
-scale = Vector2( 0.468453, 0.301292 )
+position = Vector2( -3.60757, -143.963 )
+scale = Vector2( 0.380225, 0.305004 )
 texture = ExtResource( 25 )
 centered = false
 offset = Vector2( 10, -10 )
@@ -542,7 +542,7 @@ margin_right = -8.0
 [node name="Portals" type="Node2D" parent="."]
 
 [node name="Area2D" parent="Portals" instance=ExtResource( 45 )]
-position = Vector2( 4848, 568 )
+position = Vector2( 4848, 572.261 )
 scale = Vector2( 0.99857, 1.01353 )
 collision_mask = 1
 next_scene = "res://WinScreen.tscn"
@@ -913,7 +913,7 @@ position = Vector2( 1510.34, 478.15 )
 position = Vector2( 1629.14, 337.436 )
 
 [node name="coin92" parent="coins" instance=ExtResource( 40 )]
-position = Vector2( 1694.19, 334.607 )
+position = Vector2( 1708.49, 334.607 )
 
 [node name="coin66" parent="coins" instance=ExtResource( 40 )]
 position = Vector2( 1860.49, 408.143 )
