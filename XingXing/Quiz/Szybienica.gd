@@ -2,24 +2,24 @@ extends Control
 var i=0;
 var j=0;
 var reward = 4
-var question = 10
+var question = 3
 var t = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var index = 0
 
-var array = ["Wypisz pięć pierwszych liczb pierwszych",
-"Wypisz liczby parzyste mniejsze od 13 binarne licząc od 1",
+var array = ["Wypisz 5 pierwszych liczb pierwszych",
+"Wypisz liczby parzyste mniejsze od 13 binarnie liczac od 1",
 "Dodaj do siebie dwie liczby binarne: 10111+11001",
 "Odejmij dwie liczby binarne: 1011-101",
 "Wypisz 7 pierwszych liczb z ciągu Fibonnaciego",
-"Wypisz długości stron trójkąta tak, żeby był to trójkąt pitagorejski \n jedna strona, którego jest równa 5",
-"Wypisz długości stron trójkąta egipskiego",
-"Jaka jest suma liczb na kole ruletki nazywana także 'szatańską liczbą'",
+"Wypisz dlugosci stron trojkata tak, żeby byl to trojkat pitagorejski \n jedna strona, ktorego jest rowna 5",
+"Wypisz dlugosci stron trojkata egipskiego",
+"Jaka jest suma liczb na kole ruletki nazywana takze 'szatanska liczba'",
 "Ile wynosi suma liczb od 1 do 100",
 "Jaka liczba jest na 32 miejscu po przecinku w liczbie Pi",
-"Ile razy w ciągu doby zachodzą na siebie wskazówki godziny i minuty",
+"Ile razy w ciągu doby zachodza na siebie wskazowki godziny i minuty",
+"Pan Blue mieszka w niebieskim domu, Pani Pink mieszka w rozowym domu, \n a Pan Brown w  domu brazowym. Kto mieszka w Bialym Domu?",
+"Trzy pierwsze liczby doskonale",
 "Litery A,B,C,D,E,F w systemie szesnastkowym to odpowiednio:",
-"Trzy pierwsze liczby doskonałe",
-"Pan Blue mieszka w niebieskim domu, Pani Pink mieszka w różowym domu, \n a Pan Brown w  domu brązowym. Kto mieszka w Białym Domu?",
 "Kiedy tata Kuby miał 31 lat, Kuba miał 8 lat. Teraz wiek taty jest \n dokładnie dwa razy taki wiek Kuby. Ile lat ma obecnie Kuba?",
 "Oblicz 5!+3!"] 
 onready var scene_tree: SceneTree = get_tree()
@@ -129,7 +129,7 @@ func _on_Button_pressed():
 			j = randi()%15+1
 		t[j]=1
 		label.text = array[j]
-	elif j==11 &&  $ColorRect/TextEdit.text == "10,11,12,13,14,15":
+	elif j==11 &&  $ColorRect/TextEdit.text == "Prezydent":
 		question = question-1
 		j = randi()%15+1
 		while t[j]==1:
@@ -143,7 +143,7 @@ func _on_Button_pressed():
 			j = randi()%15+1
 		t[j]=1
 		label.text = array[j]
-	elif j==13 &&  $ColorRect/TextEdit.text == "Prezydent":
+	elif j==13 &&  $ColorRect/TextEdit.text == "10,11,12,13,14,15":
 		question = question-1
 		j = randi()%15+1
 		while t[j]==1:

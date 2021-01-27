@@ -26,18 +26,16 @@ func clear_grid():
 	self.paused = true
 	check_the_result.text = "Check the result: %s" % check_result
 	sudoku_grid = [
-		[  0, 0, 2, 5, 0, 9, 6, 1, 7],
-		[  0, 1, 0, 4, 6, 7, 0, 2, 0],
-		[  7, 0, 6, 1, 0, 0, 8, 0, 4],
-		[  6, 0, 5, 0, 4, 1, 7, 0, 0],
-		[  0, 2, 7, 9, 3, 0, 5, 0, 1],
-		[  1, 3, 0, 0, 0, 8, 2, 6, 0],
-		[  5, 0, 1, 8, 7, 0, 9, 3, 2],
-		[  0, 8, 0, 3, 0, 5, 0, 7, 0],
-		[  4, 0, 3, 6, 0, 2, 1, 0, 8]
+		[0,4,0,5,8,9,6,1,7],
+		[9,1,8,4,6,7,3,2,5],
+		[7,5,6,1,2,3,8,0,4],
+		[6,9,5,2,4,1,7,8,3],
+		[8,0,7,9,3,6,5,4,1],
+		[1,3,4,7,5,0,2,6,8],
+		[5,6,1,8,7,4,9,3,2],
+		[2,8,9,3,1,5,4,7,6],
+		[4,7,3,6,9,2,0,5,8],
 	]
-	# This is not needed on the first load of the program
-	# But is needed more for when the user presses the reset button
 	for y in range (0, sudoku_grid.size()):
 		for x in range(0, sudoku_grid.size()):
 			var number = sudoku_grid[y][x]
@@ -49,6 +47,7 @@ func clear_grid():
 func _unhandled_input(_event: InputEvent) -> void:
 	if t==9:
 		$ColorRect/grid_tiles.set_cell(j,i,9)
+		--t;
 
 func result():
 	grid_origin = [
@@ -289,7 +288,6 @@ func _on_ENTER_pressed():
 					if(sudoku_grid[x][y]==8):
 						$ColorRect/grid_tiles.set_cell(y, x,17)
 		check_result = check_result-1
-		reward = reward-1
 		check_the_result.text = "Check the result: %s" % check_result
 
 
