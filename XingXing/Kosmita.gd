@@ -78,6 +78,7 @@ func _physics_process(_delta):
 					motion.x = SPEED
 					$AnimatedSprite.flip_h = false
 					$AnimatedSprite.play("jump_r_l")
+					
 				elif Input.is_action_pressed("ui_left"):
 					motion.x = -SPEED
 					$AnimatedSprite.flip_h = true

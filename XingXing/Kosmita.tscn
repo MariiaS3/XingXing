@@ -37,14 +37,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 14 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 19 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 31 ) ],
@@ -52,9 +52,24 @@ animations = [ {
 "name": "flash",
 "speed": 30.0
 }, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "attack",
+"speed": 20.0
+}, {
 "frames": [ ExtResource( 7 ), ExtResource( 21 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "Turn",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "jump_r_l",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 11 ) ],
@@ -62,30 +77,15 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 33 ), ExtResource( 25 ), ExtResource( 24 ) ],
-"loop": true,
-"name": "hurt",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 20 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 16 ), ExtResource( 22 ), ExtResource( 1 ), ExtResource( 23 ), ExtResource( 4 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 6.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 34 ), ExtResource( 33 ), ExtResource( 25 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "jump_r_l",
+"name": "hurt",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 28 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 31 ) ],
-"loop": false,
-"name": "attack",
-"speed": 20.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -135,6 +135,4 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -7.1899, 12.7776 )
 shape = SubResource( 3 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
