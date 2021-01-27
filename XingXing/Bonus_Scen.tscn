@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
 [ext_resource path="res://dodatki/PNG/Tiles_lava/lava_tile3.png" type="Texture" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://dodatki/PNG/Background/Bright/myst.png" type="Texture" id=23]
 [ext_resource path="res://dodatki/PNG/Background/Bright/rock3.png" type="Texture" id=24]
 [ext_resource path="res://Wall.tscn" type="PackedScene" id=25]
+[ext_resource path="res://music/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).wav" type="AudioStream" id=26]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 16, 64, 16, 64, 64, 0, 64 )
@@ -386,6 +387,11 @@ position = Vector2( 2168, 136 )
 
 [node name="Alien_red5" parent="." instance=ExtResource( 17 )]
 position = Vector2( 3616, 569.466 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
+volume_db = -23.0
+autoplay = true
 [connection signal="body_entered" from="Fallzone" to="." method="_on_Fallzone_body_entered"]
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin8" to="HUD" method="_on_coin_collected"]
