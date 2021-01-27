@@ -29,7 +29,7 @@
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Pause_canvas.gd" type="Script" id=28]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=29]
-[ext_resource path="res://music/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).wav" type="AudioStream" id=30]
+[ext_resource path="res://music/sounds/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).tres" type="AudioStream" id=30]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=40]
 [ext_resource path="res://World.gd" type="Script" id=44]
 [ext_resource path="res://Area2D.tscn" type="PackedScene" id=45]

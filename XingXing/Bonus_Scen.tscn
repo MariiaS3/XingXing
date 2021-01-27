@@ -25,7 +25,7 @@
 [ext_resource path="res://dodatki/PNG/Background/Bright/myst.png" type="Texture" id=23]
 [ext_resource path="res://dodatki/PNG/Background/Bright/rock3.png" type="Texture" id=24]
 [ext_resource path="res://Wall.tscn" type="PackedScene" id=25]
-[ext_resource path="res://music/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).wav" type="AudioStream" id=26]
+[ext_resource path="res://music/sounds/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).tres" type="AudioStream" id=26]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 16, 64, 16, 64, 64, 0, 64 )
