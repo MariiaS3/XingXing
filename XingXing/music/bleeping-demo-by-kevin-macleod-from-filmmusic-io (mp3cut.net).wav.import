@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).wav-62435d450d2cd1f66e66e5987b11ccbd.sample"
+
+[deps]
+
+source_file="res://music/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).wav"
+dest_files=[ "res://.import/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).wav-62435d450d2cd1f66e66e5987b11ccbd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
