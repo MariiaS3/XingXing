@@ -32,6 +32,7 @@ func dead():
 	if i==2:
 		is_dead = true
 		velocity = Vector2(0,0)
+		Global.enemy = Global.enemy +1
 		queue_free()
 	i=i+1
 

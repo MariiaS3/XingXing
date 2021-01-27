@@ -11,6 +11,8 @@ var map_position = Vector2(0,0)
 var bounce = false
 var hearts_max = 3
 var hearts = hearts_max
+var enemy = 0
+var coins =0
 
 var retry_coins =0
 var retry_heart = 3

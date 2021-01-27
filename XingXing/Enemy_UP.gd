@@ -54,11 +54,13 @@ func _on_Dead_Enemy_body_entered(_body):
 	$Dead_Kosmita.set_collision_layer_bit(14, false)
 	$Dead_Kosmita.set_collision_mask_bit(0, false)
 	is_dead = true
+	Global.enemy = Global.enemy +1
 	queue_free()
 
 func dead():
 	if i==2:
 		i=i+1
+	
 
 func _on_Dead_Kosmita_body_entered(body):
 	Global.hearts = Global.hearts - 1
