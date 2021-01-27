@@ -6,7 +6,11 @@ func _ready():
 	$coins.text = String(Global.DisplayValue)
 	Save_hud()
 
-
+func _on_coin_collected():
+	coins = coins + 1
+	get_node("/root/Global").DisplayValue += 1
+	_ready()
+	
 func _on_coin_coin_collected():
 	coins = coins + 1
 	get_node("/root/Global").DisplayValue += 1

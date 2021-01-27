@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 const GRAVITY = 10
-const SPEED = 200
+const SPEED = 250
 const HEIGHT = -600
 const FIREBALL = preload("res://Node2D.tscn")
 var motion = Vector2()
