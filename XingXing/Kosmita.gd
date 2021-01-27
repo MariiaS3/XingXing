@@ -43,6 +43,7 @@ func _physics_process(_delta):
 		motion.x = 0
 		if on_ground == true && is_attacking == false:
 			$AnimatedSprite.play("Idle")
+			
 		elif on_ground == false && is_attacking == false:
 			$AnimatedSprite.play("jump")
 		
