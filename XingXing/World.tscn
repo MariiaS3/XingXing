@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Kosmita.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Pause_canvas.gd" type="Script" id=28]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=29]
+[ext_resource path="res://music/bleeping-demo-by-kevin-macleod-from-filmmusic-io (mp3cut.net).wav" type="AudioStream" id=30]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=40]
 [ext_resource path="res://World.gd" type="Script" id=44]
 [ext_resource path="res://Area2D.tscn" type="PackedScene" id=45]
@@ -1066,6 +1067,10 @@ position = Vector2( 3979.94, 583.017 )
 
 [node name="Local_portal3" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4592, 128.167 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 30 )
+autoplay = true
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="coins/coin4" to="HUD" method="_on_coin_collected"]
