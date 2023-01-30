@@ -36,11 +36,14 @@ pomocą klawiatury. Będzie mógł skakać po platformach, gdy zajdzie
 taka potrzeba, starając się z nich nie spaść, w przepaść, i będzie
 musiał unikać np.: pułapek i zbierać monety. Jak trafi na pułapkę
 to traci życie, po utracie wszystkich żyć zaczyna poziom od nowa.
+
 Rodzaje pułapek:
-• Trujące rośliny
-• Niebezpieczne zwierzęta
-• Przepaść
-• Spadające meteory
+
+* Trujące rośliny
+* Niebezpieczne zwierzęta
+* Przepaść
+* Spadające meteory
+
 Podczas gry będzie napotykał wrogów, którzy będą chceli przeszko-
 dzić mu w dotarciu do celu, będzie mógł ich przeskoczyć/ominąć
 albo zastrzelić. W czasie gry losowo będzie pojawiać się Niezna-
@@ -49,9 +52,10 @@ które będzie można próbować rozwiązać 3 razy. Jeśli się uda dostaje
 trofeum, jeżeli nie, traci jedno życie
 
 ## Zagadki które sa w grze
-I. Wiesielec
-II. Sudoku-łamigłówka 9×9
-III. Łamigłówka, która jest podobna do sudoku, ale w niej, zamiast
+
+* Wiesielec
+* Sudoku-łamigłówka 9×9
+* Łamigłówka, która jest podobna do sudoku, ale w niej, zamiast
 wpisywać niepowtarzający się liczby, trzeba rozwiązać równa-
 nie w pionie lub poziomie.
 
